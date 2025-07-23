@@ -1,3 +1,587 @@
-:host {
-  display: block;
+/* ====== SECCIÓN PRESENTACIÓN GENERAL ====== */
+.presentación {
+  background-color: #A39279;
+  position: relative;
+  padding-left: 10%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p, h1 {
+  color: white;
+  margin-left: 20px;
+  max-width: 600px;
+  margin: 0 0 10px 20px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+/* Subrayado animado */
+.exito {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.exito::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #5D798E;
+  transition: width 0.3s ease;
+}
+
+.exito:hover::after {
+  width: 100%;
+}
+
+.exito:hover {
+  color: #5D798E;
+}
+@keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .card {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ====== BOTONES UNIFICADOS ====== */
+.empezar {
+  background-color: #B8D0E3;
+  color: #000000;
+  border-radius: 30px;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(93, 121, 142, 0.3);
+  display: inline-block;
+  width: fit-content;
+}
+
+.empezar:hover {
+  background-color: #9BB9D4;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(93, 121, 142, 0.4);
+}
+
+/* ====== FLECHA ABAJO ====== */
+.flecha-abajo {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  animation: flotar 2s infinite ease-in-out;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.flecha-abajo::before {
+  display: none;
+}
+
+.flecha-abajo::after {
+  content: '';
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #FFFFFF;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* ====== OSITO ====== */
+.osito {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* ====== ESPACIADORES ====== */
+.espacio,
+.espacio-footer {
+  height: 90px;
+}
+
+/* ====== FORMULARIO ====== */
+.formulario-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.formulario-card {
+  background: #634F31;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.formulario-emoji {
+  flex: 1;
+  background-color: #B8D0E3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.circulo-email {
+  width: 250px;
+  height: 250px;
+  background-color: #5D798E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.emoji {
+  font-size: 120px;
+  color: white;
+  transform: translateY(-5px);
+}
+/* ===== Cards ===== */
+.cards{
+  color: #000000;
+  
+}
+
+ .razones-seccion{
+      padding: 100px 20px;
+      background-color: #A39279;
+      text-align: center;
+      position: relative;
+    }
+    
+    .titulo-razones {
+      font-size: 36px;
+      color: #ffffff;
+      margin-bottom: 60px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .titulo-razones::after {
+      content: '';
+      position: absolute;
+      width: 800px;
+      height: 4px;
+      background-color: #B8D0E3;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    
+    .contenedor-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background-color: #B8D0E3;
+      border-radius: 15px;
+      padding: 40px 25px;
+      width: 23%;
+      min-width: 150px;
+      max-width: 200px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .circulo-emoji {
+      width: 100px;
+      height: 100px;
+      background-color: #5D798E;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    
+    .emoji-card {
+      font-size: 50px;
+    }
+    
+    .titulo-card {
+      font-size: 24px;
+      color: #000000;
+      margin-bottom: 15px;
+    }
+    
+    .descripcion-card {
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 15px;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Valores ===== */
+
+
+.valor-seccion {
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.valor-titulo {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.valor-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #634F31;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.valor-imagen img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #B8D0E3;
+}
+
+.valor-contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titulo-valor {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #B8D0E3;
+}
+
+.descripcion-valor {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.valor-boton {
+  text-align: right;
+}
+
+.button-valor {
+  background-color: #B8D0E3;
+  color: #000000;
+  border-radius: 30px;
+  padding: 10px 25px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button-valor:hover {
+  background-color: #9BB9D4;
+  transform: translateY(-3px);
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ====== Final card ====== */
+.final-inicio {
+  background-color: #A39279; /* Fondo general suave */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.final-card {
+  background-color: #5D798E; /* Card contrastante */
+  padding: 40px 30px;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.final-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-final {
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.descripcion-final {
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.final-boton .button-valor {
+  background-color: #B8D0E3;
+  color: #000000;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.final-boton .button-valor:hover {
+  background-color: #A39279;
+}
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1100px) {
+  .osito {
+    right: 10%;
+    width: 250px;
+  }
+}
+
+@media (max-width: 900px) {
+  .osito {
+    right: 5%;
+    width: 220px;
+  }
+  .card {
+        width: calc(50% - 30px);
+      }
+}
+
+@media (max-width: 768px) {
+  .titulo-razones::after, .valor-titulo::after {
+      content: '';
+      position: absolute;
+      width: 350px;
+      height: 4px;
+      background-color: #B8D0E3;
+      bottom: -15px;
+      left: 47%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  .presentación {
+    flex-direction: column;
+    padding: 40px 5%;
+    min-height: auto;
+    text-align: left;
+  }
+
+  .contenido-texto {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .osito {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    order: 3;
+  }
+
+  .flecha-abajo {
+    order: 4;
+    position: relative;
+    margin: 30px auto 0;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    animation: flotar-mobile 2s infinite ease-in-out;
+  }
+
+  @keyframes flotar-mobile {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .formulario-card {
+    flex-direction: column;
+  }
+
+  .formulario-emoji {
+    order: 2;
+    padding: 30px;
+  }
+
+  .valor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .valor-imagen img {
+    margin-bottom: 15px;
+  }
+
+  .valor-contenido {
+    align-items: center;
+  }
+
+  .valor-boton {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 576px) {
+  
+
+  .circulo-email {
+    width: 180px;
+    height: 180px;
+  }
+
+  .emoji {
+    font-size: 80px;
+  }
+
+  .card {
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      .titulo-razones {
+        font-size: 32px;
+      }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .osito {
+    width: 180px;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .osito {
+    width: 150px;
+  }
+}
+
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,3 +1,48 @@
-:host {
-  display: block;
+.babybear-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background-color: #5D798E;
+  border-top: 2px solid #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  gap: 1.5rem;
+}
+
+.footer-section {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.social-links i {
+  font-size: 24px;
+  color: #E3D2B8;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover i {
+  transform: scale(1.1);
+}
+
+
+.page-links a,
+.services a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.page-links a:hover,
+.services a:hover {
+  color: #E3D2B8;
+}
+
+.logo-wrapper .logo {
+  width: 60px;
+  height: auto;
 }

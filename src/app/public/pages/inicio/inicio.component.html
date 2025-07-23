@@ -1,9 +1,164 @@
 <div class="container">
-  <h1>¡Estamos cocinando algo increíble!</h1>
-  <p>Muy pronto estaremos en línea. Gracias por tu paciencia 🐻❤️</p>
-  <p>
-    Para más información, contáctanos en:
-    <a href="mailto:dev.babybear@gmail.com">dev.babybeargmail.com</a>
-  </p>
-  <div class="loader"></div>
+  <div class="presentación">
+    <p>
+      Somos Orsetto
+    </p>
+    <h1>
+      Y creamos
+    </h1>
+    <h1>
+      tecnología a 
+    </h1>
+    <h1>
+      medida que 
+    </h1>
+    <h1>
+      te impulsa al 
+    </h1>
+    <h1><span class="exito">
+      éxito
+    </span></h1>
+
+    <button class="empezar"> 
+        Empezar
+    </button>
+    <img src="assets/empezar.png" alt="Osito programador" class="osito" />
+    <!-- Flecha hacia abajo -->
+    <div class="flecha-abajo" (click)="scrollTo('formulario-container')"></div>
+  </div>
+
+  <div class="espacio"></div>
+  
+  <!-- Contenedor del formulario -->
+  <div class="formulario-container" id="formulario-container">
+    <div class="formulario-card">
+      <!-- Lado izquierdo con emoji de email -->
+      <div class="formulario-emoji">
+        <div class="circulo-email">
+          <div class="emoji">📧</div>
+        </div>
+      </div>
+      
+      <!-- Lado derecho con formulario -->
+      <app-email></app-email>
+    </div>
+    <div class="flecha-abajo" (click)="scrollTo('razones-seccion')"></div>
+  </div>
+  <!-- Espacio después del formulario -->
+  <div class="espacio"></div>
+
+
+  <div class="espacio"></div>
+  
+  <!-- Sección de Servicios -->
+  <section class="razones-seccion" id="razones-seccion">
+    <h1 class="titulo-razones">Ponte a la cabeza en todo lo que te propongas y deja que la tecnología trabaje por ti.</h1>
+    <div class="contenedor-cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="circulo-emoji">
+          <div class="emoji-card">🛍️</div>
+        </div>
+        <h3 class="titulo-card">Vendes 24/7 sin depender de nadie.</h3>
+        <p class="descripcion-card">La tecnología nunca duerme, ni cobra comisiones.</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="circulo-emoji">
+          <div class="emoji-card">📱</div>
+        </div>
+        <h3 class="titulo-card">Controlas todo tu negocio desde una sola pantalla.</h3>
+        <p class="descripcion-card">Inventario, ventas, citas, clientes, todo centralizado y a la mano.</p>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="circulo-emoji">
+          <div class="emoji-card">⏳</div>
+        </div>
+        <h3 class="titulo-card">Automatizas tareas repetitivas.</h3>
+        <p class="descripcion-card">Menos errores, menos estrés, más tiempo libre.</p>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="circulo-emoji">
+          <div class="emoji-card">📈</div>
+        </div>
+        <h3 class="titulo-card">Digitalizar tu negocio hoy es asegurar su vida mañana.</h3>
+        <p class="descripcion-card">Si no estás en línea,  no existes.</p>
+      </div>
+      <div class="flecha-abajo" (click)="scrollTo('valor-seccion')"></div>
+    </div>
+  </section>
+  
+  <div class="espacio"></div>
+
+  <section class="valor-seccion" id="valor-seccion">
+    <h1 class="valor-titulo">¿Qué valor te podemos aportar?</h1>
+
+    <div class="valor-card">
+      <div class="valor-imagen">
+        <img src="assets/ositoVR.png" alt="Osito VR">
+      </div>
+      <div class="valor-contenido">
+        <h3 class="titulo-valor">Integración de la mejor tecnología en tu negocio</h3>
+        <p class="descripcion-valor">
+          Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.
+        </p>
+        <div class="valor-boton">
+          <a href="#contacto" class="button-valor">Conoce todos los servicios</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda card -->
+    <div class="valor-card">
+      <div class="valor-imagen">
+        <img src="assets/ositoMóvil.png" alt="Imagen 2">
+      </div>
+      <div class="valor-contenido">
+        <h3 class="titulo-valor">Fortalecer la presencia digital</h3>
+        <p class="descripcion-valor">
+        Construye tu presencia, tu marca y tu conexión directa con tus clientes. Ya sea con una web rápida y potente o una aplicación móvil impecable, tener a la persona adecuada desarrollando tu plataforma digital no es un lujo: es una ventaja competitiva real.
+        </p>
+        <div class="valor-boton">
+          <a href="#contacto" class="button-valor">Trabajemos juntos</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tercera card -->
+    <div class="valor-card">
+      <div class="valor-imagen">
+        <img src="assets/cicloVida.png" alt="Imagen 3">
+      </div>
+      <div class="valor-contenido">
+        <h3 class="titulo-valor">Compromiso total</h3>
+        <p class="descripcion-valor">
+          No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios. Esta cercanía garantiza soluciones hechas a medida, con un nivel de dedicación en cuerpo y alma que nadie puede igualar.
+        </p>
+        <div class="valor-boton">
+          <a href="#contacto" class="button-valor">Animate</a>
+        </div>
+      </div>
+      <div class="flecha-abajo" (click)="scrollTo('final-inicio')"></div>
+    </div>
+  </section>
+  <div class="espacio"></div>
+
+  <section class="final-inicio" id="final-inicio">
+    <div class="final-card">
+      <div class="final-contenido">
+        <h3 class="titulo-final">Contacta con nosotros y comienza la transformación de tu negocio.</h3>
+        <p class="descripcion-final">
+          Unete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin limites, asegurando un futuro para tu negocio con más ganancias y menos estrés. 
+        </p>
+        <div class="final-boton">
+          <a href="#contacto" class="button-valor">Contactanos</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
