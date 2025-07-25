@@ -1,12 +1,12 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { EmailComponent } from "../../components/email/email.component";
-
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [EmailComponent],
+  imports: [EmailComponent, RouterModule],
 })
 export class InicioComponent implements AfterViewInit {
   @ViewChild('flecha') flechaElement!: ElementRef;

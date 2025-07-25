@@ -1,9 +1,9 @@
 import {  Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { FormularioComponent } from "../../components/formulario/formulario.component";
-
+import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-contacto',
-  imports: [FormularioComponent],
+  imports: [FormularioComponent, RouterModule],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

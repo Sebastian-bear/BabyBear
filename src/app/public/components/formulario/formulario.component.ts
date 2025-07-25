@@ -13,10 +13,10 @@ export class FormularioComponent {
     e.preventDefault();
 
     emailjs.sendForm(
-      '',     
-      '',   
+      'service_b2rf0u4',     
+      'template_2e7itm9',   
       e.target as HTMLFormElement,
-      'G19Tdul1-'      
+      'G19Tdul1-giBQos9b'      
     ).then(
       () => {
         alert('✅ ¡Mensaje enviado con éxito!');

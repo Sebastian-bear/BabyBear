@@ -98,53 +98,58 @@
   <section class="valor-seccion" id="valor-seccion">
     <h1 class="valor-titulo">¿Qué valor te podemos aportar?</h1>
 
-    <div class="valor-card">
-      <div class="valor-imagen">
-        <img src="assets/ositoVR.png" alt="Osito VR">
-      </div>
-      <div class="valor-contenido">
-        <h3 class="titulo-valor">Integración de la mejor tecnología en tu negocio</h3>
-        <p class="descripcion-valor">
-          Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.
-        </p>
-        <div class="valor-boton">
-          <a href="/contacto" class="button-valor">Conoce todos los servicios</a>
-        </div>
-      </div>
+    <!-- Primera card -->
+<div class="valor-card">
+  <div class="valor-imagen">
+    <img src="assets/ositoVR.png" alt="Osito VR">
+  </div>
+  <div class="valor-contenido">
+    <h3 class="titulo-valor">Integración de la mejor tecnología en tu negocio</h3>
+    <p class="descripcion-valor">
+      Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.
+    </p>
+    <div class="valor-boton">
+      <a [routerLink]="'contacto'" class="button-valor">Conoce todos los servicios</a>
     </div>
+  </div>
+</div>
 
-    <!-- Segunda card -->
-    <div class="valor-card">
-      <div class="valor-imagen">
-        <img src="assets/ositoFortalecer.png" alt="Imagen 2">
-      </div>
-      <div class="valor-contenido">
-        <h3 class="titulo-valor">Fortalecer la presencia digital</h3>
-        <p class="descripcion-valor">
-        Construye tu presencia, tu marca y tu conexión directa con tus clientes. Ya sea con una web rápida y potente o una aplicación móvil impecable, tener a la persona adecuada desarrollando tu plataforma digital no es un lujo: es una ventaja competitiva real.
-        </p>
-        <div class="valor-boton">
-          <<a href="/nosotros" class="button-valor">Trabajemos juntos</a>
-        </div>
-      </div> 
+<!-- Segunda card -->
+<div class="valor-card">
+  <div class="valor-imagen">
+    <img src="assets/ositoFortalecer.png" alt="Imagen 2">
+  </div>
+  <div class="valor-contenido">
+    <h3 class="titulo-valor">Fortalecer la presencia digital</h3>
+    <p class="descripcion-valor">
+      Construye tu presencia, tu marca y tu conexión directa con tus clientes. Ya sea con una web rápida y potente o una aplicación móvil impecable, tener a la persona adecuada desarrollando tu plataforma digital no es un lujo: es una ventaja competitiva real.
+    </p>
+    <div class="valor-boton">
+      <a [routerLink]="'nosotros'" class="button-valor">Trabajemos juntos</a>
     </div>
+  </div>
+  <div class="flecha-abajo" (click)="scrollTo('final-inicio')"></div>
+</div>
 
-    <!-- Tercera card -->
-    <div class="valor-card">
-      <div class="valor-imagen">
-        <img src="assets/cicloVida.png" alt="Imagen 3">
-      </div>
-      <div class="valor-contenido">
-        <h3 class="titulo-valor">Compromiso total</h3>
-        <p class="descripcion-valor">
-          No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios. Esta cercanía garantiza soluciones hechas a medida, con un nivel de dedicación en cuerpo y alma que nadie puede igualar.
-        </p>
-        <div class="valor-boton">
-          <a href="/nosotros" class="button-valor">Conocenos</a>
-        </div>
-      </div>
+<!-- Tercera card -->
+<div class="valor-card">
+  <div class="valor-imagen">
+    <img src="assets/cicloVida.png" alt="Imagen 3">
+  </div>
+  <div class="valor-contenido">
+    <h3 class="titulo-valor">Compromiso total</h3>
+    <p class="descripcion-valor">
+      No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios. Esta cercanía garantiza soluciones hechas a medida, con un nivel de dedicación en cuerpo y alma que nadie puede igualar.
+    </p>
+    <div class="valor-boton">
+      <div class="button-valor" (click)="scrollTo('formulario-container')">Animate</div>
     </div>
+  </div>
+</div>
+
+    
   </section>
+  
   <div class="espacio"></div>
 
   <section class="final-inicio" id="final-inicio">
