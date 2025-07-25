@@ -19,9 +19,9 @@
       éxito
     </span></h1>
 
-    <button class="empezar"> 
+    <a href="/contacto" class="empezar"> 
         Empezar
-    </button>
+    </a>
     <img src="assets/empezar.png" alt="Osito programador" class="osito" />
     <!-- Flecha hacia abajo -->
     <div class="flecha-abajo" (click)="scrollTo('formulario-container')"></div>
@@ -108,7 +108,7 @@
           Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.
         </p>
         <div class="valor-boton">
-          <a href="#contacto" class="button-valor">Conoce todos los servicios</a>
+          <a href="/contacto" class="button-valor">Conoce todos los servicios</a>
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
         Construye tu presencia, tu marca y tu conexión directa con tus clientes. Ya sea con una web rápida y potente o una aplicación móvil impecable, tener a la persona adecuada desarrollando tu plataforma digital no es un lujo: es una ventaja competitiva real.
         </p>
         <div class="valor-boton">
-          <a href="#contacto" class="button-valor">Trabajemos juntos</a>
+          <<a href="/nosotros" class="button-valor">Trabajemos juntos</a>
         </div>
       </div> 
     </div>
@@ -140,10 +140,9 @@
           No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios. Esta cercanía garantiza soluciones hechas a medida, con un nivel de dedicación en cuerpo y alma que nadie puede igualar.
         </p>
         <div class="valor-boton">
-          <a href="#contacto" class="button-valor">Animate</a>
+          <a href="/nosotros" class="button-valor">Conocenos</a>
         </div>
       </div>
-      <div class="flecha-abajo" (click)="scrollTo('final-inicio')"></div>
     </div>
   </section>
   <div class="espacio"></div>
@@ -156,7 +155,7 @@
           Unete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin limites, asegurando un futuro para tu negocio con más ganancias y menos estrés. 
         </p>
         <div class="final-boton">
-          <a href="#contacto" class="button-valor">Contactanos</a>
+          <div class="button-valor" (click)="scrollTo('formulario-container')">Contactanos</div>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   selector: 'app-nosotros',
   imports: [],
-  template: `<p>nosotros works!</p>`,
+  templateUrl: './nosotros.component.html',
   styleUrl: './nosotros.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

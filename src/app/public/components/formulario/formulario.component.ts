@@ -2,25 +2,21 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import emailjs from 'emailjs-com';
 
 @Component({
-  selector: 'app-email',
-  templateUrl: './email.component.html',
-  styleUrls: ['./email.component.css'],
+  selector: 'app-formulario',
+  imports: [],
+  templateUrl: './formulario.component.html',
+  styleUrl: './formulario.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
 })
-export class EmailComponent {
-  constructor() {
-    emailjs.init('G19Tdul1-giBQos9b'); // 👈 Agrega esto
-  }
-
+export class FormularioComponent {
   enviarEmail(e: Event) {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_b2rf0u4',
-      'template_jpm81vk',
+      '',     
+      '',   
       e.target as HTMLFormElement,
-      'G19Tdul1-giBQos9b'
+      'G19Tdul1-'      
     ).then(
       () => {
         alert('✅ ¡Mensaje enviado con éxito!');
@@ -32,4 +28,4 @@ export class EmailComponent {
       }
     );
   }
-}
+ }
