@@ -1,0 +1,98 @@
+<div class="container">
+    <section class="presentación">
+        <h1>Evolución digital estratégica</h1>
+        <img src="assets/ositoTransformador.png">
+        <h3>Lleva tu negocio al siguiente nivel. Modernízate o desaparece.</h3>
+        <p>Diagnostico a solo $1500</p>
+        <div class="flecha-abajo" (click)="scrollTo('precios')"></div>
+    </section>
+    <section class="precios" id="precios">
+  <div class="contenedor-precios">
+    <h2 class="titulo-precios">Potencia tu presencia digital</h2>
+    <p class="subtitulo-precios">
+      Servicios estratégicos para empresas que buscan escalar, optimizar y evolucionar su presencia digital.
+    </p>
+
+    <div class="precios-grid">
+      <!-- IZQUIERDA: CARDS DE SERVICIO -->
+      <div class="tarjetas-precio">
+      <!-- Paquete Básico -->
+        <div class="tarjeta-precio">
+          <h3>Diagnóstico único: $1,500 MXN</h3>
+          <p class="descripcion">
+            Evaluación profesional inicial con recomendaciones clave.
+            Perfecto para descubrir oportunidades antes de invertir más.
+          </p>
+        </div>
+        <div class="tarjeta-precio">
+          <h3>Desde $15,000 MXN</h3>
+          <p class="descripcion">
+            <strong>Paquete Básico:</strong><br>
+            Diagnóstico, estrategia y página web sencilla.<br>
+            Ideal para negocios que inician su transformación.
+          </p> 
+        </div>
+
+        <!-- Paquete Intermedio -->
+        <div class="tarjeta-precio">
+          <h3>Desde $30,000 MXN</h3>
+          <p class="descripcion">
+            <strong>Paquete Intermedio:</strong><br>
+            Diagnóstico + estrategia + web + app básica.<br>
+            Perfecto para empresas que quieren digitalizarse rápido.
+          </p>
+        </div>
+
+        <!-- Paquete Completo -->
+        <div class="tarjeta-precio">
+          <h3>Desde $50,000 MXN</h3>
+          <p class="descripcion">
+            <strong>Paquete Completo:</strong><br>
+            Desarrollo web, apps, CRM, automatización, soporte.<br>
+            El plan integral para escalar sin límites.
+          </p>
+        </div>
+      </div>
+
+      <!-- DERECHA: BENEFICIOS -->
+      <div class="incluye">
+        <h4>¿Qué incluye cada paquete?</h4>
+        <ul class="lista-beneficios">
+            <li><span>✔️</span> Diagnóstico integral de áreas clave del negocio</li>
+            <li><span>✔️</span> Estrategia digital alineada a tus objetivos reales</li>
+            <li><span>✔️</span> Propuestas con herramientas, procesos y automatizaciones</li>
+            <li><span>✔️</span> Capacitación personalizada y acompañamiento continuo</li>
+            <li><span>✔️</span> Revisión y mejora de tu presencia digital actual</li>
+            <li><span>✔️</span> Identificación de oportunidades de crecimiento online</li>
+            <li><span>✔️</span> Asesoría en plataformas, herramientas y recursos</li>
+            <li><span>✔️</span> Plan de acción con prioridades claras y medibles</li>
+            <li><span>✔️</span> Soporte para implementación o integración técnica</li>
+            <li><span>✔️</span> Reuniones estratégicas de seguimiento (según plan)</li>
+        </ul>
+
+        <blockquote class="nota">
+          <strong>*</strong> Cada empresa es única. Este servicio se cotiza 100% a la medida.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+    </section>
+    <div class="espacio"></div>
+    <section class="cta-final espacio">
+        <div class="cta-contenedor">
+            <div class="cta-imagen">
+            <img src="assets/ositoTranformacion.png" alt="Ejemplo de página web">
+            </div>
+            <div class="cta-texto">
+            <h2>¿Estás preparado para llevar a tu negocio al siguiente nivel?</h2>
+            <p>
+                Si quieres crecer, ya no basta con trabajar más: hay que trabajar mejor.
+Tu negocio merece una estructura digital que te permita avanzar con claridad, control y confianza.
+Cotiza sin compromiso. El primer paso no es gastar… es decidir evolucionar.
+            </p>
+            <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
+            </div>
+        </div>
+    </section>
+
+</div>

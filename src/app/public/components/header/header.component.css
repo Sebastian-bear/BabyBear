@@ -1,18 +1,31 @@
 .babybear-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #B8D0E3;
+  border-bottom: 2px solid black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+/* Contenedor interno para mantener el diseño anterior */
+.babybear-header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
-  background-color: #B8D0E3;
-  border-bottom: 2px solid black;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Estilos existentes */
 .left-section {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-decoration: underline;
+  text-decoration-color: #B8D0E3;
 }
 
 .logo {
@@ -70,14 +83,17 @@
   display: block;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
+
   .slogan,
-  .brand{
+  .brand {
     display: none;
   }
+
   .nav-links {
     display: none;
     flex-direction: column;

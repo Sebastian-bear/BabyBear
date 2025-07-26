@@ -89,9 +89,9 @@ h1 {
 }
 
 .empezar:hover {
-  background-color: #9BB9D4;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(93, 121, 142, 0.4);
+  background-color: #5D798E;
+    text-decoration-line: underline;
+  text-decoration-color: #5D798E;
 }
  
 /* ====== FLECHA ABAJO ====== */
@@ -189,97 +189,78 @@ h1 {
   transform: translateY(-5px);
 }
 /* ===== Cards ===== */
-.cards{
-  color: #000000;
-  
+.razones-seccion {
+  padding: 100px 20px;
+  background-color: #A39279;
+  text-align: center;
 }
 
- .razones-seccion{
-      padding: 100px 20px;
-      background-color: #A39279;
-      text-align: center;
-      position: relative;
-    }
-    
-    .titulo-razones {
-      font-size: 36px;
-      color: #ffffff;
-      margin-bottom: 60px;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .titulo-razones::after {
-      content: '';
-      position: absolute;
-      width: 800px;
-      height: 4px;
-      background-color: #B8D0E3;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 2px;
-    }
-    
-    .contenedor-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .card {
-      background-color: #B8D0E3;
-      border-radius: 15px;
-      padding: 40px 25px;
-      width: 23%;
-      min-width: 150px;
-      max-width: 200px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    }
-    
-    .circulo-emoji {
-      width: 100px;
-      height: 100px;
-      background-color: #5D798E;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
-    }
-    
-    .emoji-card {
-      font-size: 50px;
-    }
-    
-    .titulo-card {
-      font-size: 24px;
-      color: #000000;
-      margin-bottom: 15px;
-    }
-    
-    .descripcion-card {
-  color: #000000;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-top: 15px;
-  max-width: 220px;
+.titulo-razones {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 60px;
+  position: relative;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
+
+.titulo-razones::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  background-color: #B8D0E3;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.razones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.razon-card {
+  background-color: #B8D0E3;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 4px 4px 0 #634F31;
+  flex: 1 1 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.razon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.emoji-grande {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.titulo-card {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.descripcion-card {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 
 /* ===== Valores ===== */
 
@@ -358,14 +339,15 @@ h1 {
   font-weight: 600;
   min-width: 1200px; 
 
-   display: inline-block;     /* o block si quieres centrar con margin */
+   display: inline-block;    
   min-width: 200px;          /* todos tendrán al menos este ancho */
   text-align: center;
 }
 
 .button-valor:hover {
-  background-color: #9BB9D4;
-  transform: translateY(-3px);
+  background-color: #5D798E;
+    text-decoration-line: underline;
+  text-decoration-color: #5D798E;
 }
 
 
@@ -440,7 +422,9 @@ h1 {
 }
 
 .final-boton .button-valor:hover {
-  background-color: #9BB9D4;
+  background-color: #5D798E;
+    text-decoration-line: underline;
+  text-decoration-color: #5D798E;
 }
 /* ====== RESPONSIVE ====== */
 @media (max-width: 1100px) {

@@ -1,21 +1,23 @@
 <header class="babybear-header">
-  <div class="left-section">
-    <img src="assets/logo.svg" alt="BabyBear Logo" class="logo" />
-    <div class="brand">
-      <h1>Orsetto</h1>
-      <p class="slogan">Soluciones de tecnología</p>
-    </div>
+  <div class="babybear-header-content">
+    <a routerLink="/" class="left-section">
+      <img src="assets/logo.svg" alt="BabyBear Logo" class="logo" />
+      <div class="brand">
+        <h1>Orsetto</h1>
+        <p class="slogan">Soluciones de tecnología</p>
+      </div>
+    </a>
+
+    <button class="hamburger" (click)="menuAbierto = !menuAbierto">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" [class.open]="menuAbierto">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+      <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+    </nav>
   </div>
-
-  <button class="hamburger" (click)="menuAbierto = !menuAbierto">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <nav class="nav-links" [class.open]="menuAbierto">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
-    <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
-    <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
-  </nav>
 </header>

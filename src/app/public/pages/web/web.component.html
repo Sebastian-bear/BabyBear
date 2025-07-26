@@ -1,0 +1,120 @@
+<div class="container">
+    <section class="presentación">
+        <h1>Sistema Web Profesional</h1>
+        <img src="assets/ositoDesarrolloWeb.png">
+        <h3>Si tu negocio no tiene una web moderna, rápida y que inspire confianza, estás perdiendo ventas incluso mientras lees esto. Yo diseño páginas que cautivan, informan y convierten. Porque si no estás en la web, no existes.</h3>
+        <p>Comienza con el cambio desde $1500</p>
+        <div class="flecha-abajo" (click)="scrollTo('precios')"></div>
+    </section>
+    <section class="precios" id="precios">
+        <div class="contenedor-precios">
+            <h2 class="titulo-precios">Potencia tu presencia digital</h2>
+            <p class="subtitulo-precios">
+            Soluciones web a tu medida con diseño profesional y enfoque estratégico.
+            </p>
+
+            <div class="precios-grid">
+            <!-- LADO IZQUIERDO: CARDS DE PRECIOS -->
+            <div class="tarjetas-precio">
+
+                <div class="tarjeta-precio">
+                    <h3>Landing Page estratégica</h3>
+                    <p class="descripcion">
+                    Ideal para campañas o negocios que recién comienzan. Una sola sección potente que informa y convierte.
+                    </p>
+                    <p><strong>Desde $2,000 MXN</strong></p>
+                </div>
+
+                <div class="tarjeta-precio">
+                    <h3>Sitio institucional simple</h3>
+                    <p class="descripcion">
+                    Perfecto para PYMEs, profesionistas y portafolios. Incluye varias secciones con diseño limpio y moderno.
+                    </p>
+                    <p><strong>Desde $4,000 MXN</strong></p>
+                </div>
+
+                <div class="tarjeta-precio">
+                    <h3>Web con funcionalidades</h3>
+                    <p class="descripcion">
+                    Ideal si necesitas formularios, blog, reservas, o funciones adicionales personalizadas.
+                    </p>
+                    <p><strong>Desde $6,500 MXN</strong></p>
+                </div>
+
+                <div class="tarjeta-precio">
+                    <h3>Embudo + Contenido Premium</h3>
+                    <p class="descripcion">
+                    Web enfocada en ventas y marketing digital. Incluye estrategia, contenido y automatizaciones simples.
+                    </p>
+                    <p><strong>Desde $9,000 MXN</strong></p>
+                </div>
+
+                <div class="tarjeta-precio">
+                    <h3>E-commerce simple</h3>
+                    <p class="descripcion">
+                    Tienda en línea funcional con pasarela de pago, catálogo y seguimiento básico de pedidos.
+                    </p>
+                    <p><strong>Desde $10,000 MXN</strong></p>
+                </div>
+
+                <div class="tarjeta-precio">
+                    <h3>Web personalizada o SaaS</h3>
+                    <p class="descripcion">
+                    Desarrollo avanzado con lógica compleja: dashboards, usuarios, sistemas internos o apps web.
+                    </p>
+                    <p><strong>Desde $18,000 MXN</strong></p>
+                </div>
+
+                </div>
+
+            <!-- LADO DERECHO: INCLUYE -->
+            <div class="incluye">
+                <h4>Todos los paquetes incluyen:</h4>
+                    <ul class="lista-beneficios">
+                        <li><span>✔️</span> Estrategia UX/UI centrada en conversión</li>
+                        <li><span>✔️</span> Diagnóstico de marca / objetivos</li>
+                        <li><span>✔️</span> Optimización SEO básica</li>
+                        <li><span>✔️</span> Adaptado a móvil (responsive)</li>
+                        <li><span>✔️</span> Integración con redes sociales y WhatsApp</li>
+                        <li><span>✔️</span> Formularios inteligentes</li>
+                        <li><span>✔️</span> Capacitación o guía de uso</li>
+                        <li><span>✔️</span> Hosting y dominio opcionales</li>
+                        <li><span>✔️</span> Diseño visual coherente con branding</li>
+                    </ul>
+
+                    <h4>Extras opcionales:</h4>
+                    <ul class="lista-beneficios">
+                        <li><span>🌐</span> Optimización para Google Core Web Vitals</li>
+                        <li><span>📊</span> Dashboard de analítica básica</li>
+                        <li><span>🔁</span> Automatizaciones con CRM o correo</li>
+                        <li><span>🎯</span> Embudos de venta personalizados</li>
+                        <li><span>🤖</span> Chatbots con IA o atención programada</li>
+                    </ul>
+
+                    <blockquote class="nota">
+                    Cada proyecto es único. Estos precios sirven como base para adaptar la solución exacta que tú o tu negocio necesita.
+                    </blockquote>
+
+            </div>
+            </div>
+        </div>
+    </section>
+    <div class="espacio"></div>
+    <section class="cta-final espacio">
+        <div class="cta-contenedor">
+            <div class="cta-imagen">
+            <img src="assets/ositoWeb.png" alt="Ejemplo de página web">
+            </div>
+            <div class="cta-texto">
+            <h2>¿Listo para transformar tu presencia online?</h2>
+            <p>
+                ¿Tienes una idea en mente pero no sabes si es posible? Escríbenos.  
+Cotizamos sin compromiso y te explico todo con claridad.  
+No tienes que saber de tecnología. Solo tienes que soñar en grande.
+            </p>
+            <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
+            </div>
+        </div>
+    </section>
+
+</div>

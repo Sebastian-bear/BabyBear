@@ -1,0 +1,72 @@
+<div class="container">
+    <section class="presentación">
+        <img src="assets/ositoDesarrolloMovil.png">
+        <h1>Aplicaciones móviles</h1>
+        <h3>Presencia, automatización y conexión directa con tus usuarios, estén donde estén.</h3>
+        <p>Comienza con el cambio desde $4500</p>
+        <div class="flecha-abajo" (click)="scrollTo('apps')"></div>
+    </section>
+    <section class="aplicaciones espacio" id="apps">
+        <div class="contenedor-precios">
+            <h2 class="titulo-precios">Lleva tu idea a la palma de la mano</h2>
+            <p class="subtitulo-precios">
+            Ideal si quieres una sola app para ambos sistemas operativos, sin duplicar costos ni tiempos.
+            </p>
+
+            <div class="apps-grid">
+                <!-- Card Flutter -->
+                <div class="card-app">
+                    <h3>📱 App Multiplataforma (Flutter)</h3>
+                    <p class="descripcion">
+                    Una solución inteligente para llegar a usuarios de iOS y Android con una sola base de código.
+                    </p>
+                    <ul class="ventajas">
+                    <li><span></span>Ahorra tiempo y presupuesto</li>
+                    <li><span></span> Diseño adaptado para ambos sistemas</li>
+                    <li><span></span>Perfecta para negocios en crecimiento y soluciones rápidas</li>
+                    </ul>
+                    <p class="precio">Desde $6,500 MXN</p>
+                    <div class="imagen-app">
+                    <img src="assets/ositoFlutter.png" alt="Mockup app Flutter">
+                    </div>
+                </div>
+
+                <!-- Card Android Nativa -->
+                <div class="card-app">
+                    <h3>📲 App Nativa iOS</h3>
+                    <p class="descripcion">
+                        Pensada para ofrecer una experiencia premium a usuarios de iPhone, aprovechando al máximo las capacidades del ecosistema apple
+                    </p>
+                    <ul class="ventajas">
+                    <li><span></span>Mejor rendimiento y fluidez</li>
+                    <li><span></span>Facilidad de capacidades especificas de iOS</li>
+                    <li><span></span>Ideal si tu publico usa iPhone, iPad, Apple Watch, Mac o Vision Pro</li>
+                    </ul>
+                    <p class="precio">Desde $7,500 MXN</p>
+                    <div class="imagen-app">
+                    <img src="assets/ositoApple.png" alt="Mockup app Android nativa">
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </section>
+
+    <div class="espacio"></div>
+    <section class="cta-final espacio" id="final">
+        <div class="cta-contenedor">
+            <div class="cta-imagen">
+            <img src="assets/appOsito.png" alt="Ejemplo de página web">
+            </div>
+            <div class="cta-texto">
+            <h2>¿Listo para estar en el bolsillo de tus clientes?</h2>
+            <p>
+                Tener una app ya no es cosa del futuro. Es lo que tu negocio necesita hoy.
+Escríbenos  y hablemos de esa app que tienes en mente.  
+Cotizaciones honestas, trato directo, resultados reales.
+            </p>
+            <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
+            </div>
+        </div>
+    </section>
+
+</div>

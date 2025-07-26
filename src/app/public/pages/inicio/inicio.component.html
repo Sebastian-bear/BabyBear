@@ -19,7 +19,7 @@
       éxito
     </span></h1>
 
-    <a [routerLink]="'/contacto'" class="empezar"> 
+    <a [routerLink]="'contacto'" class="empezar"> 
         Empezar
     </a>
     <img src="assets/empezar.png" alt="Osito programador" class="osito" />
@@ -52,46 +52,39 @@
   
   <!-- Sección de Servicios -->
   <section class="razones-seccion" id="razones-seccion">
-    <h1 class="titulo-razones">Ponte a la cabeza en todo lo que te propongas y deja que la tecnología trabaje por ti.</h1>
-    <div class="contenedor-cards">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="circulo-emoji">
-          <div class="emoji-card">🛍️</div>
-        </div>
-        <h3 class="titulo-card">Vendes 24/7 sin depender de nadie.</h3>
-        <p class="descripcion-card">La tecnología nunca duerme, ni cobra comisiones.</p>
-      </div>
-      
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="circulo-emoji">
-          <div class="emoji-card">📱</div>
-        </div>
-        <h3 class="titulo-card">Controlas todo tu negocio desde una sola pantalla.</h3>
-        <p class="descripcion-card">Inventario, ventas, citas, clientes, todo centralizado y a la mano.</p>
-      </div>
-      
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="circulo-emoji">
-          <div class="emoji-card">⏳</div>
-        </div>
-        <h3 class="titulo-card">Automatizas tareas repetitivas.</h3>
-        <p class="descripcion-card">Menos errores, menos estrés, más tiempo libre.</p>
-      </div>
-      
-      <!-- Card 4 -->
-      <div class="card">
-        <div class="circulo-emoji">
-          <div class="emoji-card">📈</div>
-        </div>
-        <h3 class="titulo-card">Digitalizar tu negocio hoy es asegurar su vida mañana.</h3>
-        <p class="descripcion-card">Si no estás en línea,  no existes.</p>
-      </div>
-      <div class="flecha-abajo" (click)="scrollTo('valor-seccion')"></div>
+  <h2 class="titulo-razones">Ponte a la cabeza en todo lo que te propongas y deja que la tecnología trabaje por ti.</h2>
+
+  <div class="razones-grid">
+    <!-- Card 1 -->
+    <div class="card-app razon-card">
+      <div class="emoji-grande">🛍️</div>
+      <h3 class="titulo-card">Vende 24/7 sin depender de nadie</h3>
+      <p class="descripcion-card">La tecnología nunca duerme, ni cobra comisiones.</p>
     </div>
-  </section>
+
+    <!-- Card 2 -->
+    <div class="card-app razon-card">
+      <div class="emoji-grande">📱</div>
+      <h3 class="titulo-card">Control total desde una sola pantalla</h3>
+      <p class="descripcion-card">Inventario, ventas, citas, clientes... todo centralizado.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-app razon-card">
+      <div class="emoji-grande">⏳</div>
+      <h3 class="titulo-card">Automatiza lo repetitivo</h3>
+      <p class="descripcion-card">Menos errores, menos estrés, más tiempo libre.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-app razon-card">
+      <div class="emoji-grande">📈</div>
+      <h3 class="titulo-card">Digitaliza o desaparece</h3>
+      <p class="descripcion-card">Si no estás en línea, simplemente no existes.</p>
+    </div>
+  </div>
+</section>
+
   
   <div class="espacio"></div>
 
@@ -109,7 +102,7 @@
       Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.
     </p>
     <div class="valor-boton">
-      <a [routerLink]="'/contacto'" class="button-valor">Conoce todos los servicios</a>
+      <a [routerLink]="'contacto'" class="button-valor">Conoce todos los servicios</a>
     </div>
   </div>
 </div>
@@ -128,8 +121,9 @@
       <a [routerLink]="'nosotros'" class="button-valor">Trabajemos juntos</a>
     </div>
   </div>
-  <div class="flecha-abajo" (click)="scrollTo('final-inicio')"></div>
+  
 </div>
+<div class="flecha-abajo" (click)="scrollTo('final-inicio')"></div>
 
 <!-- Tercera card -->
 <div class="valor-card">
