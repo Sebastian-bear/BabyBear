@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
-
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-nosotros',
   imports: [],
@@ -8,6 +8,13 @@ import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDe
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NosotrosComponent { 
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Sobre nosotros');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Conoce a Orsetto, una desarrolladora de software que cuidará de tu empresa como una Mamá oso.'
+    });
+  }
   @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {

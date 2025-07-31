@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-transformación',
   imports: [RouterModule],
@@ -8,6 +9,13 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TransformaciónComponent { 
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Transformación dígital de empresas');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Te ayudamos a digitalizar procesos y modernizar tu empresa con soluciones tecnológicas ágiles y efectivas.'
+    });
+  }
   @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {

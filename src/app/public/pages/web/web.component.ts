@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-web',
   imports: [RouterModule],
@@ -8,6 +9,13 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WebComponent { 
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Desarrollo Web Profesional');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Creamos sitios web funcionales, rápidos y adaptables. Desarrollo web personalizado para empresas y emprendimientos.'
+    });
+  }
   @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {

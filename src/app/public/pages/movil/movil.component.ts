@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-movil',
   imports: [RouterModule],
@@ -8,6 +9,13 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MovilComponent { 
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Desarrollo de aplicaciones móviles');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Diseño y desarrollo de aplicaciones móviles para Android y iOS. Creamos experiencias móviles que conectan con tus usuarios.'
+    });
+  }
   @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {

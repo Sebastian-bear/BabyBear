@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { EmailComponent } from "../../components/email/email.component";
 import { RouterModule } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -9,6 +10,14 @@ import { RouterModule } from '@angular/router';
   imports: [EmailComponent, RouterModule],
 })
 export class InicioComponent implements AfterViewInit {
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Orsetto | Desarrollo de software');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Creamos soluciones digitales con un enfoque humano. Desarrollo de software web, móvil y transformación digital para empresas.'
+    });
+  }
+
   @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {

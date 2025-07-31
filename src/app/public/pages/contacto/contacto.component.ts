@@ -1,6 +1,7 @@
 import {  Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { FormularioComponent } from "../../components/formulario/formulario.component";
 import { Router, RouterModule } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-contacto',
   imports: [FormularioComponent, RouterModule],
@@ -9,6 +10,13 @@ import { Router, RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactoComponent implements AfterViewInit{ 
+  constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Contactanos');
+    this.metaService.updateTag({
+      name: 'description',
+      content: '¿Necesitas una solución digital? Contáctanos para desarrollar software a medida, automatizar procesos o transformar tu organización.'
+    });
+  }
 @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {

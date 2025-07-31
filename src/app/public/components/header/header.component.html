@@ -4,7 +4,7 @@
       <img src="assets/logo.svg" alt="BabyBear Logo" class="logo" />
       <div class="brand">
         <h1>Orsetto</h1>
-        <p class="slogan">Soluciones de tecnología</p>
+        <p class="slogan">Tecnología que no hiberna</p>
       </div>
     </a>
 
@@ -18,6 +18,18 @@
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
       <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
       <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+
+      <div class="dropdown nav-dropdown">
+        <span class="dropdown-toggle">Servicios</span>
+        <div class="dropdown-menu">
+          <a routerLink="/web" routerLinkActive="active">Web</a>
+          <a routerLink="/movil" routerLinkActive="active">Móvil</a>
+          <a routerLink="/transformación" routerLinkActive="active">Transformación</a>
+          <a routerLink="/otros" routerLinkActive="active">Otros</a>
+        </div>
+      </div>
+
+
     </nav>
   </div>
 </header>

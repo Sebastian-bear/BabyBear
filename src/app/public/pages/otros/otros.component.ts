@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-otros',
   imports: [RouterModule],
@@ -8,6 +9,13 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OtrosComponent {
+    constructor(private titleService: Title, private metaService: Meta) {
+    this.titleService.setTitle('Inteligencia artificial y más');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Explora nuestras soluciones en Realidad Aumentada, Realidad Virtual, Realidad Mixta e Inteligencia Artificial para potenciar tu organización.'
+    });
+  }
   @ViewChild('flecha') flechaElement!: ElementRef;
   
   ngAfterViewInit() {
