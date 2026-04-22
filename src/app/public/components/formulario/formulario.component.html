@@ -1,0 +1,27 @@
+<section class="contact-section">
+    <div class="contact-card">
+      <div class="emoji-circle">🧸</div>
+      <h2>Comienza a construir el futuro que siempre has soñado.</h2>
+      <p>Envía un mensaje personalizado describiendo lo que deseas para tu negocio y obtener una cotización totalmente gratis. </p>
+      
+      <form class="contact-form" (submit)="enviarEmail($event)">
+
+        <input type="email" id="email"  name="user_email" placeholder="Correo electrónico" required>
+        
+        <select name="subject" required>
+          <option disabled selected>Selecciona un servicio</option>
+          <option>Desarrollo web</option>
+          <option>Desarrollo de aplicaciones móviles</option>
+          <option>Transformación dígital para negocios</option>
+          <option>Realidad virtual</option>
+          <option>Realidad aumentada</option>
+          <option>Realidad mixta</option>
+          <option>Inteligencia artificial</option>
+        </select>
+        
+        <textarea placeholder="Escribe tu mensaje aquí..." name="message" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>

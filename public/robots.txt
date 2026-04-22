@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /private
+Disallow: /api
+
+# Google Search Console
+# Uncomment and add your code below if needed
+# google-site-verification: xxxxx
+
+# Sitemap
+Sitemap: https://orsetto.pro/sitemap.xml
+
+# Crawl delay for all bots
+Crawl-delay: 1
