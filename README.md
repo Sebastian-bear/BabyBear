@@ -1,59 +1,79 @@
-# BabyBear
+# Orsetto 🐻
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+**Tecnología que no hiberna** | Desarrollo Web • Aplicaciones Móviles • Transformación Digital
 
-## Development server
+---
 
-To start a local development server, run:
+## 🎯 ¿Qué es Orsetto?
 
-```bash
-ng serve
-```
+Orsetto es una agencia de transformación digital que se especializa en crear soluciones tecnológicas innovadoras para empresas que buscan crecer en el mundo digital.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Nos enfocamos en:
+- 🌐 **Desarrollo Web Profesional** - Sitios web rápidos y atractivos que venden 24/7
+- 📱 **Aplicaciones Móviles** - Apps para iOS y Android que automatizan y generan impacto
+- 🔄 **Transformación Digital Estratégica** - Moderniza tu negocio con soluciones tecnológicas
+- ✨ **Realidad Aumentada e Inteligencia Artificial** - Soluciones innovadoras para el futuro
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ✨ Características
 
-```bash
-ng generate component component-name
-```
+- **Diseño Responsivo** - Optimizado para escritorio, tablet y móvil
+- **Optimización SEO** - Completamente indexable en buscadores
+- **Rendimiento** - Carga rápida y eficiente
+- **Accesibilidad** - Diseño inclusivo y accesible
+- **Dominio Personalizado** - Alojado en GitHub Pages con dominio propio
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🚀 Empezar
 
-## Building
+Visita **[orsetto.pro](https://orsetto.pro)** para conocer nuestros servicios.
 
-To build the project run:
+### Secciones Principales
+- **Inicio** - Presentación y valor agregado
+- **Servicios**
+  - Desarrollo Web
+  - Desarrollo Móvil
+  - Transformación Digital
+  - Otros Servicios
+- **Nosotros** - Conoce nuestro equipo y filosofía
+- **Contacto** - Ponte en contacto con nosotros
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 💡 Nuestro Enfoque
 
-## Running unit tests
+> "No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios."
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Creemos en soluciones:
+- ✅ Hechas a medida
+- ✅ Con dedicación total
+- ✅ Orientadas a resultados
+- ✅ Con compromiso a largo plazo
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 📞 Contacto
 
-For end-to-end (e2e) testing, run:
+¿Listo para transformar tu negocio digitalmente?
 
-```bash
-ng e2e
-```
+**[Contáctanos ahora](https://orsetto.pro/contacto)**
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+O encuentra más información en:
+- 🌐 [orsetto.pro](https://orsetto.pro)
+- 📱 Disponible en desktop, tablet y móvil
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📋 Información Técnica
+
+Este sitio está construido con tecnologías modernas y está optimizado para:
+- 🔍 Posicionamiento en buscadores (SEO)
+- ⚡ Rendimiento y velocidad
+- 📱 Experiencia móvil óptima
+- ♿ Accesibilidad web
+
+---
+
+**Orsetto** © 2026 - Tecnología que no hiberna 🐻
