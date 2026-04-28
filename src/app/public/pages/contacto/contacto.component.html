@@ -6,6 +6,18 @@
           <img src="assets/Conoce.png" alt="Osito programando">
         </div>
           <div class="cards-column">
+
+            <a [routerLink]="'/transformacion'" class="servicio-card">
+              <div class="servicio-texto">
+                <h3 class="servicio-title">Transformación digital para negocios</h3>
+                <p class="servicio-desc">La tecnología no es opcional: o te adaptas o te vuelves invisible.
+                  Soluciones reales a problemas reales.</p>
+              </div>
+              <div class="servicio-button">
+                <div class="boton">&#8594;</div>
+              </div>
+            </a>
+
             <a [routerLink]="'/web'" class="servicio-card">
               <div class="servicio-texto">
                 <h3 class="servicio-title">Desarrollo web profesional</h3>
@@ -26,27 +38,9 @@
               </div>
             </a>
 
-            <a [routerLink]="'/transformación'" class="servicio-card">
-              <div class="servicio-texto">
-                <h3 class="servicio-title">Transformación digital para negocios</h3>
-                <p class="servicio-desc">La tecnología no es opcional: o te adaptas o te vuelves invisible.
-                  Soluciones reales a problemas reales.</p>
-              </div>
-              <div class="servicio-button">
-                <div class="boton">&#8594;</div>
-              </div>
-            </a>
 
-            <a [routerLink]="'/otros'" class="servicio-card">
-              <div class="servicio-texto">
-                <h3 class="servicio-title">Otros servicios</h3>
-                <p class="servicio-desc">Realidad Aumentada, Virtual o Mixta para capacitación o productividad. 
-                  Diseño centrado en el usuario y inteligencia artificial (Próximamente)</p>
-              </div>
-              <div class="servicio-button">
-                <div class="boton">&#8594;</div>
-              </div>
-            </a>
+
+
           </div>
       </div>
       <div class="flecha-abajo" (click)="scrollTo('formulario-contacto')"></div>
@@ -58,69 +52,69 @@
       
   <div class="espacio"></div>
   <section class="decisión-section" id="decisión-contacto">
-    <h1 class="decisión-titulo">Esto pasará si no decides automatizar</h1>
+    <h1 class="decisión-titulo">Esto pasará si decides automatizar</h1>
     <div class="container decisión-layout">
       <div class="decisión-imagen">
-      <img src="assets/osoTriste.png" alt="Osito triste">
+      <img src="assets/OsitoFeliz.png" alt="Osito feliz">
       </div>
         <ul class="decisión-column">
-          <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Estás <u>dejando de vender</u> mientras duermes.
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Tus empleados <u>no estarán contentos</u> haciendo tareas repetitivas que un sistema haría más rápido.
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Tus competidores ya están digitalizando. Tú decides si <u>alcanzarlos o desaparecer.</u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          <u>Gastarás tu tiempo</u> en tareas repetitivas en lugar de usar ese tiempo para estrategia, expansión o simplemente vivir mejor. 
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Estarás atrapado en un bucle infinito <u>sin crecimiento. </u> 
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Sin datos reales no podrás tomar <u>decisiones importantes</u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Las nuevas generaciones prefieren <u>prefieren hacer todo desde su celular.</u> 
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Estás <u>perdiendo eficiencia interna, y con ello dinero. </u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          La competencia crecerá a ritmos mas altos, <u>dejándote atrás. </u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Serás esclavo de tu negocio <u>sin ver resultados.  </u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Aumento en <u>eficiencia</u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          Si hoy no tienes una base digital, <u>mañana estarás muy atrás para ponerte al día.</u>
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          <u>No existirás para el mercado</u> que busca primero online. 
-        </li>
-        <li>
-          <span class="bullet"><span class="checkmark">✔️</span></span>
-          <u>No generarás ninguna reputación</u>, ni opiniones ni reseñas de clientes.
-        </li>
-        </ul>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Puedes <u>generar ventas incluso mientras descansas</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Tu equipo puede enfocarse en <u>tareas más creativas y valiosas</u>, dejando lo repetitivo a los sistemas.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Puedes <u>avanzar al ritmo del mercado</u>, paso a paso y con confianza.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Libera <u>tiempo para estrategia, expansión o simplemente vivir mejor</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Construye procesos más claros que te permitan <u>crecer de forma constante</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Tener datos reales te ayuda a tomar <u>decisiones con mayor seguridad</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Facilita que tus clientes puedan <u>interactuar contigo desde su celular</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Mejora tu operación con <u>mayor eficiencia interna</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Puedes <u>crecer a tu propio ritmo</u> sin quedarte atrás.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Tu negocio puede volverse <u>más ligero y menos dependiente de ti</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Impulsa un <u>aumento en eficiencia</u> en todo tu negocio.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Una base digital hoy te da <u>ventaja para el futuro</u>.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Puedes <u>estar presente donde tus clientes ya buscan</u>: online.
+  </li>
+  <li>
+    <span class="bullet"><span class="checkmark">✔️</span></span>
+    Empieza a <u>construir tu reputación</u> con opiniones reales de clientes.
+  </li>
+</ul>
         <div class="flecha-abajo" (click)="scrollTo('decisión-contacto')"></div>
     </div>
     

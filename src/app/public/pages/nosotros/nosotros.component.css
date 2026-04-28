@@ -26,6 +26,11 @@
   font-size: 2em;
 }
 
+.hero-text h1 .icon-inline-h1 {
+  height: 0.7em !important;
+  width: 0.7em !important;
+}
+
 .hero-text p {
   font-size: 1.2em;
   line-height: 1.5;
@@ -146,6 +151,12 @@
   transition: transform 0.3s ease;
 }
 
+.icono-circulo.icon-svg {
+  height: 14px !important;
+  width: 14px !important;
+  font-size: inherit;
+}
+
 .icono-circulo:hover {
   transform: scale(1.1);
 }
@@ -181,6 +192,11 @@
   font-size: 2.4em;
   margin-bottom: 20px;
   color: #FFFFFF;
+}
+
+.historia-texto h2 .icon-inline-h1 {
+  height: 0.7em !important;
+  width: 0.7em !important;
 }
 
 .historia-texto p {

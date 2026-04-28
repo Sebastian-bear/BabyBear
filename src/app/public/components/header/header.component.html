@@ -17,17 +17,16 @@
     <nav class="nav-links" [class.open]="menuAbierto">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
       <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
-      <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
-
       <div class="dropdown nav-dropdown">
         <span class="dropdown-toggle" (click)="toggleDropdown()">Servicios</span>
         <div class="dropdown-menu" [class.open]="dropdownAbierto">
+          <a routerLink="/transformacion" routerLinkActive="active" (click)="cerrarMenu()">Evolución digital estratégica</a>
           <a routerLink="/web" routerLinkActive="active" (click)="cerrarMenu()">Web</a>
           <a routerLink="/movil" routerLinkActive="active" (click)="cerrarMenu()">Móvil</a>
-          <a routerLink="/transformacion" routerLinkActive="active" (click)="cerrarMenu()">Transformacion</a>
-          <a routerLink="/otros" routerLinkActive="active" (click)="cerrarMenu()">Otros</a>
+
         </div>
       </div>
+      <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
 
 
     </nav>

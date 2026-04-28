@@ -1,0 +1,73 @@
+/* Icon SVG Styling */
+.icon-svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  margin-right: 8px;
+  fill: currentColor;
+  color: inherit;
+}
+
+/* For emoji-grande class (large emoji containers) - HALF SIZE */
+.emoji-grande.icon-svg {
+  height: 16px;
+  width: 16px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* For emoji class in circles - Email icon (larger to fill circle) */
+.emoji.icon-svg {
+  height: 120px;
+  width: 120px;
+  margin-right: 0;
+}
+
+/* For emoji-circle class */
+.emoji-circle.icon-svg {
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
+}
+
+/* For icono-circulo class - REDUCED */
+.icono-circulo.icon-svg {
+  height: 14px;
+  width: 14px;
+  margin-right: 0;
+}
+
+/* For inline icons in text - REDUCED */
+.icon-inline.icon-svg {
+  height: 14px;
+  width: 14px;
+  margin: 0 8px 0 0;
+}
+
+/* For inline icons in headings - REDUCED (half size) */
+.icon-inline-h1 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 0.5em;
+  width: 0.5em;
+  margin-left: 8px;
+  fill: currentColor;
+  color: inherit;
+}
+
+/* SVG stroke color for circular icons */
+.icon-svg[class*="checkmark"],
+.icon-svg[class*="plus"],
+.icon-svg[class*="star"] {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* Ensure SVGs are responsive */
+.icon-svg {
+  max-width: 100%;
+  height: auto;
+}

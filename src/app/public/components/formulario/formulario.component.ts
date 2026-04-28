@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-formulario',
@@ -9,6 +9,10 @@ import emailjs from 'emailjs-com';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormularioComponent {
+  constructor() {
+    emailjs.init('G19Tdul1-giBQos9b');
+  }
+
   enviarEmail(e: Event) {
     e.preventDefault();
 

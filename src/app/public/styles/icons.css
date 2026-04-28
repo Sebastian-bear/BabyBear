@@ -1,0 +1,61 @@
+/* Icon Styles */
+
+/* General icon styles */
+.icon-emoji,
+.icon-emoji-grande,
+.icon-check,
+.icon-checkmark,
+.icon-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Small inline icons (for lists and text) */
+.icon-check {
+  width: 1.2em;
+  height: 1.2em;
+  stroke-width: 2.5;
+  color: currentColor;
+  margin-right: 0.5em;
+}
+
+/* Checkmark emoji replacement (inside spans) */
+.icon-checkmark {
+  width: 1.2em;
+  height: 1.2em;
+  stroke-width: 2.5;
+  color: currentColor;
+}
+
+/* Large emoji replacements (card icons) */
+.icon-emoji-grande {
+  width: 4rem;
+  height: 4rem;
+  stroke-width: 1.5;
+  color: currentColor;
+  margin-bottom: 1rem;
+}
+
+/* Regular emoji size (form circles) */
+.icon-emoji {
+  width: 3rem;
+  height: 3rem;
+  stroke-width: 1.5;
+  color: currentColor;
+}
+
+/* Inline icon (next to text) */
+.icon-inline {
+  width: 1.4em;
+  height: 1.4em;
+  stroke-width: 2;
+  color: currentColor;
+  margin-right: 0.4em;
+  vertical-align: -0.2em;
+}
+
+/* Ensure SVG displays properly */
+svg {
+  stroke: currentColor;
+  fill: none;
+}

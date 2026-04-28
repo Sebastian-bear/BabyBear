@@ -145,6 +145,11 @@ p {
   color: #000000;
 }
 
+.card-app h3 .icon-inline-h1 {
+  height: 0.5em !important;
+  width: 0.5em !important;
+}
+
 .card-app .descripcion {
   font-size: 1rem;
   color: #333;

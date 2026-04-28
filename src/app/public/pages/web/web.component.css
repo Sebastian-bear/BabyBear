@@ -176,6 +176,11 @@
   color: #B8D0E3; /* puedes usar blanco o acento si prefieres */
 }
 
+.lista-beneficios li span .icon-inline {
+  height: 14px !important;
+  width: 14px !important;
+}
+
 .nota {
   margin-top: 30px;
   padding: 20px;

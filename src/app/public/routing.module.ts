@@ -7,7 +7,8 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { WebComponent } from './pages/web/web.component';
 import { MovilComponent } from './pages/movil/movil.component';
 import { TransformacionComponent } from './pages/transformacion/transformacion.component';
-import { OtrosComponent } from './pages/otros/otros.component';
+
+
 const publicRoutes: Routes = [
   { 
     path: '', 
@@ -19,7 +20,7 @@ const publicRoutes: Routes = [
       { path: 'web', component: WebComponent },
       { path: 'movil', component: MovilComponent },
       { path: 'transformacion', component: TransformacionComponent },
-      { path: 'otros', component: OtrosComponent }
+
     ]
   }
 ];

@@ -12,10 +12,25 @@
 
 /* Título */
 .conoce-titulo, .decisión-title {
-  font-size: 36px;
-  margin-bottom: 60px;
+  font-size: 42px;
+  margin-bottom: 65px;
   position: relative;
   display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+}
+
+.conoce-titulo::after {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #B8D0E3, transparent);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
 }
 
 /* Layout responsivo */
@@ -37,8 +52,14 @@
 
 .conoce-imagen img, .decisión-imagen img {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.conoce-imagen img:hover, .decisión-imagen img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 /* Contenedor de cards */
@@ -55,18 +76,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5D798E;
-  border-radius: 12px;
-  padding: 20px;
+  background: linear-gradient(135deg, #5D798E 0%, #6F8BA0 100%);
+  border-radius: 16px;
+  padding: 28px 32px;
   color: white;
   width: 100%;
   max-width: 600px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .servicio-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
 }
 
 .servicio-texto {
@@ -76,34 +101,38 @@
 
 .servicio-title {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
   color: white;
+  font-weight: 700;
+  letter-spacing: -0.2px;
 }
 
 .servicio-desc {
-  margin-top: 8px;
-  font-size: 16px;
-  color: white;
+  margin-top: 10px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
 }
 
 .servicio-button {
   margin-left: 20px;
 }
 
-/* Sin subrayado normalmente */
+/* Sin subrayado en ningún estado */
 .servicio-card .servicio-title,
 .servicio-card .servicio-desc {
-  text-decoration-line: underline;
-  text-decoration-color: #5D798E;
+  text-decoration: none;
 }
 
-/* Aparece la línea al pasar el mouse */
 .servicio-card:hover .servicio-title,
 .servicio-card:hover .servicio-desc {
-  text-decoration: underline;
-  text-decoration-color: #B8D0E3;   /* o el color que prefieras */
+  text-decoration: none;
 }
 
+/* Remover subrayado de h3 y p */
+h3, p {
+  text-decoration: none;
+}
 
 .boton {
   background-color: white;
@@ -125,12 +154,28 @@
 }
 
 /* ====== DESICIÓN ====== */
-.decisión-section{
-  background-color: #A39279;
-
+.decisión-section {
+  background: linear-gradient(135deg, #A39279 0%, #B5A491 100%);
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.decisión-titulo{
+
+.decisión-titulo {
   color: white;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.decisión-titulo::after {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #B8D0E3, transparent);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
 }
 .decisión-column {
   flex: 1;
@@ -147,27 +192,39 @@
 
 
 .decisión-column li {
-  font-size: 1.2rem;
-  line-height: 2;
+  font-size: 1.15rem;
+  line-height: 2.2;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   text-align: left;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease;
+}
 
+.decisión-column li:hover {
+  transform: translateX(8px);
 }
 
 .bullet {
-  background-color: #B8D0E3;
-  color: #B8D0E3;
+  background: linear-gradient(135deg, #B8D0E3 0%, #A0B8D3 100%);
+  color: #5D798E;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  margin-right: 15px;
+  font-size: 1.1rem;
+  margin-right: 18px;
   flex-shrink: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.decisión-column li:hover .bullet {
+  transform: scale(1.12) rotate(5deg);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 u {
@@ -184,12 +241,13 @@ u {
 }
 
 .final-card {
-  background-color: #5D798E;
-  padding: 40px 30px;
+  background: linear-gradient(135deg, #5D798E 0%, #6F8BA0 100%);
+  padding: 50px 45px;
   max-width: 1100px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .final-layout {
@@ -206,18 +264,21 @@ u {
 }
 
 .titulo-final {
-  font-size: 28px;
+  font-size: 32px;
   color: #FFFFFF;
   margin-bottom: 20px;
   font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 .descripcion-final {
-  font-size: 18px;
+  font-size: 17px;
   color: #FFFFFF;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  line-height: 1.8;
+  margin-bottom: 35px;
   max-width: 90%;
+  opacity: 0.98;
+  font-weight: 400;
 }
 
 .final-boton {
@@ -230,16 +291,23 @@ u {
   background-color: #B8D0E3;
   color: #000000;
   text-decoration: none;
-  padding: 12px 28px;
+  padding: 14px 36px;
   border-radius: 30px;
   font-size: 1rem;
   font-weight: 600;
-  transition: background-color 0.3s ease;
-  
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(93, 121, 142, 0.25);
+  letter-spacing: 0.4px;
+  border: none;
+  cursor: pointer;
 }
 
 .final-boton .button-valor:hover {
-  background-color: #A39279;
+  background-color: #5D798E;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(93, 121, 142, 0.35);
 }
 
 .final-imagen {
@@ -250,7 +318,14 @@ u {
 .final-imagen img {
   width: 100%;
   max-width: 300px;
-  border-radius: 12px;
+  border-radius: 16px;
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.final-imagen img:hover {
+  transform: translateY(-5px);
+
 }
 
 /* Responsive */
@@ -289,6 +364,7 @@ u {
   .cards-column {
     align-items: center;
     width: 100%;
+    order: 2;
   }
 
   .servicio-card {
@@ -296,8 +372,9 @@ u {
   }
 
   .conoce-imagen {
-    order: 2; /* para que aparezca debajo */
+    order: 1;
     width: 100%;
+    margin-bottom: 20px;
   }
     .decisión-layout {
     flex-direction: column;

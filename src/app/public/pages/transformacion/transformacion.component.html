@@ -1,98 +1,378 @@
 <div class="container">
     <section class="presentación">
-        <h1>Evolución digital estratégica</h1>
-        <img src="assets/ositoTransformador.png">
-        <h3>Lleva tu negocio al siguiente nivel. Modernízate o desaparece.</h3>
-        <p>Diagnostico a solo $1500</p>
-        <div class="flecha-abajo" (click)="scrollTo('precios')"></div>
-    </section>
-    <section class="precios" id="precios">
-  <div class="contenedor-precios">
-    <h2 class="titulo-precios">Potencia tu presencia digital</h2>
-    <p class="subtitulo-precios">
-      Servicios estratégicos para empresas que buscan escalar, optimizar y evolucionar su presencia digital.
-    </p>
-
-    <div class="precios-grid">
-      <!-- IZQUIERDA: CARDS DE SERVICIO -->
-      <div class="tarjetas-precio">
-      <!-- Paquete Básico -->
-        <div class="tarjeta-precio">
-          <h3>Diagnóstico único: $1,500 MXN</h3>
-          <p class="descripcion">
-            Evaluación profesional inicial con recomendaciones clave.
-            Perfecto para descubrir oportunidades antes de invertir más.
-          </p>
-        </div>
-        <div class="tarjeta-precio">
-          <h3>Desde $15,000 MXN</h3>
-          <p class="descripcion">
-            <strong>Paquete Básico:</strong><br>
-            Diagnóstico, estrategia y página web sencilla.<br>
-            Ideal para negocios que inician su transformación.
-          </p> 
-        </div>
-
-        <!-- Paquete Intermedio -->
-        <div class="tarjeta-precio">
-          <h3>Desde $30,000 MXN</h3>
-          <p class="descripcion">
-            <strong>Paquete Intermedio:</strong><br>
-            Diagnóstico + estrategia + web + app básica.<br>
-            Perfecto para empresas que quieren digitalizarse rápido.
-          </p>
-        </div>
-
-        <!-- Paquete Completo -->
-        <div class="tarjeta-precio">
-          <h3>Desde $50,000 MXN</h3>
-          <p class="descripcion">
-            <strong>Paquete Completo:</strong><br>
-            Desarrollo web, apps, CRM, automatización, soporte.<br>
-            El plan integral para escalar sin límites.
-          </p>
-        </div>
-      </div>
-
-      <!-- DERECHA: BENEFICIOS -->
-      <div class="incluye">
-        <h4>¿Qué incluye cada paquete?</h4>
-        <ul class="lista-beneficios">
-            <li><span>✔️</span> Diagnóstico integral de áreas clave del negocio</li>
-            <li><span>✔️</span> Estrategia digital alineada a tus objetivos reales</li>
-            <li><span>✔️</span> Propuestas con herramientas, procesos y automatizaciones</li>
-            <li><span>✔️</span> Capacitación personalizada y acompañamiento continuo</li>
-            <li><span>✔️</span> Revisión y mejora de tu presencia digital actual</li>
-            <li><span>✔️</span> Identificación de oportunidades de crecimiento online</li>
-            <li><span>✔️</span> Asesoría en plataformas, herramientas y recursos</li>
-            <li><span>✔️</span> Plan de acción con prioridades claras y medibles</li>
-            <li><span>✔️</span> Soporte para implementación o integración técnica</li>
-            <li><span>✔️</span> Reuniones estratégicas de seguimiento (según plan)</li>
-        </ul>
-
-        <blockquote class="nota">
-          <strong>*</strong> Cada empresa es única. Este servicio se cotiza 100% a la medida.
-        </blockquote>
-      </div>
-    </div>
-  </div>
-    </section>
-    <div class="espacio"></div>
-    <section class="cta-final espacio">
-        <div class="cta-contenedor">
-            <div class="cta-imagen">
-            <img src="assets/ositoTranformacion.png" alt="Ejemplo de página web">
+        <div class="presentacion-content">
+            <div class="presentacion-texto">
+                <h1>Ecosistema dígital para empresas</h1>
             </div>
-            <div class="cta-texto">
-            <h2>¿Estás preparado para llevar a tu negocio al siguiente nivel?</h2>
+            <div class="presentacion-imagen">
+                <img src="assets/ositoTransformador.png" alt="Osito guiando la transformacion" class="osito-hero">
+            </div>
+            <div class="presentacion-bottom">
+              <p class="presentacion-subtitulo">
+                Sin caos, sin datos perdidos, sin depender de que todo 
+                pase por ti. Construimos el sistema que hace que tu 
+                negocio funcione solo.
+              </p>
+                <div class="cta-buttons">
+                    <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="boton-cta-primary">Cuentanos tu caso</a>
+                </div>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('problema')"></div>
+    </section>
+
+    <!-- Sección: Realidad Actual -->
+    <section class="realidad-section" id="problema">
+        <h2 class="seccion-titulo">La realidad de muchos negocios hoy</h2>
+        <p class="seccion-subtitulo">¿Cuál es tu situación?</p>
+        
+        <div class="realidad-comparacion">
+            <div class="realidad-lado caos">
+                <div class="realidad-icono caos-icon">
+                    <img src="assets/sin_ecosistema.png" alt="Negocio sin ecosistema" class="realidad-ilustracion">
+                </div>
+                <h3>Sin sistema</h3>
+                <ul class="problemas-list">
+                    <li>Datos en diferentes lugares</li>
+                    <li>Procesos manuales y lentos</li>
+                    <li>Tareas duplicadas</li>
+                    <li>Difícil de escalar</li>
+                    <li>Estrés y errores constantes</li>
+                    <li>Dependencia total de ti</li>
+                </ul>
+            </div>
+
+            <div class="realidad-flecha">
+                <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#A39279"/>
+                        </marker>
+                    </defs>
+                    <path d="M 10 20 Q 50 5, 90 20" stroke="#A39279" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                    <text x="50" y="10" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="bold">Transformación</text>
+                </svg>
+            </div>
+
+            <div class="realidad-lado orden">
+                <div class="realidad-icono orden-icon">
+                    <img src="assets/con_ecosistema.png" alt="Negocio con ecosistema" class="realidad-ilustracion">
+                </div>
+                <h3>Con ecosistema</h3>
+                <ul class="beneficios-list">
+                    <li>Información centralizada</li>
+                    <li>Procesos automatizados</li>
+                    <li>Eficiencia escalable</li>
+                    <li>Decisiones con datos</li>
+                    <li>Menos errores, más velocidad</li>
+                    <li>Tu negocio trabaja por ti</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('etapas')"></div>
+    </section>
+
+    <!-- Sección: Las 4 Etapas -->
+    <section class="etapas-section" id="etapas">
+        <h2 class="seccion-titulo">La transformación en 4 etapas claras</h2>
+        <p class="seccion-subtitulo">No es magia, es un proceso probado que funciona</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-contenido">
+                    <h3>Diagnóstico profundo</h3>
+                    <p>Entendemos tu negocio, tus procesos, tus dolor es y tus objetivos reales. Aquí identificamos oportunidades que ni imaginabas.</p>
+                    <span class="timeline-badge">Semana 1-2</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-contenido">
+                    <h3>Diseño de la solución</h3>
+                    <p>Creamos una roadmap clara de cómo será tu ecosistema. Visualizas exactamente qué cambio, por qué y cuándo.</p>
+                    <span class="timeline-badge">Semana 3-4</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-contenido">
+                    <h3>Implementación smart</h3>
+                    <p>Construimos fase a fase, comenzando con lo más crítico. Tu equipo aprende mientras implementamos. Sin caos, sin paros.</p>
+                    <span class="timeline-badge">Mes 2-3</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">4</div>
+                <div class="timeline-contenido">
+                    <h3>Acompañamiento continuo</h3>
+                    <p>No te dejamos solo. Seguimos contigo, ajustamos, optimizamos y evolucionamos el sistema junto a tu crecimiento.</p>
+                    <span class="timeline-badge">Indefinido</span>
+                </div>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('resultados')"></div>
+    </section>
+
+    <!-- Sección: Antes y Después (Resultados en acción) -->
+    <section class="resultados-section" id="resultados">
+        <h2 class="seccion-titulo">Esto es lo que pasa en la práctica</h2>
+        <p class="seccion-subtitulo">Casos reales, transformaciones tangibles</p>
+
+        <div class="resultado-card resultado-card-destacada">
+            <div class="resultado-imagen">
+                <div class="icono-resultado">
+                    <img src="assets/osito_restaurante.png" alt="Osito restaurante" class="resultado-ilustracion">
+                </div>
+            </div>
+            <div class="resultado-contenido">
+                <h3>Restaurante: De papeleo a automatización total</h3>
+                <p class="antes"><strong>Antes:</strong> Reservas en WhatsApp, reservas en llamadas, reservas en Messenger. Nadie sabía qué mesas estaban libres. Los chefs no recibían órdenes claras. Perdían mesas por caos.</p>
+                <p class="despues"><strong>Después:</strong> Sistema que conecta reservas online, punto de venta, cocina e inventario. Todo automatizado. Cero confusiones. Aumentaron ventas 40% sin agregar personal.</p>
+            </div>
+        </div>
+
+        <div class="resultado-card resultado-card-destacada">
+            <div class="resultado-contenido">
+                <h3>Agencia: De proyectos dispersos a operación fluida</h3>
+                <p class="antes"><strong>Antes:</strong> Cada cliente en plataforma diferente. Nadie sabía quién hacía qué. Proyectos atrasados. Cliente no veía avance. Equipo quemado.</p>
+                <p class="despues"><strong>Después:</strong> Un único sistema que conecta clientes, proyectos, equipo y reportes. Transparencia total. Proyectos entregados a tiempo. Clientes más satisfechos. Equipo más feliz.</p>
+            </div>
+            <div class="resultado-imagen">
+                <div class="icono-resultado">
+                    <img src="assets/osito_agencia.png" alt="Osito agencia" class="resultado-ilustracion">
+                </div>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('impacto')"></div>
+    </section>
+
+    <!-- Sección: Impacto mensurable -->
+    <section class="impacto-section" id="impacto">
+        <h2 class="seccion-titulo">El impacto que ves en números</h2>
+        <p class="seccion-subtitulo">Esto no es promesa, es matemática</p>
+
+        <div class="impacto-grid">
+            <div class="impacto-card">
+                <div class="impacto-numero">30-50%</div>
+                <p class="impacto-descripcion">Reducción en tareas manuales</p>
+                <span class="impacto-detalle">Tu equipo hace lo que importa</span>
+            </div>
+
+            <div class="impacto-card">
+                <div class="impacto-numero">40-60%</div>
+                <p class="impacto-descripcion">Aumento en capacidad</p>
+                <span class="impacto-detalle">Sin contratar más gente</span>
+            </div>
+
+            <div class="impacto-card">
+                <div class="impacto-numero">2-4h</div>
+                <p class="impacto-descripcion">Tiempo ahorrado diario</p>
+                <span class="impacto-detalle">Por persona, todos los días</span>
+            </div>
+
+            <div class="impacto-card">
+                <div class="impacto-numero">99%</div>
+                <p class="impacto-descripcion">Menos errores operacionales</p>
+                <span class="impacto-detalle">Los procesos los atrapa antes</span>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('planes')"></div>
+    </section>
+
+    <!-- Sección: Planes mejorada -->
+
+    <!-- Sección: Planes mejorada -->
+    <section class="planes-section" id="planes">
+        <h2 class="seccion-titulo">Planes de transformación</h2>
+        <p class="seccion-subtitulo">Elige según dónde estés y hacia dónde vas</p>
+        <div class="plan-entrada">
+  <div class="plan-entrada-badge">¿No sabes por dónde empezar?</div>
+  <h3 class="plan-entrada-titulo">Diagnóstico + Hoja de ruta</h3>
+  <p class="plan-entrada-desc">
+    Antes de invertir en un sistema completo, entendemos 
+    juntos cómo opera tu negocio hoy, qué está frenando 
+    tu crecimiento y cuál es el camino más inteligente 
+    hacia adelante. Te entregamos un plan claro, con 
+    prioridades y costos reales. Sin compromiso de continuar.
+  </p>
+  <div class="plan-entrada-precio">$1,500 MXN</div>
+  <p class="plan-entrada-nota">
+    Si después decides transformarte con nosotros, 
+    este costo se descuenta del proyecto.
+  </p>
+  <a [routerLink]="'/contacto'" fragment="formulario-contacto" 
+     class="plan-entrada-boton">Quiero mi diagnóstico</a>
+</div>
+        <div class="planes-grid">
+            <div class="plan-card plan-base">
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Transformación Base</h3>
+                    <p class="plan-lema">Primeros pasos sólidos</p>
+                </div>
+                <div class="plan-precio">Desde $15,000 MXN</div>
+                <div class="plan-descripcion">
+                    Ideal para negocios que necesitan orden inmediato y una base escalable.
+                </div>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Diagnóstico completo</li>
+                    <li><span class="check">✓</span> Estructura digital inicial</li>
+                    <li><span class="check">✓</span> Procesos clave organizados</li>
+                    <li><span class="check">✓</span> Sistema básico de control</li>
+                    <li><span class="check">✓</span> Automatizaciones iniciales</li>
+                    <li><span class="check">✓</span> Capacitación básica</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton">Conocer más</a>
+            </div>
+
+            <div class="plan-card plan-expansion plan-recomendado">
+                <div class="plan-badge">Más popular</div>
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Transformación Expansion</h3>
+                    <p class="plan-lema">Acelera tu crecimiento</p>
+                </div>
+                <div class="plan-precio">Desde $30,000 MXN</div>
+                <div class="plan-descripcion">
+                    Para empresas con movimiento que buscan optimizar, automatizar y escalar inteligentemente.
+                </div>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Todo lo de Base +</li>
+                    <li><span class="check">✓</span> Integración avanzada de procesos</li>
+                    <li><span class="check">✓</span> Automatizaciones intermedias</li>
+                    <li><span class="check">✓</span> Sistemas conectados</li>
+                    <li><span class="check">✓</span> Analytics y reportes</li>
+                    <li><span class="check">✓</span> Soporte prioritario</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton plan-boton-destaque">Transformar ahora</a>
+            </div>
+
+            <div class="plan-card plan-completo">
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Ecosistema Completo</h3>
+                    <p class="plan-lema">Sistema completo</p>
+                </div>
+                <div class="plan-precio">Desde $50,000 MXN</div>
+                <div class="plan-descripcion">
+                    Solución integral para empresas que quieren escalar en serio con automatización total.
+                </div>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Todo lo de Expansion +</li>
+                    <li><span class="check">✓</span> Automatización avanzada</li>
+                    <li><span class="check">✓</span> Inteligencia artificial aplicada</li>
+                    <li><span class="check">✓</span> Sistemas personalizados</li>
+                    <li><span class="check">✓</span> Acompañamiento continuo con respuesta garantizada</li>
+                    <li><span class="check">✓</span> Evolución continua</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton">Comenzar empresa</a>
+            </div>
+        </div>
+
+        <div class="plan-nota">
+            <h4>✨ Nota importante</h4>
             <p>
-                Si quieres crecer, ya no basta con trabajar más: hay que trabajar mejor.
-Tu negocio merece una estructura digital que te permita avanzar con claridad, control y confianza.
-Cotiza sin compromiso. El primer paso no es gastar… es decidir evolucionar.
-            </p>
-            <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
+  Cada negocio es diferente y cada presupuesto también. 
+  Estos números son punto de partida, no límites. Si tienes 
+  un proyecto en mente y no sabes si encaja, escríbenos. 
+  Siempre encontramos el camino.
+</p>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('componentes')"></div>
+    </section>
+
+    <!-- Sección: Componentes extras -->
+    <section class="componentes-section" id="componentes">
+        <h2 class="seccion-titulo">Suma componentes cuando los necesites</h2>
+        <p class="seccion-subtitulo">El ecosistema crece contigo</p>
+
+        <div class="componentes-grid">
+            <div class="componente-card">
+                <div class="componente-icono">
+                    <img src="assets/ositoRM.png" alt="Sitio Web" class="componente-ilustracion">
+                </div>
+                <h3>Sitio Web</h3>
+                <p>Presencia profesional que vende 24/7. Rápido, moderno y optimizado.</p>
+                <span class="componente-precio">Desde $2,000 MXN</span>
+            </div>
+
+            <div class="componente-card">
+                <div class="componente-icono">
+                    <img src="assets/ositoRA.png" alt="App Móvil" class="componente-ilustracion">
+                </div>
+                <h3>App Móvil</h3>
+                <p>Tu negocio en el bolsillo de tus clientes. iOS, Android o ambos.</p>
+                <span class="componente-precio">Desde $18,000 MXN</span>
+            </div>
+
+            <div class="componente-card">
+                <div class="componente-icono">
+                    <img src="assets/ositoIA.png" alt="Inteligencia Artificial" class="componente-ilustracion">
+                </div>
+                <h3>Inteligencia Artificial</h3>
+                <p>Chatbots, análisis predictivo, reconocimiento biométrico. Decisiones con datos.</p>
+                <span class="componente-precio">A medida</span>
+            </div>
+
+            <div class="componente-card">
+                <div class="componente-icono">
+                    <img src="assets/ositoRV.png" alt="Realidad Aumentada/Virtual" class="componente-ilustracion">
+                </div>
+                <h3>Realidad Aumentada/Virtual</h3>
+                <p>Experiencias inmersivas para marketing, capacitación o productividad.</p>
+                <span class="componente-precio">A medida</span>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('proceso-decision')"></div>
+    </section>
+
+    <!-- Sección: Proceso de decisión -->
+    <section class="proceso-section" id="proceso-decision">
+        <h2 class="seccion-titulo">¿Cómo sabemos qué es lo tuyo?</h2>
+        <p class="seccion-subtitulo">Un proceso simple y honesto</p>
+
+        <div class="proceso-content">
+            <div class="proceso-paso">
+                <div class="paso-numero">1</div>
+                <h3>Conversación inicial</h3>
+                <p>Platícanos tu negocio, tus retos y tus sueños. Escuchamos de verdad.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">2</div>
+                <h3>Análisis detallado</h3>
+                <p>Hacemos un diagnóstico profundo de tu operación. Identificamos oportunidades.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">3</div>
+                <h3>Propuesta personalizada</h3>
+                <p>Te presentamos exactamente qué haremos, cuánto costará y cuánto tiempo tomará.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">4</div>
+                <h3>Transformación</h3>
+                <p>Implementamos fase a fase. Tu equipo aprende. Los cambios se sienten.</p>
+            </div>
+        </div>
+        <div class="flecha-abajo" (click)="scrollTo('final-transformacion')"></div>
+    </section>
+
+    <!-- Sección: Call to action final -->
+    <section class="final-transformacion" id="final-transformacion">
+        <div class="final-contenido">
+          <h2>Tu negocio tiene potencial.<br>La tecnología correcta lo libera.</h2>
+<p>
+  No necesitas saberlo todo antes de empezar. Solo necesitas 
+  dar el primer paso con alguien que se involucra de verdad. 
+  Hablemos sin compromiso.
+</p>
+            <div class="final-botones">
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="boton-final-primary">Cuentanos tu caso</a>
+                <a [routerLink]="'/nosotros'" class="boton-final-secondary">¿Quienes somos?</a>
             </div>
         </div>
     </section>
-
 </div>
