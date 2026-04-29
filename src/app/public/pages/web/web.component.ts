@@ -15,10 +15,10 @@ export class WebComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.titleService.setTitle('Desarrollo Web Profesional - Orsetto');
-    this.metaTags.updateTag({ name: 'description', content: 'Sitios web rápidos, funcionales y atractivos. Tu mejor vendedor trabajando 24/7 para tu negocio.' });
-    this.metaTags.updateTag({ property: 'og:title', content: 'Desarrollo Web Profesional - Orsetto' });
-    this.metaTags.updateTag({ property: 'og:description', content: 'Sitios web rápidos, funcionales y atractivos. Tu mejor vendedor trabajando 24/7 para tu negocio.' });
+    this.titleService.setTitle('Desarrollo Web Estratégico - Orsetto');
+    this.metaTags.updateTag({ name: 'description', content: 'Sitios web rápidos, claros y orientados a conversión. Una presencia digital profesional que explica, convence y genera oportunidades reales.' });
+    this.metaTags.updateTag({ property: 'og:title', content: 'Desarrollo Web Estratégico - Orsetto' });
+    this.metaTags.updateTag({ property: 'og:description', content: 'Sitios web rápidos, claros y orientados a conversión. Una presencia digital profesional que explica, convence y genera oportunidades reales.' });
   }
   @ViewChild('flecha') flechaElement!: ElementRef;
   

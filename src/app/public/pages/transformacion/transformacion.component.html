@@ -1,20 +1,33 @@
 <div class="container">
-    <section class="presentación">
-        <div class="presentacion-content">
-            <div class="presentacion-texto">
+    <section class="presentación" id="hero">
+        <div class="hero-shell">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Transformación digital</p>
                 <h1>Ecosistema dígital para empresas</h1>
-            </div>
-            <div class="presentacion-imagen">
-                <img src="assets/ositoTransformador.png" alt="Osito guiando la transformacion" class="osito-hero">
-            </div>
-            <div class="presentacion-bottom">
-              <p class="presentacion-subtitulo">
-                Sin caos, sin datos perdidos, sin depender de que todo 
-                pase por ti. Construimos el sistema que hace que tu 
-                negocio funcione solo.
-              </p>
+                <p class="presentacion-subtitulo">
+                    Sin caos, sin datos perdidos, sin depender de que todo 
+                    pase por ti. Construimos el sistema que hace que tu 
+                    negocio funcione solo.
+                </p>
                 <div class="cta-buttons">
                     <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="boton-cta-primary">Cuentanos tu caso</a>
+                    <button type="button" class="boton-cta-secondary" (click)="scrollTo('planes')">Explorar planes</button>
+                </div>
+                <div class="hero-tags">
+                    <span>Automatización</span>
+                    <span>Datos</span>
+                    <span>Escalabilidad</span>
+                    <span>Sistemas</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-frame">
+                    <img src="assets/ositoTransformador.png" alt="Osito guiando la transformacion" class="osito-hero">
+                </div>
+                <div class="hero-stat">
+                    <strong>Tu negocio trabajando 24/7</strong>
+                    <span>Más claridad, menos caos y procesos que siguen avanzando aunque tú no estés encima de todo.</span>
                 </div>
             </div>
         </div>
@@ -42,16 +55,10 @@
                 </ul>
             </div>
 
-            <div class="realidad-flecha">
-                <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <polygon points="0 0, 10 3, 0 6" fill="#A39279"/>
-                        </marker>
-                    </defs>
-                    <path d="M 10 20 Q 50 5, 90 20" stroke="#A39279" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                    <text x="50" y="10" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="bold">Transformación</text>
-                </svg>
+            <div class="realidad-flecha" aria-hidden="true">
+                <span>Fricción</span>
+                <div class="realidad-linea"></div>
+                <span>Conversión</span>
             </div>
 
             <div class="realidad-lado orden">
@@ -295,6 +302,7 @@
                 <h3>Sitio Web</h3>
                 <p>Presencia profesional que vende 24/7. Rápido, moderno y optimizado.</p>
                 <span class="componente-precio">Desde $2,000 MXN</span>
+                <a [routerLink]="'/web'" class="componente-boton">Ver página web</a>
             </div>
 
             <div class="componente-card">
@@ -304,6 +312,7 @@
                 <h3>App Móvil</h3>
                 <p>Tu negocio en el bolsillo de tus clientes. iOS, Android o ambos.</p>
                 <span class="componente-precio">Desde $18,000 MXN</span>
+                <a [routerLink]="'/movil'" class="componente-boton">Ver app móvil</a>
             </div>
 
             <div class="componente-card">

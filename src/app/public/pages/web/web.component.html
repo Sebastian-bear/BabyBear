@@ -1,120 +1,403 @@
 <div class="container">
-    <section class="presentación">
-        <h1>Sistema Web Profesional</h1>
-        <img src="assets/ositoDesarrolloWeb.png">
-        <h3>Si tu negocio no tiene una web moderna, rápida y que inspire confianza, estás perdiendo ventas incluso mientras lees esto. Yo diseño páginas que cautivan, informan y convierten. Porque si no estás en la web, no existes.</h3>
-        <p>Comienza con el cambio desde $1500</p>
-        <div class="flecha-abajo" (click)="scrollTo('precios')"></div>
-    </section>
-    <section class="precios" id="precios">
-        <div class="contenedor-precios">
-            <h2 class="titulo-precios">Potencia tu presencia digital</h2>
-            <p class="subtitulo-precios">
-            Soluciones web a tu medida con diseño profesional y enfoque estratégico.
-            </p>
+    <section class="hero-section">
+        <div class="hero-shell">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Desarrollo web estratégico</p>
+                <h1>Sistema web profesional.</h1>
+                <p class="hero-text">
+                    Diseñamos páginas rápidas, claras y memorables para que tu marca se vea seria, tu oferta se entienda en segundos y el usuario sepa exactamente qué hacer después.
+                </p>
 
-            <div class="precios-grid">
-            <!-- LADO IZQUIERDO: CARDS DE PRECIOS -->
-            <div class="tarjetas-precio">
-
-                <div class="tarjeta-precio">
-                    <h3>Landing Page estratégica</h3>
-                    <p class="descripcion">
-                    Ideal para campañas o negocios que recién comienzan. Una sola sección potente que informa y convierte.
-                    </p>
-                    <p><strong>Desde $2,000 MXN</strong></p>
+                <div class="hero-actions">
+                    <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="hero-button hero-button-primary">Cotizar mi web</a>
+                    <button type="button" class="hero-button hero-button-secondary" (click)="scrollTo('planes')">Explorar planes</button>
                 </div>
 
-                <div class="tarjeta-precio">
-                    <h3>Sitio institucional simple</h3>
-                    <p class="descripcion">
-                    Perfecto para PYMEs, profesionistas y portafolios. Incluye varias secciones con diseño limpio y moderno.
-                    </p>
-                    <p><strong>Desde $4,000 MXN</strong></p>
+                <div class="hero-tags">
+                    <span>UX/UI</span>
+                    <span>SEO</span>
+                    <span>Responsive</span>
+                    <span>Conversión</span>
                 </div>
-
-                <div class="tarjeta-precio">
-                    <h3>Web con funcionalidades</h3>
-                    <p class="descripcion">
-                    Ideal si necesitas formularios, blog, reservas, o funciones adicionales personalizadas.
-                    </p>
-                    <p><strong>Desde $6,500 MXN</strong></p>
-                </div>
-
-                <div class="tarjeta-precio">
-                    <h3>Embudo + Contenido Premium</h3>
-                    <p class="descripcion">
-                    Web enfocada en ventas y marketing digital. Incluye estrategia, contenido y automatizaciones simples.
-                    </p>
-                    <p><strong>Desde $9,000 MXN</strong></p>
-                </div>
-
-                <div class="tarjeta-precio">
-                    <h3>E-commerce simple</h3>
-                    <p class="descripcion">
-                    Tienda en línea funcional con pasarela de pago, catálogo y seguimiento básico de pedidos.
-                    </p>
-                    <p><strong>Desde $10,000 MXN</strong></p>
-                </div>
-
-                <div class="tarjeta-precio">
-                    <h3>Web personalizada o SaaS</h3>
-                    <p class="descripcion">
-                    Desarrollo avanzado con lógica compleja: dashboards, usuarios, sistemas internos o apps web.
-                    </p>
-                    <p><strong>Desde $18,000 MXN</strong></p>
-                </div>
-
-                </div>
-
-            <!-- LADO DERECHO: INCLUYE -->
-            <div class="incluye">
-                <h4>Todos los paquetes incluyen:</h4>
-                    <ul class="lista-beneficios">
-                        <li><span>✔️</span> Estrategia UX/UI centrada en conversión</li>
-                        <li><span>✔️</span> Diagnóstico de marca / objetivos</li>
-                        <li><span>✔️</span> Optimización SEO básica</li>
-                        <li><span>✔️</span> Adaptado a móvil (responsive)</li>
-                        <li><span>✔️</span> Integración con redes sociales y WhatsApp</li>
-                        <li><span>✔️</span> Formularios inteligentes</li>
-                        <li><span>✔️</span> Capacitación o guía de uso</li>
-                        <li><span>✔️</span> Hosting y dominio opcionales</li>
-                        <li><span>✔️</span> Diseño visual coherente con branding</li>
-                    </ul>
-
-                    <h4>Extras opcionales:</h4>
-                    <ul class="lista-beneficios">
-                        <li><span><img src="assets/icons/globe.svg" class="icon-inline" alt="Globe"></span> Optimización para Google Core Web Vitals</li>
-                        <li><span><img src="assets/icons/chart.svg" class="icon-inline" alt="Chart"></span> Dashboard de analítica básica</li>
-                        <li><span><img src="assets/icons/refresh.svg" class="icon-inline" alt="Refresh"></span> Automatizaciones con CRM o correo</li>
-                        <li><span><img src="assets/icons/target.svg" class="icon-inline" alt="Target"></span> Embudos de venta personalizados</li>
-                        <li><span><img src="assets/icons/robot.svg" class="icon-inline" alt="Robot"></span> Chatbots con IA o atención programada</li>
-                    </ul>
-
-                    <blockquote class="nota">
-                    Cada proyecto es único. Estos precios sirven como base para adaptar la solución exacta que tú o tu negocio necesita.
-                    </blockquote>
-
             </div>
+
+            <div class="hero-visual">
+                <div class="hero-frame">
+                    <img src="assets/ositoDesarrolloWeb.png" alt="Osito desarrollando una web profesional" class="hero-image">
+                </div>
+                <div class="hero-stat">
+                    <strong>Tu web trabajando 24/7</strong>
+                    <span>Más claridad, más confianza y más oportunidades reales para tu negocio.</span>
+                </div>
             </div>
         </div>
+
+        <div class="flecha-abajo" #flecha (click)="scrollTo('problema')"></div>
     </section>
-    <div class="espacio"></div>
-    <section class="cta-final espacio">
+
+    <section class="problema-section" id="problema">
+        <h2 class="seccion-titulo">El problema: muchas webs se ven bien, pero no hacen nada</h2>
+        <p class="seccion-subtitulo">No basta con existir en internet. Tu sitio debe ordenar el mensaje, reducir fricción y abrir conversaciones.</p>
+
+        <div class="problema-grid">
+            <article class="contraste-card contraste-caos">
+                <div class="contraste-card-header">
+                    <img src="assets/icons/error-circle.svg" alt="Problemas comunes" class="contraste-icon">
+                    <div>
+                        <h3>Cuando la web estorba</h3>
+                        <p>El sitio existe, pero no ayuda a vender.</p>
+                    </div>
+                </div>
+
+                <ul class="contraste-list">
+                    <li>La marca no se entiende en segundos</li>
+                    <li>Los servicios están dispersos o mal explicados</li>
+                    <li>El sitio carga lento o se siente viejo</li>
+                    <li>El usuario no sabe qué hacer después</li>
+                    <li>Se pierden leads por falta de confianza</li>
+                </ul>
+            </article>
+
+            <div class="contraste-puente">
+                <span>Fricción</span>
+                <div class="contraste-linea"></div>
+                <span>Conversión</span>
+            </div>
+
+            <article class="contraste-card contraste-orden">
+                <div class="contraste-card-header">
+                    <img src="assets/icons/check-circle.svg" alt="Soluciones efectivas" class="contraste-icon">
+                    <div>
+                        <h3>Cuando la web convierte</h3>
+                        <p>La experiencia guía hacia una acción clara.</p>
+                    </div>
+                </div>
+
+                <ul class="contraste-list">
+                    <li>Explica rápido el valor real de tu negocio</li>
+                    <li>Ordena el contenido para tomar decisiones</li>
+                    <li>Genera confianza visual y técnica</li>
+                    <li>Facilita el contacto y el seguimiento</li>
+                    <li>Trabaja aunque tú no estés conectado</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('solucion')"></div>
+    </section>
+
+    <section class="solucion-section" id="solucion">
+        <h2 class="seccion-titulo">La solución: una estructura pensada para claridad y conversión</h2>
+        <p class="seccion-subtitulo">No improvisamos pantallas. Organizamos el mensaje, el recorrido y el objetivo de negocio.</p>
+
+        <div class="proceso-content solucion-proceso">
+            <div class="proceso-paso">
+                <div class="paso-numero">1</div>
+                <h3>Diagnóstico</h3>
+                <p>Entendemos qué vendes, a quién le hablas y qué obstáculo hoy te está frenando.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">2</div>
+                <h3>Arquitectura</h3>
+                <p>Definimos el contenido, los recorridos y el orden visual para que el usuario nunca se pierda.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">3</div>
+                <h3>Diseño</h3>
+                <p>Construimos una interfaz que respira marca, transmite profesionalismo y dirige la atención.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">4</div>
+                <h3>Optimización</h3>
+                <p>Velocidad, SEO base, responsive y medición para que la web siga mejorando con el tiempo.</p>
+            </div>
+        </div>
+
+        <div class="solucion-highlight">
+            <div class="solucion-highlight-label">El resultado</div>
+            <p>Una web que no solo se ve profesional: también explica, guía y produce oportunidades reales.</p>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('caso-uso')"></div>
+    </section>
+
+    <section class="caso-section" id="caso-uso">
+        <h2 class="seccion-titulo">Caso de uso: una constructora que necesita generar confianza desde el primer clic</h2>
+        <p class="seccion-subtitulo">Cuando el proyecto es serio, la web tiene que demostrarlo antes de que el cliente pregunte.</p>
+
+        <div class="caso-layout">
+            <div class="caso-media">
+                <div class="caso-imagen">
+                    <img src="assets/ositoConstructor.png" alt="Ejemplo de sitio web para constructora" class="caso-visual">
+                </div>
+
+                <div class="caso-flow">
+                    <span>Anuncio</span>
+                    <span>Landing</span>
+                    <span>WhatsApp</span>
+                    <span>Visita</span>
+                    <span>Cotización</span>
+                </div>
+            </div>
+
+            <div class="caso-copy">
+                <h3>De catálogo invisible a máquina de leads</h3>
+                <p>
+                    Una constructora no necesita solo “presencia”. Necesita una página que explique sus servicios, muestre proyectos, responda dudas frecuentes y convierta la intención en contacto.
+                </p>
+
+                <ul class="caso-lista">
+                    <li>El cliente entiende rápido qué tipo de obra realizan</li>
+                    <li>Los proyectos construyen autoridad y credibilidad</li>
+                    <li>El formulario filtra mejor las solicitudes reales</li>
+                    <li>La web reduce llamadas repetidas y dudas operativas</li>
+                </ul>
+
+                <blockquote class="caso-frase">
+                    La web no reemplaza al vendedor; llega antes que él.
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('promocion-constructora')"></div>
+        <div class="espacio"></div>
+        <div class="anuncio-card">
+  <div class="anuncio-badge">Disponible ahora · Una sola venta</div>
+  <div class="anuncio-contenido">
+    <h3 class="anuncio-titulo">
+      Sitio completo para constructora o inmobiliaria — 
+      listo en 48 horas
+    </h3>
+    <p class="anuncio-descripcion">
+      Ya desarrollado y funcionando: calculadora de 
+      cotizaciones · panel de administración · portafolio 
+      de proyectos · formularios y completamente bilingüe 
+      español/inglés. Solo ponle el nombre de tu empresa.
+    </p>
+    <div class="anuncio-features">
+      <span>Calculadora de cotizaciones</span>
+      <span>Panel de admin</span>
+      <span>Bilingüe ES/EN</span>
+      <span>Back-end incluido</span>
+    </div>
+  </div>
+  <a [routerLink]="'/contacto'" 
+     fragment="formulario-contacto" 
+     class="anuncio-boton">Me interesa →</a>
+</div>
+    </section>
+    <section class="impacto-section" id="impacto">
+        <h2 class="seccion-titulo">El impacto que ves en números</h2>
+        <p class="seccion-subtitulo">Esto no es promesa, es matemática</p>
+
+        <div class="impacto-grid">
+            <div class="impacto-card">
+  <div class="impacto-numero">3 seg</div>
+  <p class="impacto-descripcion">Para causar primera impresión</p>
+  <span class="impacto-detalle">O el usuario se va para siempre</span>
+</div>
+
+<div class="impacto-card">
+  <div class="impacto-numero">75%</div>
+  <p class="impacto-descripcion">Juzga credibilidad por el diseño</p>
+  <span class="impacto-detalle">Antes de leer una sola línea</span>
+</div>
+
+<div class="impacto-card">
+  <div class="impacto-numero">24/7</div>
+  <p class="impacto-descripcion">Tu negocio visible</p>
+  <span class="impacto-detalle">Sin descansos ni días festivos</span>
+</div>
+
+<div class="impacto-card">
+  <div class="impacto-numero">+40%</div>
+  <p class="impacto-descripcion">Más confianza percibida</p>
+  <span class="impacto-detalle">Con diseño profesional vs. sin él</span>
+</div>
+
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('planes')"></div>
+    </section>
+
+    <section class="planes-section" id="planes">
+        <h2 class="seccion-titulo">Planes de desarrollo web</h2>
+        <p class="seccion-subtitulo">Empieza con la escala que tiene sentido hoy y deja preparada la base para crecer mañana.</p>
+
+        <div class="planes-grid">
+            <article class="plan-card plan-base">
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Landing de captación</h3>
+                    <p class="plan-lema">Ideal para campañas o validación rápida</p>
+                </div>
+                <div class="plan-precio">Desde $2,500 MXN</div>
+                <p class="plan-descripcion">Una página enfocada en un objetivo: atraer, explicar y lograr el primer contacto.</p>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Diseño de una sola página</li>
+                    <li><span class="check">✓</span> Mensaje claro y directo</li>
+                    <li><span class="check">✓</span> Formulario o WhatsApp</li>
+                    <li><span class="check">✓</span> Responsive y optimización base</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton">Quiero esta opción</a>
+            </article>
+
+            <article class="plan-card plan-recomendado">
+                <div class="plan-badge">Más elegido</div>
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Sitio corporativo estratégico</h3>
+                    <p class="plan-lema">La base ideal para una marca seria</p>
+                </div>
+                <div class="plan-precio">Desde $5,500 MXN</div>
+                <p class="plan-descripcion">Varias secciones, narrativa de marca, servicio claro y una presentación sólida para generar confianza.</p>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Home más secciones internas</li>
+                    <li><span class="check">✓</span> Estructura orientada a conversión</li>
+                    <li><span class="check">✓</span> SEO base y carga optimizada</li>
+                    <li><span class="check">✓</span> Integración con redes y contacto</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton plan-boton-destaque">Cotizar esta base</a>
+            </article>
+
+            <article class="plan-card plan-completo">
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Web con funcionalidades</h3>
+                    <p class="plan-lema">Cuando el sitio debe hacer algo más</p>
+                </div>
+                <div class="plan-precio">Desde $8,500 MXN</div>
+                <p class="plan-descripcion">Pensado para formularios avanzados, catálogos, reservas, flujos especiales o lógica a medida.</p>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Componentes dinámicos</li>
+                    <li><span class="check">✓</span> Estructura modular</li>
+                    <li><span class="check">✓</span> Funciones personalizadas</li>
+                    <li><span class="check">✓</span> Escalable para crecer</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton">Hablar de mi proyecto</a>
+            </article>
+
+            <article class="plan-card">
+                <div class="plan-header">
+                    <h3 class="plan-nombre">Plataforma a medida</h3>
+                    <p class="plan-lema">Para procesos complejos y visión de largo plazo</p>
+                </div>
+                <div class="plan-precio">Desde $15,000 MXN</div>
+                <p class="plan-descripcion">Dashboards, usuarios, automatización o sistemas internos pensados desde la operación real.</p>
+                <ul class="plan-incluye">
+                    <li><span class="check">✓</span> Arquitectura personalizada</li>
+                    <li><span class="check">✓</span> Integraciones avanzadas</li>
+                    <li><span class="check">✓</span> Medición y control</li>
+                    <li><span class="check">✓</span> Evolución continua</li>
+                </ul>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="plan-boton">Construir a medida</a>
+            </article>
+        </div>
+
+        <div class="plan-nota">
+            <h4>✨ Nota importante</h4>
+            <p>
+                Cada negocio es diferente. Estos rangos son una base para tomar decisiones con claridad, no un techo para tu proyecto.
+            </p>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('ecosistema')"></div>
+    </section>
+
+    <section class="ecosistema-section" id="ecosistema">
+        <h2 class="seccion-titulo">También podría interesar</h2>
+        <p class="seccion-subtitulo">El ecosistema crece contigo</p>
+
+        <div class="ecosistema-grid">
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoRM.png" alt="Ecosistema digital" class="ecosistema-visual">
+                </div>
+                <h3>Ecosistema digital</h3>
+                <p>Presencia profesional que vende 24/7. Rápido, moderno y optimizado.</p>
+                <span class="ecosistema-precio">Desde $15,000 MXN</span>
+                <a [routerLink]="'/transformacion'" fragment="hero" class="ecosistema-boton">Ver ecosistema digital</a>
+            </article>
+
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoRA.png" alt="App móvil" class="ecosistema-visual">
+                </div>
+                <h3>App móvil</h3>
+                <p>Lleva tu servicio al bolsillo de tus clientes con iOS o Android.</p>
+                <span class="ecosistema-precio">Desde $18,000 MXN</span>
+                <a [routerLink]="'/movil'" class="ecosistema-boton">Ver plan móvil</a>
+            </article>
+
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoIA.png" alt="Inteligencia artificial" class="ecosistema-visual">
+                </div>
+                <h3>Inteligencia artificial</h3>
+                <p>Automatización, asistentes y análisis para responder más rápido y decidir mejor.</p>
+                <span class="ecosistema-precio">A medida</span>
+            </article>
+
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoRV.png" alt="Realidad aumentada y virtual" class="ecosistema-visual">
+                </div>
+                <h3>Realidad aumentada / virtual</h3>
+                <p>Experiencias inmersivas para mostrar productos, entrenar o sorprender.</p>
+                <span class="ecosistema-precio">A medida</span>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('diferencia')"></div>
+    </section>
+
+    <section class="diferencia-section" id="diferencia">
+        <h2 class="seccion-titulo">Lo que marca la diferencia frente al resto</h2>
+        <p class="seccion-subtitulo">La propuesta no es “hacer una web”. Es diseñar una herramienta de negocio con intención.</p>
+
+        <div class="diferencia-grid">
+            <article class="diferencia-card">
+                <img src="assets/icons/brain.svg" alt="Estrategia" class="diferencia-icono">
+                <h3>Estrategia antes que decoración</h3>
+                <p>Primero entendemos tu negocio y después construimos el sitio.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <img src="assets/icons/globe.svg" alt="Arquitectura" class="diferencia-icono">
+                <h3>Arquitectura clara</h3>
+                <p>Cada sección responde a una duda real del usuario y lo acerca a contactarte.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <img src="assets/icons/trending-up.svg" alt="Rendimiento" class="diferencia-icono">
+                <h3>Rendimiento y SEO base</h3>
+                <p>La web no solo debe verse bien; también debe cargar rápido y ser fácil de encontrar.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <img src="assets/icons/refresh.svg" alt="Acompañamiento" class="diferencia-icono">
+                <h3>Acompañamiento real</h3>
+                <p>No te entregamos algo frío y ya. Ajustamos, mejoramos y seguimos pensando contigo.</p>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('final-web')"></div>
+    </section>
+
+    <section class="cta-final" id="final-web">
         <div class="cta-contenedor">
             <div class="cta-imagen">
-            <img src="assets/ositoWeb.png" alt="Ejemplo de página web">
+                <img src="assets/ositoWeb.png" alt="Ejemplo de página web">
             </div>
             <div class="cta-texto">
-            <h2>¿Listo para transformar tu presencia online?</h2>
-            <p>
-                ¿Tienes una idea en mente pero no sabes si es posible? Escríbenos.  
-Cotizamos sin compromiso y te explico todo con claridad.  
-No tienes que saber de tecnología. Solo tienes que soñar en grande.
-            </p>
-            <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
+                <h2>¿Listo para transformar tu presencia online?</h2>
+                <p>
+                    ¿Tienes una idea en mente pero no sabes si es posible? Escríbenos.
+                    Cotizamos sin compromiso y te explico todo con claridad.
+                    No tienes que saber de tecnología. Solo tienes que soñar en grande.
+                </p>
+                <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="boton-cta">Cotiza tu proyecto</a>
             </div>
         </div>
     </section>
-
 </div>

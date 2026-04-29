@@ -148,11 +148,11 @@ h1 {
 
 /* ====== OSITO ====== */
 .osito {
-  width: 575px;
-  height: 575px;
+  width: 610px;
+  height: 610px;
   position: absolute;
   right: 5%;
-  top: 47%;
+  top: 52%;
   transform: translateY(-50%);
   z-index: 0;
   object-fit: contain;
@@ -660,7 +660,7 @@ h1 {
 @media (max-width: 1100px) {
   .osito {
     right: 10%;
-    width: 250px;
+    width: 280px;
     height: auto;
   }
 }
@@ -674,7 +674,7 @@ h1 {
     right: 5px;
     width: 200px;
     height: auto;
-    z-index: -1;
+    z-index: 1;
   }
   .card {
         width: calc(50% - 30px);
@@ -708,7 +708,7 @@ h1 {
 
   .osito {
     position: relative;
-    width: 200px;
+    width: 220px;
     height: auto;
     margin: 0 auto;
     right: auto;
@@ -718,6 +718,7 @@ h1 {
     max-width: 100%;
     display: block;
     margin-bottom: 20px;
+    z-index: 1;
   }
 
   .flecha-abajo {
@@ -803,7 +804,7 @@ h1 {
   }
 
   .osito {
-    width: 180px;
+    width: 195px;
   }
 }
 
@@ -813,7 +814,7 @@ h1 {
   }
 
   .osito {
-    width: 150px;
+    width: 165px;
   }
 }
 
