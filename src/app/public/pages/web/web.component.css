@@ -1235,7 +1235,7 @@ section {
 }
 
 .cta-imagen img:hover {
-  transform: scale(1.02);
+  transform: scale(2);
 }
 
 .cta-texto {

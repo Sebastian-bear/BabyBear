@@ -1,70 +1,476 @@
 <div class="container">
-    <section class="presentación">
-        <img src="assets/ositoDesarrolloMovil.png">
-        <h1>Aplicaciones móviles</h1>
-        <h3>Presencia, automatización y conexión directa con tus usuarios, estén donde estén.</h3>
-        <p>Comienza con el cambio desde $4500</p>
-        <div class="flecha-abajo" (click)="scrollTo('apps')"></div>
-    </section>
-    <section class="aplicaciones espacio" id="apps">
-        <div class="contenedor-precios">
-            <h2 class="titulo-precios">Lleva tu idea a la palma de la mano</h2>
-            <p class="subtitulo-precios">
-            Ideal si quieres una sola app para ambos sistemas operativos, sin duplicar costos ni tiempos.
-            </p>
+    <section class="hero-section" id="hero">
+        <div class="hero-shell">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Aplicaciones móviles</p>
+                <h1>Tu negocio en el bolsillo de tus clientes.</h1>
+                <p class="hero-text">
+                    Diseñamos apps que acercan tu marca, simplifican el acceso y mantienen a tus usuarios conectados con tu servicio donde sea que estén.
+                </p>
 
-            <div class="apps-grid">
-                <!-- Card Flutter -->
-                <div class="card-app">
-                    <h3><img src="assets/icons/smartphone.svg" class="icon-inline-h1" alt="Mobile"> App Multiplataforma (Flutter)</h3>
-                    <p class="descripcion">
-                    Una solución inteligente para llegar a usuarios de iOS y Android con una sola base de código.
-                    </p>
-                    <ul class="ventajas">
-                    <li><span></span>Ahorra tiempo y presupuesto</li>
-                    <li><span></span> Diseño adaptado para ambos sistemas</li>
-                    <li><span></span>Perfecta para negocios en crecimiento y soluciones rápidas</li>
-                    </ul>
-                    <p class="precio">Desde $6,500 MXN</p>
-                    <div class="imagen-app">
-                    <img src="assets/ositoFlutter.png" alt="Mockup app Flutter">
-                    </div>
+                <div class="hero-actions">
+                    <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="hero-button hero-button-primary">Cotizar mi app</a>
+                    <button type="button" class="hero-button hero-button-secondary" (click)="scrollTo('problema')">Explorar la solución</button>
                 </div>
 
-                <!-- Card Android Nativa -->
-                <div class="card-app">
-                    <h3><img src="assets/icons/smartphone.svg" class="icon-inline-h1" alt="Mobile"> App Nativa iOS</h3>
-                    <p class="descripcion">
-                        Pensada para ofrecer una experiencia premium a usuarios de iPhone, aprovechando al máximo las capacidades del ecosistema apple
-                    </p>
-                    <ul class="ventajas">
-                    <li><span></span>Mejor rendimiento y fluidez</li>
-                    <li><span></span>Facilidad de capacidades especificas de iOS</li>
-                    <li><span></span>Ideal si tu publico usa iPhone, iPad, Apple Watch, Mac o Vision Pro</li>
-                    </ul>
-                    <p class="precio">Desde $7,500 MXN</p>
-                    <div class="imagen-app">
-                    <img src="assets/ositoApple.png" alt="Mockup app Android nativa">
-                    </div>
+                <div class="hero-tags">
+                    <span>Swift nativo</span>
+                    <span>Flutter</span>
+                    <span>Apple Watch</span>
+                    <span>Vision Pro</span>
+                    <span>UX</span>
                 </div>
-            </div>          
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-frame">
+                    <img src="assets/ositoDesarrolloMovil.png" alt="Osito desarrollando una aplicación móvil" class="hero-image">
+                </div>
+                <div class="hero-stat">
+                    <strong>Tu servicio siempre a un toque de distancia</strong>
+                    <span>Más presencia, más comodidad y más oportunidades de uso recurrente.</span>
+                </div>
+            </div>
         </div>
+
+        <div class="flecha-abajo" #flecha (click)="scrollTo('problema')"></div>
     </section>
 
-    <div class="espacio"></div>
-    <section class="cta-final espacio" id="final">
+    <section class="problema-section" id="problema">
+        <h2 class="seccion-titulo">Tu cliente está en el móvil, pero tu negocio no siempre llega ahí</h2>
+        <p class="seccion-subtitulo">Si cada interacción depende de abrir WhatsApp, buscar un enlace o repetir el mismo proceso, el interés se enfría antes de convertirse en hábito.</p>
+
+        <div class="problema-grid">
+            <article class="contraste-card contraste-caos">
+                <div class="contraste-card-header">
+                    <img src="assets/icons/error-circle.svg" alt="Problemas comunes" class="contraste-icon">
+                    <div>
+                        <h3>Cuando no hay app</h3>
+                        <p>Todo depende de pasos sueltos y poca continuidad.</p>
+                    </div>
+                </div>
+
+                <ul class="contraste-list">
+                    <li>El usuario tiene que buscar tu contacto cada vez</li>
+                    <li>Las acciones se dispersan entre chats, enlaces y formularios</li>
+                    <li>Las notificaciones y recordatorios se pierden</li>
+                    <li>La experiencia cambia según el canal</li>
+                    <li>Cuesta crear uso recurrente y fidelidad</li>
+                </ul>
+            </article>
+
+            <div class="contraste-puente" aria-hidden="true">
+                <span>Fricción</span>
+                <div class="contraste-linea"></div>
+                <span>Conversión</span>
+            </div>
+
+            <article class="contraste-card contraste-orden">
+                <div class="contraste-card-header">
+                    <img src="assets/icons/check-circle.svg" alt="Soluciones efectivas" class="contraste-icon">
+                    <div>
+                        <h3>Cuando sí hay app</h3>
+                        <p>La experiencia se vuelve rápida, clara y repetible.</p>
+                    </div>
+                </div>
+
+                <ul class="contraste-list">
+                    <li>El acceso queda en la pantalla principal del usuario</li>
+                    <li>Las funciones más usadas están a un toque</li>
+                    <li>Los recordatorios y avisos llegan a tiempo</li>
+                    <li>La marca acompaña al cliente en su rutina diaria</li>
+                    <li>La relación se vuelve más cercana y duradera</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('solucion')"></div>
+    </section>
+
+    <section class="solucion-section" id="solucion">
+        <h2 class="seccion-titulo">Una app pensada para uso real, no solo para verse bien</h2>
+        <p class="seccion-subtitulo">Definimos la estructura, el flujo y la lógica para que la app resuelva una necesidad concreta desde el primer uso.</p>
+
+        <div class="solucion-proceso">
+            <div class="proceso-paso">
+                <div class="paso-numero">1</div>
+                <h3>Descubrimiento</h3>
+                <p>Entendemos qué problema móvil quieres resolver, quién lo usa y qué fricción existe hoy.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">2</div>
+                <h3>Diseño de experiencia</h3>
+                <p>Ordenamos pantallas, navegación y mensajes para que el usuario nunca se pierda ni dude.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">3</div>
+                <h3>Desarrollo</h3>
+                <p>Construimos la app con una base clara, escalable y lista para integrar funciones futuras.</p>
+            </div>
+
+            <div class="proceso-paso">
+                <div class="paso-numero">4</div>
+                <h3>Lanzamiento y evolución</h3>
+                <p>Ajustamos, medimos y mejoramos para que la app siga aportando valor después de salir al público.</p>
+            </div>
+        </div>
+
+        <div class="solucion-highlight">
+            <div class="solucion-highlight-label">El resultado</div>
+            <p>Una app que no depende de la memoria del usuario: lo guía, lo acompaña y lo hace volver.</p>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('caso-uso')"></div>
+    </section>
+
+    <section class="caso-section" id="caso-uso">
+        <h2 class="seccion-titulo">Una academia de idiomas que quiere reservas, recordatorios y continuidad</h2>
+        <p class="seccion-subtitulo">Un caso nuevo, distinto a las otras páginas: aquí la app organiza el aprendizaje y reduce la fricción entre clase, agenda y seguimiento.</p>
+
+        <div class="caso-layout">
+            <div class="caso-media">
+                <div class="caso-imagen">
+                    <img src="assets/ositoIdiomas.png" alt="Ejemplo de aplicación móvil para academia" class="caso-visual">
+                </div>
+
+                <div class="caso-flow">
+                    <span>Reserva</span>
+                    <span>Recordatorio</span>
+                    <span>Clase</span>
+                    <span>Seguimiento</span>
+                    <span>Renovación</span>
+                </div>
+            </div>
+
+            <div class="caso-copy">
+                <h3>De chats dispersos a una experiencia continua</h3>
+                <p>
+                    Una academia no solo necesita mostrar horarios. Necesita que cada alumno vea su avance, reciba avisos a tiempo y tenga una forma fácil de reprogramar, pagar o retomar su proceso.
+                </p>
+
+                <ul class="caso-lista">
+                    <li>Los alumnos reservan clases sin depender de mensajes manuales</li>
+                    <li>Los recordatorios reducen inasistencias y confusiones</li>
+                    <li>El historial de progreso queda disponible en un solo lugar</li>
+                    <li>La app hace más fácil renovar y mantener la relación activa</li>
+                </ul>
+
+                <blockquote class="caso-frase">
+                    Cuando la app ordena la experiencia, la retención deja de ser casualidad.
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('impacto')"></div>
+    </section>
+
+    <section class="impacto-section" id="impacto">
+        <h2 class="seccion-titulo">El impacto positivo que deja una app bien resuelta</h2>
+        <p class="seccion-subtitulo">No se trata solo de tener presencia móvil; se trata de crear acceso, constancia y una mejor relación con tus usuarios.</p>
+
+        <div class="impacto-grid">
+            <div class="impacto-card">
+                <div class="impacto-numero">24/7</div>
+                <p class="impacto-descripcion">Tu servicio siempre visible</p>
+                <span class="impacto-detalle">Sin depender de horarios de atención</span>
+            </div>
+
+            <div class="impacto-card">
+                <div class="impacto-numero">-40%</div>
+                <p class="impacto-descripcion">Menos fricción operativa</p>
+                <span class="impacto-detalle">Menos mensajes repetidos y menos pasos innecesarios</span>
+            </div>
+
+            <div class="impacto-card">
+                <div class="impacto-numero">+60%</div>
+                <p class="impacto-descripcion">Más uso recurrente</p>
+                <span class="impacto-detalle">Porque la experiencia queda a un toque de distancia</span>
+            </div>
+
+            <div class="impacto-card">
+                <div class="impacto-numero">1 app</div>
+                <p class="impacto-descripcion">Un solo punto de contacto</p>
+                <span class="impacto-detalle">Información, acción y seguimiento en un mismo lugar</span>
+            </div>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('planes')"></div>
+    </section>
+
+    <section class="planes-section" id="planes">
+        <h2 class="seccion-titulo">Planes de aplicaciones móviles</h2>
+        <p class="seccion-subtitulo">Empieza con la escala correcta hoy y deja lista la base para crecer después.</p>
+
+        <div class="planes-grid">
+            <article class="plan-card plan-base">
+  <div class="plan-header">
+    <h3 class="plan-nombre">Prototipo navegable</h3>
+    <p class="plan-lema">Valida tu idea antes de desarrollar</p>
+  </div>
+  <div class="plan-precio">Desde $4,500 MXN</div>
+  <p class="plan-descripcion">
+    Todas tus pantallas diseñadas y navegables. 
+    Para probar la idea con usuarios reales antes 
+    de invertir en desarrollo.
+  </p>
+  <ul class="plan-incluye">
+    <li><span class="check">✓</span> Diseño completo en Figma</li>
+    <li><span class="check">✓</span> Flujo navegable real</li>
+    <li><span class="check">✓</span> Pruebas con usuarios</li>
+    <li><span class="check">✓</span> Base lista para desarrollar</li>
+  </ul>
+  <a [routerLink]="'/contacto'" 
+     fragment="formulario-contacto" 
+     class="plan-boton">Quiero validar mi idea</a>
+</article>
+
+<article class="plan-card plan-recomendado">
+  <div class="plan-badge">Punto de partida ideal</div>
+  <div class="plan-header">
+    <h3 class="plan-nombre">MVP funcional</h3>
+    <p class="plan-lema">Tu idea en una app real y publicable</p>
+  </div>
+  <div class="plan-precio">Desde $18,000 MXN</div>
+  <p class="plan-descripcion">
+    App funcional para iOS y Android. Flujo principal 
+    completo, lista para publicar y validar en el 
+    mercado real.
+  </p>
+  <ul class="plan-incluye">
+    <li><span class="check">✓</span> iOS + Android (Flutter)</li>
+    <li><span class="check">✓</span> Diseño UI/UX profesional</li>
+    <li><span class="check">✓</span> Back-end básico incluido</li>
+    <li><span class="check">✓</span> Publicación en tiendas</li>
+  </ul>
+  <a [routerLink]="'/contacto'" 
+     fragment="formulario-contacto" 
+     class="plan-boton plan-boton-destaque">Cotizar mi MVP</a>
+</article>
+
+<article class="plan-card plan-completo">
+  <div class="plan-header">
+    <h3 class="plan-nombre">App completa</h3>
+    <p class="plan-lema">Producto maduro listo para crecer</p>
+  </div>
+  <div class="plan-precio">Desde $35,000 MXN</div>
+  <p class="plan-descripcion">
+    Todo lo del MVP más usuarios, notificaciones, 
+    panel de administración y soporte incluido.
+  </p>
+  <ul class="plan-incluye">
+    <li><span class="check">✓</span> Todo lo del MVP</li>
+    <li><span class="check">✓</span> Autenticación de usuarios</li>
+    <li><span class="check">✓</span> Notificaciones push</li>
+    <li><span class="check">✓</span> Panel de administración</li>
+    <li><span class="check">✓</span> 3 meses de soporte</li>
+  </ul>
+  <a [routerLink]="'/contacto'" 
+     fragment="formulario-contacto" 
+     class="plan-boton">Quiero la versión completa</a>
+</article>
+
+<article class="plan-card plan-apple">
+  <div class="plan-badge plan-badge-apple">Especialidad Apple</div>
+  <div class="plan-header">
+    <h3 class="plan-nombre">App nativa Apple</h3>
+    <p class="plan-lema">Swift puro para el ecosistema Apple</p>
+  </div>
+  <div class="plan-precio">Desde $28,000 MXN</div>
+  <p class="plan-descripcion">
+    iPhone, iPad, Apple Watch. Con acceso a CoreML, 
+    ARKit, HealthKit y HomeKit. El estándar más alto 
+    en experiencia iOS.
+  </p>
+  <ul class="plan-incluye">
+    <li><span class="check">✓</span> Swift / SwiftUI nativo</li>
+    <li><span class="check">✓</span> CoreML e IA integrada</li>
+    <li><span class="check">✓</span> ARKit disponible</li>
+    <li><span class="check">✓</span> Apple Watch opcional</li>
+    <li><span class="check">✓</span> Vision Pro en hoja de ruta</li>
+  </ul>
+  <a [routerLink]="'/contacto'" 
+     fragment="formulario-contacto" 
+     class="plan-boton">Construir en Apple</a>
+</article>
+
+<article class="plan-card">
+  <div class="plan-header">
+    <h3 class="plan-nombre">App a medida</h3>
+    <p class="plan-lema">Lógica compleja, integraciones propias</p>
+  </div>
+  <div class="plan-precio">Cotización</div>
+  <p class="plan-descripcion">
+    Reservas, membresías, pagos, dashboards o 
+    integración con sistemas existentes. 
+    Cada proyecto es diferente.
+  </p>
+  <ul class="plan-incluye">
+    <li><span class="check">✓</span> Funcionalidades personalizadas</li>
+    <li><span class="check">✓</span> Integración con tu operación</li>
+    <li><span class="check">✓</span> Evolución por etapas</li>
+    <li><span class="check">✓</span> Pensada para escalar</li>
+  </ul>
+  <a [routerLink]="'/contacto'" 
+     fragment="formulario-contacto" 
+     class="plan-boton">Hablar de mi proyecto</a>
+</article>
+        </div>
+
+        <div class="plan-nota">
+            <h4>✨ Nota importante</h4>
+            <p>
+                Cada proyecto móvil es distinto. Estos planes son una base para arrancar con claridad; si tu idea requiere otra estructura, la ajustamos contigo.
+            </p>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('diferencia')"></div>
+    </section>
+
+    <section class="diferencia-section" id="diferencia">
+        <h2 class="seccion-titulo">Lo que nos diferencia en móvil</h2>
+        <p class="seccion-subtitulo">No hacemos apps genéricas. Diseñamos herramientas con intención, ritmo y una lógica que el usuario sí quiere usar.</p>
+
+        <div class="diferencia-grid">
+            <article class="diferencia-card">
+                <img src="assets/icons/brain.svg" alt="Estrategia" class="diferencia-icono">
+                <h3>Estrategia antes que pantalla</h3>
+                <p>Antes de diseñar, entendemos qué problema móvil realmente vale la pena resolver.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <img src="assets/icons/smartphone.svg" alt="Experiencia móvil" class="diferencia-icono">
+                <h3>Experiencia pensada para el pulgar</h3>
+                <p>La navegación, los tamaños y las acciones se diseñan para usarse fácil y rápido.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <img src="assets/icons/trending-up.svg" alt="Escalabilidad" class="diferencia-icono">
+                <h3>Base escalable</h3>
+                <p>La app nace preparada para crecer con más módulos, funciones y etapas futuras.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <img src="assets/icons/refresh.svg" alt="Acompañamiento" class="diferencia-icono">
+                <h3>Acompañamiento real</h3>
+                <p>No dejamos la app como producto muerto; la ajustamos y seguimos mejorándola contigo.</p>
+            </article>
+
+            <article class="diferencia-card">
+                <div class="diferencia-icono" aria-hidden="true">
+                    <svg width="54" height="54" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apple logo">
+                        <path d="M44.6 39.3c-.6 1.4-1.2 2.7-2.3 3.8-1.2 1.1-2.6 1.9-4.1 1.9-1.6 0-2.1-1.1-4.6-1.1-2.5 0-3.3 1.1-4.9 1.1-1.8 0-3.7-1.1-5-2.6-3.4-3.8-6-10.9-2.5-16.7 1.7-2.8 4.9-4.6 8.3-4.6 1.7 0 3.4.7 4.9.7 1.5 0 3.2-.8 5.2-.8 1.8 0 3.6.7 4.9 1.9-4.8 2.8-3.6 8.6-3.6 8.9-.1.4-.6 2.4.3 4.6z" fill="#000"/>
+                        <path d="M40.9 16.6c1.1-1.3 1.9-3.2 1.6-5-1.6.1-3.6 1-4.7 2.3-1 1.2-1.9 2.9-1.6 4.6 1.7.1 3.6-.8 4.7-1.9z" fill="#000"/>
+                    </svg>
+                </div>
+                <h3>Especialistas en ecosistema Apple</h3>
+                <p>Swift nativo, CoreML, ARKit, Apple Watch y Vision Pro. 
+                No solo hacemos apps para iPhone: conocemos cómo piensa 
+                el usuario de Apple y diseñamos para ese estándar.</p>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('interes')"></div>
+    </section>
+
+    <section class="comparacion-section" id="comparacion">
+        <h2 class="seccion-titulo">¿Flutter o app nativa iOS?</h2>
+        <p class="seccion-subtitulo">Una comparación rápida para ayudarte a elegir según tus objetivos.</p>
+
+        <div class="comparacion-grid">
+            <article class="comparacion-card">
+                <div class="comparacion-media">
+                    <img src="assets/ositoFlutter.png" alt="Flutter" class="comparacion-visual">
+                </div>
+                <h3>Flutter (multi-plataforma)</h3>
+                <ul>
+                    <li>Desarrollo más rápido para iOS y Android</li>
+                    <li>Un solo código base</li>
+                    <li>Ideal para validar productos y reducir costos</li>
+                    <li>Menor tiempo de mantenimiento entre plataformas</li>
+                    <li>UI consistente en distintos dispositivos</li>
+                </ul>
+            </article>
+
+            <article class="comparacion-card">
+                <div class="comparacion-media">
+                    <img src="assets/ositoApple.png" alt="App nativa iOS" class="comparacion-visual">
+                </div>
+                <h3>App nativa iOS (Swift)</h3>
+                <ul>
+                    <li>Máximo rendimiento y experiencia Apple</li>
+                    <li>Acceso directo a CoreML, ARKit, WatchKit</li>
+                    <li>Recomendado para experiencias premium y uso intensivo</li>
+                    <li>Mejor integración con funciones específicas del ecosistema Apple</li>
+                    <li>Ideal para marcas que priorizan detalle y fluidez</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('interes')"></div>
+    </section>
+
+    <section class="ecosistema-section" id="interes">
+        <h2 class="seccion-titulo">También podría interesar</h2>
+        <p class="seccion-subtitulo">El ecosistema crece contigo</p>
+
+        <div class="ecosistema-grid">
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoRM.png" alt="Ecosistema digital" class="ecosistema-visual">
+                </div>
+                <h3>Ecosistema digital</h3>
+                <p>Conecta procesos, automatización y datos para que tu operación trabaje de forma más ordenada.</p>
+                <span class="ecosistema-precio">Desde $15,000 MXN</span>
+                <a [routerLink]="'/transformacion'" fragment="hero" class="ecosistema-boton">Ver ecosistema digital</a>
+            </article>
+
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoRA.png" alt="Sistema web" class="ecosistema-visual">
+                </div>
+                <h3>Sistema web</h3>
+                <p>Una web profesional para explicar, ordenar y convertir visitas en contactos reales.</p>
+                <span class="ecosistema-precio">Desde $2,000 MXN</span>
+                <a [routerLink]="'/web'" class="ecosistema-boton">Ver sistema web</a>
+            </article>
+
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoIA.png" alt="Inteligencia artificial" class="ecosistema-visual">
+                </div>
+                <h3>Inteligencia artificial</h3>
+                <p>Chatbots, análisis predictivo, reconocimiento biométrico. Decisiones con datos.</p>
+                <span class="ecosistema-precio">A medida</span>
+            </article>
+
+            <article class="ecosistema-card">
+                <div class="ecosistema-icono">
+                    <img src="assets/ositoRV.png" alt="Realidad aumentada y virtual" class="ecosistema-visual">
+                </div>
+                <h3>Realidad aumentada / virtual</h3>
+                <p>Experiencias inmersivas para mostrar productos, entrenar personas o sorprender a tus clientes.</p>
+                <span class="ecosistema-precio">A medida</span>
+            </article>
+        </div>
+
+        <div class="flecha-abajo" (click)="scrollTo('final')"></div>
+    </section>
+
+    
+
+    <section class="cta-final" id="final">
         <div class="cta-contenedor">
             <div class="cta-imagen">
-            <img src="assets/appOsito.png" alt="Ejemplo de página web">
+                <img src="assets/appOsito.png" alt="Ejemplo de app">
             </div>
             <div class="cta-texto">
-            <h2>¿Listo para estar en el bolsillo de tus clientes?</h2>
-            <p>
-                Tener una app ya no es cosa del futuro. Es lo que tu negocio necesita hoy.
-Escríbenos  y hablemos de esa app que tienes en mente.  
-Cotizaciones honestas, trato directo, resultados reales.
-            </p>
-            <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
+                <h2>¿Lista esa app que tienes en mente?</h2>
+                <p>
+                Cuéntanos qué quieres resolver. Cotización honesta, trato directo y una app que tus clientes van a querer usar de verdad.
+                </p>
+                <a [routerLink]="'/contacto'" class="boton-cta">Cotiza tu proyecto</a>
             </div>
         </div>
     </section>
