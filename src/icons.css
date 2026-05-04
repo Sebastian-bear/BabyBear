@@ -1,61 +1,73 @@
-/* Icon Styles */
-
-/* General icon styles */
-.icon-emoji,
-.icon-emoji-grande,
-.icon-check,
-.icon-checkmark,
-.icon-inline {
+/* Icon SVG Styling */
+.icon-svg {
   display: inline-block;
   vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  margin-right: 8px;
+  fill: currentColor;
+  color: inherit;
 }
 
-/* Small inline icons (for lists and text) */
-.icon-check {
-  width: 1.2em;
-  height: 1.2em;
-  stroke-width: 2.5;
-  color: currentColor;
-  margin-right: 0.5em;
+/* For emoji-grande class (large emoji containers) - HALF SIZE */
+.emoji-grande.icon-svg {
+  height: 16px;
+  width: 16px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  display: block;
 }
 
-/* Checkmark emoji replacement (inside spans) */
-.icon-checkmark {
-  width: 1.2em;
-  height: 1.2em;
-  stroke-width: 2.5;
-  color: currentColor;
+/* For emoji class in circles - Email icon (larger to fill circle) */
+.emoji.icon-svg {
+  height: 120px;
+  width: 120px;
+  margin-right: 0;
 }
 
-/* Large emoji replacements (card icons) */
-.icon-emoji-grande {
-  width: 4rem;
-  height: 4rem;
-  stroke-width: 1.5;
-  color: currentColor;
-  margin-bottom: 1rem;
+/* For emoji-circle class */
+.emoji-circle.icon-svg {
+  height: 100%;
+  width: 100%;
+  margin-right: 0;
 }
 
-/* Regular emoji size (form circles) */
-.icon-emoji {
-  width: 5.5rem;
-  height: 5.5rem;
-  stroke-width: 1.5;
-  color: currentColor;
+/* For icono-circulo class - REDUCED */
+.icono-circulo.icon-svg {
+  height: 14px;
+  width: 14px;
+  margin-right: 0;
 }
 
-/* Inline icon (next to text) */
-.icon-inline {
-  width: 1.4em;
-  height: 1.4em;
-  stroke-width: 2;
-  color: currentColor;
-  margin-right: 0.4em;
-  vertical-align: -0.2em;
+/* For inline icons in text - REDUCED */
+.icon-inline.icon-svg {
+  height: 14px;
+  width: 14px;
+  margin: 0 8px 0 0;
 }
 
-/* Ensure SVG displays properly */
-svg {
-  stroke: currentColor;
+/* For inline icons in headings - REDUCED (half size) */
+.icon-inline-h1 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 0.5em;
+  width: 0.5em;
+  margin-left: 8px;
+  fill: currentColor;
+  color: inherit;
+}
+
+/* SVG stroke color for circular icons */
+.icon-svg[class*="checkmark"],
+.icon-svg[class*="plus"],
+.icon-svg[class*="star"] {
   fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* Ensure SVGs are responsive */
+.icon-svg {
+  max-width: 100%;
+  height: auto;
 }

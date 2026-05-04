@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit, NgZone } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-web',
   imports: [RouterModule],
@@ -8,51 +9,65 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrl: './web.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WebComponent implements OnInit { 
+export class WebComponent implements OnInit, AfterViewInit {
+  @ViewChild('flecha') flechaElement!: ElementRef;
+  private lastScrollCheck = 0;
+  private readonly SCROLL_CHECK_INTERVAL = 250;
+
   constructor(
     private titleService: Title,
-    private metaTags: Meta
+    private metaTags: Meta,
+    private ngZone: NgZone
   ) {}
 
-  ngOnInit() {
-    this.titleService.setTitle('Desarrollo Web Estratégico - Orsetto');
-    this.metaTags.updateTag({ name: 'description', content: 'Sitios web rápidos, claros y orientados a conversión. Una presencia digital profesional que explica, convence y genera oportunidades reales.' });
-    this.metaTags.updateTag({ property: 'og:title', content: 'Desarrollo Web Estratégico - Orsetto' });
-    this.metaTags.updateTag({ property: 'og:description', content: 'Sitios web rápidos, claros y orientados a conversión. Una presencia digital profesional que explica, convence y genera oportunidades reales.' });
+  ngOnInit(): void {
+    this.setPageMetadata();
   }
-  @ViewChild('flecha') flechaElement!: ElementRef;
-  
-  ngAfterViewInit() {
+
+  ngAfterViewInit(): void {
     this.checkScrollPosition();
   }
 
   @HostListener('window:scroll')
-  onWindowScroll() { 
-    this.checkScrollPosition();
-  }
-
-  private checkScrollPosition() {
-    if (this.flechaElement) {
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.body.scrollHeight;
-      
-      // Ocultar flecha cuando estamos cerca del final de la página
-      if (scrollPosition + windowHeight >= documentHeight - 100) {
-        this.flechaElement.nativeElement.style.opacity = '0';
-        this.flechaElement.nativeElement.style.pointerEvents = 'none';
-      } else {
-        this.flechaElement.nativeElement.style.opacity = '1';
-        this.flechaElement.nativeElement.style.pointerEvents = 'auto';
-      }
+  onWindowScroll(): void {
+    const now = Date.now();
+    if (now - this.lastScrollCheck >= this.SCROLL_CHECK_INTERVAL) {
+      this.lastScrollCheck = now;
+      this.checkScrollPosition();
     }
   }
 
-  scrollTo(id: string) {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+  private setPageMetadata(): void {
+    const description = 'Sitios web rápidos, claros y orientados a conversión. Una presencia digital profesional que explica, convence y genera oportunidades reales.';
+    const title = 'Desarrollo Web Estratégico - Orsetto';
+    
+    this.titleService.setTitle(title);
+    this.metaTags.updateTag({ name: 'description', content: description });
+    this.metaTags.updateTag({ property: 'og:title', content: title });
+    this.metaTags.updateTag({ property: 'og:description', content: description });
   }
-}
 
+  private checkScrollPosition(): void {
+    if (this.flechaElement) {
+      this.ngZone.runOutsideAngular(() => {
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.scrollHeight;
+        const isNearEnd = scrollPosition + windowHeight >= documentHeight - 100;
+        
+        this.ngZone.run(() => {
+          const style = this.flechaElement.nativeElement.style;
+          style.opacity = isNearEnd ? '0' : '1';
+          style.pointerEvents = isNearEnd ? 'none' : 'auto';
+        });
+      });
+    }
+  }
+
+  scrollTo(id: string): void {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

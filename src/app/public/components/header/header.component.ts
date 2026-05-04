@@ -8,19 +8,22 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent { 
+export class HeaderComponent {
   menuAbierto = false;
   dropdownAbierto = false;
 
-  toggleDropdown() {
+  toggleMenu(): void {
+    this.menuAbierto = !this.menuAbierto;
+    if (this.menuAbierto) {
+      this.dropdownAbierto = false;
+    }
+  }
+
+  toggleDropdown(): void {
     this.dropdownAbierto = !this.dropdownAbierto;
   }
 
-  cerrarDropdown() {
-    this.dropdownAbierto = false;
-  }
-
-  cerrarMenu() {
+  cerrarMenu(): void {
     this.menuAbierto = false;
     this.dropdownAbierto = false;
   }

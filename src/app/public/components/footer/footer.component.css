@@ -1,17 +1,27 @@
+:host {
+  --primary-dark: #5D798E;
+  --accent-light: #E3D2B8;
+  --text-white: #ffffff;
+  --border-dark: #000000;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --spacing-gap: 1.5rem;
+  --transition: 0.3s ease;
+}
+
 .babybear-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1.5rem;
-  background-color: #5D798E;
-  border-top: 2px solid #000000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  gap: 1.5rem;
+  background-color: var(--primary-dark);
+  border-top: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-sm);
+  gap: var(--spacing-gap);
 }
 
 .footer-section {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--spacing-gap);
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
@@ -20,26 +30,25 @@
 
 .social-links i {
   font-size: 24px;
-  color: #E3D2B8;
-  transition: transform 0.3s ease;
+  color: var(--accent-light);
+  transition: transform var(--transition);
 }
 
 .social-links a:hover i {
   transform: scale(1.1);
 }
 
-
 .page-links a,
 .services a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-white);
   font-weight: 700;
-  transition: color 0.3s ease;
+  transition: color var(--transition);
 }
 
 .page-links a:hover,
 .services a:hover {
-  color: #E3D2B8;
+  color: var(--accent-light);
 }
 
 .logo-wrapper .logo {

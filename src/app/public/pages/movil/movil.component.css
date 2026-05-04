@@ -97,6 +97,8 @@ section {
   gap: 14px;
   margin-bottom: 24px;
   animation: fadeInUp 1s ease 0.35s both;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-button,
@@ -109,16 +111,23 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  box-sizing: border-box;
 }
 
 .hero-button {
-  padding: 14px 32px;
+  width: min(100%, 280px);
+  max-width: 280px;
+  min-height: 52px;
+  padding: 14px 24px;
+  margin: 0 auto;
   border-radius: 30px;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.4px;
   border: none;
+  text-align: center;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 
 .hero-button-primary {
@@ -217,14 +226,11 @@ section {
   padding: 18px 20px;
   border-radius: 18px;
   background: #634F31;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.94);
   flex: 0 1 48%;
   animation: fadeIn 1.5s ease;
-  display: flex;
-  justify-content: flex-start;
   display: block;
   margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.94);
 }
 
 .seccion-titulo {
@@ -1021,37 +1027,6 @@ section {
   font-weight: 700;
 }
 
-@media screen and (max-width: 899px) {
-  .comparacion-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .comparacion-card {
-    padding: 24px 20px;
-  }
-
-  .comparacion-media {
-    justify-content: center;
-  }
-
-  .comparacion-visual {
-    max-width: 130px;
-  }
-
-  .cta-imagen {
-    justify-content: center;
-    flex: 1 1 100%;
-  }
-  .cta-texto {
-    text-align: center;
-    flex: 1 1 100%;
-  }
-  .cta-imagen img {
-    max-width: 80%;
-  }
-}
-
 .ecosistema-card p {
   font-size: 0.98rem;
   color: rgba(255, 255, 255, 0.94);
@@ -1131,59 +1106,8 @@ section {
   margin-left: 20px;
 }
 
-@media screen and (max-width: 900px) {
-  .cta-contenedor {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .cta-imagen {
-    justify-content: flex-start;
-  }
-  .cta-imagen img {
-    max-width: 120px;
-  }
-}
-
-
-
 .boton-cta:hover {
   background-color: #5D798E;
-}
-
-.flecha-abajo {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  animation: flotar 2s infinite ease-in-out;
-  z-index: 2;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flecha-abajo::before {
-  display: none;
-}
-
-.flecha-abajo::after {
-  content: '';
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 15px solid #FFFFFF;
-}
-
-@keyframes flotar {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 10px); }
 }
 
 @keyframes fadeIn {
@@ -1206,7 +1130,32 @@ section {
   to { opacity: 1; transform: translateX(0); }
 }
 
-@media screen and (max-width: 768px) {
+/* Desktop layout: 3 cards across, recommended plan scaled up */
+@media screen and (min-width: 900px) {
+  .planes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .planes-grid > .plan-card {
+    flex: 0 1 calc(33.333% - 28px);
+    max-width: 420px;
+  }
+
+  .plan-recomendado {
+    transform: scale(1.05);
+  }
+
+  .comparacion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet & mobile responsive: stacked layout */
+@media screen and (max-width: 899px) {
   section {
     padding: 70px 18px 96px;
   }
@@ -1271,46 +1220,17 @@ section {
   .diferencia-grid {
     width: 100%;
   }
-  .solucion-proceso {
-    grid-template-columns: 1fr;
-  }
 
-}
-
-@media screen and (min-width: 900px) {
-  /* Desktop & tablet: show 3 up and 2 below centered using flex layout */
-  .planes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
-    align-items: stretch;
-  }
-
-  .planes-grid > .plan-card {
-    flex: 0 1 calc(33.333% - 28px);
-    max-width: 420px;
-  }
-
-  /* Ensure second row centers when only two items are present */
-  .planes-grid > .plan-card:nth-child(4),
-  .planes-grid > .plan-card:nth-child(5) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 899px) {
   .planes-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .planes-grid > .plan-card {
     max-width: none;
     width: 100%;
   }
-}
 
   .plan-recomendado {
     transform: none;
@@ -1329,66 +1249,50 @@ section {
     justify-content: center;
   }
 
-  /* Desktop / default: CTA image left, reasonably large (inspired by web CTA) */
-  .cta-contenedor {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 36px;
-    text-align: left;
+  .solucion-proceso {
+    grid-template-columns: 1fr;
   }
 
-  .cta-imagen,
-  .cta-texto {
-    flex: initial;
+  .comparacion-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .comparacion-card {
+    padding: 24px 20px;
+  }
+
+  .comparacion-media {
+    justify-content: center;
+  }
+
+  .comparacion-visual {
+    max-width: 130px;
+  }
+
+  .cta-contenedor {
+    gap: 20px;
+    text-align: center;
   }
 
   .cta-imagen {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .cta-imagen img {
-    width: auto;
-    max-width: 360px;
-    height: auto;
+    width: 80%;
+    max-width: 240px;
   }
 
   .cta-texto h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .cta-texto p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .boton-cta {
-    font-size: 1rem;
-    padding: 12px 24px;
-    margin-left: 20px;
+    margin-left: 0;
   }
-
-  /* Small screens: center content and scale image */
-  @media screen and (max-width: 899px) {
-    .cta-contenedor {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      text-align: center;
-    }
-    .cta-imagen {
-      justify-content: center;
-    }
-    .cta-imagen img {
-      width: 80%;
-      max-width: 240px;
-    }
-    .cta-texto h2 {
-      font-size: 1.6rem;
-    }
-    .cta-texto p {
-      font-size: 1rem;
-    }
-    .boton-cta {
-      margin-left: 0;
-    }
-  }
- 
+}

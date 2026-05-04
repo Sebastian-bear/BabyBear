@@ -1,142 +1,134 @@
 <div class="contacto-section">
   <div class="conoce-section">
-      <h2 class="conoce-titulo">Conoce nuestros servicios</h2>
-      <div class="container conoce-layout">
-        <div class="conoce-imagen">
-          <img src="assets/Conoce.png" alt="Osito programando">
-        </div>
-          <div class="cards-column">
-
-            <a [routerLink]="'/transformacion'" class="servicio-card">
-              <div class="servicio-texto">
-                <h3 class="servicio-title">Transformación digital para negocios</h3>
-                <p class="servicio-desc">La tecnología no es opcional: o te adaptas o te vuelves invisible.
-                  Soluciones reales a problemas reales.</p>
-              </div>
-              <div class="servicio-button">
-                <div class="boton">&#8594;</div>
-              </div>
-            </a>
-
-            <a [routerLink]="'/web'" class="servicio-card">
-              <div class="servicio-texto">
-                <h3 class="servicio-title">Desarrollo web profesional</h3>
-                <p class="servicio-desc">Tu sitio web no es solo tu carta de presentación… es tu mejor vendedor, trabaja 24/7.</p>
-              </div>
-              <div class="servicio-button">
-                <div class="boton">&#8594;</div>
-              </div>
-            </a>
-
-            <a [routerLink]="'/movil'" class="servicio-card">
-              <div class="servicio-texto">
-                <h3 class="servicio-title">Desarrollo de aplicaciones móviles</h3>
-                <p class="servicio-desc">Una gran app no solo impresiona… automatiza, fideliza y multiplica tu impacto.</p>
-              </div>
-              <div class="servicio-button">
-                <div class="boton">&#8594;</div>
-              </div>
-            </a>
-
-
-
-
-          </div>
+    <h2 class="conoce-titulo">Conoce nuestros servicios</h2>
+    <div class="container conoce-layout">
+      <div class="conoce-imagen">
+        <img src="assets/Conoce.png" alt="Osito programando" />
       </div>
-      <div class="flecha-abajo" (click)="scrollTo('formulario-contacto')"></div>
+      <div class="cards-column">
+        <a [routerLink]="'/transformacion'" class="servicio-card">
+          <div class="servicio-texto">
+            <h3 class="servicio-title">Transformación digital para negocios</h3>
+            <p class="servicio-desc">La tecnología no es opcional: o te adaptas o te vuelves invisible. Soluciones reales a problemas reales.</p>
+          </div>
+          <div class="servicio-button">
+            <span class="boton" aria-hidden="true">&#8594;</span>
+          </div>
+        </a>
+        <a [routerLink]="'/web'" class="servicio-card">
+          <div class="servicio-texto">
+            <h3 class="servicio-title">Desarrollo web profesional</h3>
+            <p class="servicio-desc">Tu sitio web no es solo tu carta de presentación… es tu mejor vendedor, trabaja 24/7.</p>
+          </div>
+          <div class="servicio-button">
+            <span class="boton" aria-hidden="true">&#8594;</span>
+          </div>
+        </a>
+        <a [routerLink]="'/movil'" class="servicio-card">
+          <div class="servicio-texto">
+            <h3 class="servicio-title">Desarrollo de aplicaciones móviles</h3>
+            <p class="servicio-desc">Una gran app no solo impresiona… automatiza, fideliza y multiplica tu impacto.</p>
+          </div>
+          <div class="servicio-button">
+            <span class="boton" aria-hidden="true">&#8594;</span>
+          </div>
+        </a>
+      </div>
     </div>
+    <button type="button" class="flecha-abajo" aria-label="Ir a formulario" #flecha (click)="scrollTo('formulario-contacto')"></button>
+  </div>
+
   <div class="espacio"></div>
+
   <section class="formulario-container" id="formulario-contacto">
-    <app-formulario></app-formulario> 
+    <app-formulario></app-formulario>
   </section>
-      
+
   <div class="espacio"></div>
+
   <section class="decisión-section" id="decisión-contacto">
-    <h1 class="decisión-titulo">Esto pasará si decides automatizar</h1>
+    <h2 class="decisión-titulo">Esto pasará si decides automatizar</h2>
     <div class="container decisión-layout">
       <div class="decisión-imagen">
-      <img src="assets/OsitoFeliz.png" alt="Osito feliz">
+        <img src="assets/OsitoFeliz.png" alt="Osito feliz" />
       </div>
-        <ul class="decisión-column">
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Puedes <u>generar ventas incluso mientras descansas</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Tu equipo puede enfocarse en <u>tareas más creativas y valiosas</u>, dejando lo repetitivo a los sistemas.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Puedes <u>avanzar al ritmo del mercado</u>, paso a paso y con confianza.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Libera <u>tiempo para estrategia, expansión o simplemente vivir mejor</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Construye procesos más claros que te permitan <u>crecer de forma constante</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Tener datos reales te ayuda a tomar <u>decisiones con mayor seguridad</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Facilita que tus clientes puedan <u>interactuar contigo desde su celular</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Mejora tu operación con <u>mayor eficiencia interna</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Puedes <u>crecer a tu propio ritmo</u> sin quedarte atrás.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Tu negocio puede volverse <u>más ligero y menos dependiente de ti</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Impulsa un <u>aumento en eficiencia</u> en todo tu negocio.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Una base digital hoy te da <u>ventaja para el futuro</u>.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Puedes <u>estar presente donde tus clientes ya buscan</u>: online.
-  </li>
-  <li>
-    <span class="bullet"><span class="checkmark">✔️</span></span>
-    Empieza a <u>construir tu reputación</u> con opiniones reales de clientes.
-  </li>
-</ul>
-        <div class="flecha-abajo" (click)="scrollTo('decisión-contacto')"></div>
+      <ul class="decisión-column">
+        <li>
+          <span class="bullet">✔️</span>
+          Puedes <u>generar ventas incluso mientras descansas</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Tu equipo puede enfocarse en <u>tareas más creativas y valiosas</u>, dejando lo repetitivo a los sistemas.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Puedes <u>avanzar al ritmo del mercado</u>, paso a paso y con confianza.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Libera <u>tiempo para estrategia, expansión o simplemente vivir mejor</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Construye procesos más claros que te permitan <u>crecer de forma constante</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Tener datos reales te ayuda a tomar <u>decisiones con mayor seguridad</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Facilita que tus clientes puedan <u>interactuar contigo desde su celular</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Mejora tu operación con <u>mayor eficiencia interna</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Puedes <u>crecer a tu propio ritmo</u> sin quedarte atrás.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Tu negocio puede volverse <u>más ligero y menos dependiente de ti</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Impulsa un <u>aumento en eficiencia</u> en todo tu negocio.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Una base digital hoy te da <u>ventaja para el futuro</u>.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Puedes <u>estar presente donde tus clientes ya buscan</u>: online.
+        </li>
+        <li>
+          <span class="bullet">✔️</span>
+          Empieza a <u>construir tu reputación</u> con opiniones reales de clientes.
+        </li>
+      </ul>
     </div>
-    
   </section>
+
   <div class="espacio"></div>
-  <section class="final-inicio" id="final-inicio">
+
+  <section class="final-inicio">
     <div class="final-card">
       <div class="final-layout">
         <div class="final-texto">
           <h3 class="titulo-final">Contacta con nosotros y comienza la transformación de tu negocio.</h3>
-          <p class="descripcion-final">
-            Únete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin límites, asegurando un futuro para tu negocio con más ganancias y menos estrés. 
-          </p>
+          <p class="descripcion-final">Únete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin límites, asegurando un futuro para tu negocio con más ganancias y menos estrés.</p>
           <div class="final-boton">
-            <div class="button-valor" (click)="scrollTo('formulario-contacto')">Contáctanos</div>
+            <button type="button" class="button-valor" (click)="scrollTo('formulario-contacto')" aria-label="Ir a contacto">Contáctanos</button>
           </div>
         </div>
         <div class="final-imagen">
-          <img src="assets/ositoSeguro.png" alt="Osito seguro">
+          <img src="assets/ositoSeguro.png" alt="Osito seguro" />
         </div>
       </div>
     </div>
   </section>
-
 </div>

@@ -3,178 +3,152 @@
 </head>
 <div class="container">
   <div class="presentación">
-    <h1>
-      Todo empieza por algo
-    </h1>
-    <h1>
-      <span class="exito">pequeño</span>
-    </h1>
-    <p class="hero-subtitulo">
-      Nosotros lo tomamos con carino... y lo llevamos contigo hasta hacerlo real.
-    </p>
-
-    <button class="empezar" (click)="scrollTo('formulario-container')">
-      Cuentanos tu idea
-    </button>
+    <h1>Todo empieza por algo</h1>
+    <h1><span class="exito">pequeño</span></h1>
+    <p class="hero-subtitulo">Nosotros lo tomamos con cariño... y lo llevamos contigo hasta hacerlo real.</p>
+    <button type="button" class="empezar" (click)="scrollTo('formulario-container')" aria-label="Comenzar">Cuéntanos tu idea</button>
     <img src="assets/empezar.png" alt="Osito programador" class="osito" />
-    <!-- Flecha hacia abajo -->
-    <div class="flecha-abajo" (click)="scrollTo('formulario-container')"></div>
+    <button type="button" class="flecha-abajo" aria-label="Ir a formulario" #flecha (click)="scrollTo('formulario-container')"></button>
   </div>
 
   <div class="espacio"></div>
-  
-  <!-- Contenedor del formulario -->
+
   <div class="formulario-container" id="formulario-container">
     <div class="formulario-card">
-      <!-- Lado izquierdo con email icon -->
       <div class="formulario-emoji">
         <div class="circulo-email">
-          <img src="assets/icons/email.svg" class="emoji icon-svg" alt="Email">
+          <img src="assets/icons/email.svg" class="emoji icon-svg" alt="Icono de email" />
         </div>
       </div>
-      
-      <!-- Lado derecho con formulario -->
       <app-email></app-email>
     </div>
-    <div class="flecha-abajo" (click)="scrollTo('razones-seccion')"></div>
+    <button type="button" class="flecha-abajo" aria-label="Ir a servicios" (click)="scrollTo('razones-seccion')"></button>
   </div>
-  <!-- Espacio después del formulario -->
-  <div class="espacio"></div>
-
 
   <div class="espacio"></div>
-  
-  <!-- Sección de Servicios -->
+
   <section class="razones-seccion" id="razones-seccion">
-  <h2 class="titulo-razones">Tu ecosistema digital comienza aquí</h2>
-  <p class="descripcion-razones">Cada parte de tu negocio puede trabajar en conjunto. Empieza con lo esencial y evoluciona hacia un sistema completo.</p>
+    <h2 class="titulo-razones">Tu ecosistema digital comienza aquí</h2>
+    <p class="descripcion-razones">Cada parte de tu negocio puede trabajar en conjunto. Empieza con lo esencial y evoluciona hacia un sistema completo.</p>
 
-  <div class="razones-grid">
-    <div class="razon-card">
-      <img src="assets/icons/shopping-bag.svg" class="razon-icon icon-svg" alt="Web">
-      <div class="razon-label">Web</div>
-      <h3 class="titulo-card">Tu presencia digital, con identidad</h3>
-      <p class="descripcion-card">Un sitio que no solo se ve bien, sino que trabaja por ti mientras duermes. Rápido, moderno y hecho a tu medida.</p>
-      <p class="precio-card">Desde $2,000 MXN</p>
-      <p class="tags-card">Sitios web · E-commerce · Landing</p>
+    <div class="razones-grid">
+      <div class="razon-card">
+        <img src="assets/icons/shopping-bag.svg" class="razon-icon icon-svg" alt="Icono de web" />
+        <div class="razon-label">Web</div>
+        <h3 class="titulo-card">Tu presencia digital, con identidad</h3>
+        <p class="descripcion-card">Un sitio que no solo se ve bien, sino que trabaja por ti mientras duermes. Rápido, moderno y hecho a tu medida.</p>
+        <p class="precio-card">Desde $2,000 MXN</p>
+        <p class="tags-card">Sitios web · E-commerce · Landing</p>
+      </div>
+
+      <div class="razon-card">
+        <img src="assets/icons/smartphone.svg" class="razon-icon icon-svg" alt="Icono de app" />
+        <div class="razon-label">App</div>
+        <h3 class="titulo-card">Tu negocio en el bolsillo</h3>
+        <p class="descripcion-card">Aplicaciones diseñadas para conectar con tus clientes y ofrecer experiencias fluidas en cada interacción.</p>
+        <p class="precio-card">Desde $18,000 MXN</p>
+        <p class="tags-card">iOS · Android · Apple</p>
+      </div>
+
+      <div class="razon-card">
+        <img src="assets/icons/clock.svg" class="razon-icon icon-svg" alt="Icono de automatización" />
+        <div class="razon-label">Automatización</div>
+        <h3 class="titulo-card">Automatiza lo que te quita tiempo</h3>
+        <p class="descripcion-card">Integra inteligencia artificial para responder, analizar y optimizar procesos sin esfuerzo manual.</p>
+        <p class="precio-card">Cotización personalizada</p>
+        <p class="tags-card">IA · Automatización · Chatbots</p>
+      </div>
+
+      <div class="razon-card">
+        <img src="assets/icons/trending-up.svg" class="razon-icon icon-svg" alt="Icono de experiencias" />
+        <div class="razon-label">Experiencias</div>
+        <h3 class="titulo-card">Experiencias que se sienten</h3>
+        <p class="descripcion-card">Realidad aumentada y virtual aplicada a marketing, capacitación y productividad.</p>
+        <p class="precio-card">Cotización personalizada</p>
+        <p class="tags-card">AR · VR · Vision Pro</p>
+      </div>
     </div>
 
-    <div class="razon-card">
-      <img src="assets/icons/smartphone.svg" class="razon-icon icon-svg" alt="App">
-      <div class="razon-label">App</div>
-      <h3 class="titulo-card">Tu negocio en el bolsillo</h3>
-      <p class="descripcion-card">Aplicaciones diseñadas para conectar con tus clientes y ofrecer experiencias fluidas en cada interacción.</p>
-      <p class="precio-card">Desde $18,000 MXN</p>
-      <p class="tags-card">iOS · Android · Apple</p>
+    <div class="ecosistema-call">
+      <h3 class="ecosistema-titulo">Todo puede formar parte de un solo sistema</h3>
+      <p class="ecosistema-descripcion">Puedes empezar con una página web o una app, y evolucionar hacia un ecosistema digital completo que automatiza y conecta todo tu negocio.</p>
+      <a [routerLink]="'transformacion'" class="button-ecosistema">Explorar ecosistema completo</a>
     </div>
 
-    <div class="razon-card">
-      <img src="assets/icons/clock.svg" class="razon-icon icon-svg" alt="Automatización">
-      <div class="razon-label">Automatización</div>
-      <h3 class="titulo-card">Automatiza lo que te quita tiempo</h3>
-      <p class="descripcion-card">Integra inteligencia artificial para responder, analizar y optimizar procesos sin esfuerzo manual.</p>
-      <p class="precio-card">Cotización personalizada</p>
-      <p class="tags-card">IA · Automatización · Chatbots</p>
+    <div class="espacio"></div>
+
+    <div class="anuncio-card">
+      <div class="anuncio-badge">Disponible ahora · Una sola venta</div>
+      <div class="anuncio-contenido">
+        <h3 class="anuncio-titulo">Sitio completo para constructora o inmobiliaria — listo en 48 horas</h3>
+        <p class="anuncio-descripcion">Ya desarrollado y funcionando: calculadora de cotizaciones · panel de administración · portafolio de proyectos · formularios y completamente bilingüe español/inglés. Solo ponle el nombre de tu empresa.</p>
+        <div class="anuncio-features">
+          <span>Calculadora de cotizaciones</span>
+          <span>Panel de admin</span>
+          <span>Bilingüe ES/EN</span>
+          <span>Back-end incluido</span>
+        </div>
+      </div>
+      <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="anuncio-boton">Me interesa →</a>
     </div>
+  </section>
 
-    <div class="razon-card">
-      <img src="assets/icons/trending-up.svg" class="razon-icon icon-svg" alt="Experiencias">
-      <div class="razon-label">Experiencias</div>
-      <h3 class="titulo-card">Experiencias que se sienten</h3>
-      <p class="descripcion-card">Realidad aumentada y virtual aplicada a marketing, capacitación y productividad.</p>
-      <p class="precio-card">Cotización personalizada</p>
-      <p class="tags-card">AR · VR · Vision Pro</p>
-    </div>
-  </div>
-
-  <div class="ecosistema-call">
-    <h3 class="ecosistema-titulo">Todo puede formar parte de un solo sistema</h3>
-    <p class="ecosistema-descripcion">Puedes empezar con una página web o una app, y evolucionar hacia un ecosistema digital completo que automatiza y conecta todo tu negocio.</p>
-    <a [routerLink]="'transformacion'" class="button-ecosistema">Explorar ecosistema completo</a>
-  </div>
-
-  <div class="espacio"></div>
-
-  <div class="anuncio-card">
-    <div class="anuncio-badge">Disponible ahora</div>
-    <div class="anuncio-contenido">
-      <h3 class="anuncio-titulo">Sistema web para constructora — listo para usar</h3>
-      <p class="anuncio-descripcion">Un sitio profesional ya desarrollado, con diseno moderno y todo funcionando. Ideal para empresas de construccion o inmobiliarias que quieren presencia digital hoy mismo.</p>
-    </div>
-    <button class="anuncio-boton" (click)="scrollTo('formulario-container')">Me interesa</button>
-  </div>
-</section>
-
-  
   <div class="espacio"></div>
 
   <section class="valor-seccion" id="valor-seccion">
-    <h1 class="valor-titulo">¿Qué valor te podemos aportar?</h1>
+    <h2 class="valor-titulo">¿Qué valor te podemos aportar?</h2>
 
-    <!-- Primera card -->
-<div class="valor-card">
-  <div class="valor-imagen">
-    <img src="assets/ositoVR.png" alt="Osito VR">
-  </div>
-  <div class="valor-contenido">
-    <h3 class="titulo-valor">Integración de la mejor tecnología en tu negocio</h3>
-    <p class="descripcion-valor">
-      Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.
-    </p>
-    <div class="valor-boton">
-      <a [routerLink]="'contacto'" class="button-valor">Conoce todos los servicios</a>
+    <div class="valor-card">
+      <div class="valor-imagen">
+        <img src="assets/ositoVR.png" alt="Osito VR" />
+      </div>
+      <div class="valor-contenido">
+        <h3 class="titulo-valor">Integración de la mejor tecnología en tu negocio</h3>
+        <p class="descripcion-valor">Tenemos la capacidad de desarrollar soluciones con las herramientas más vanguardistas, como desarrollo de Realidad Aumentada, Desarrollo para dispositivos móviles (Apple/Android), Desarrollo web y Digitalización para las organizaciones.</p>
+        <div class="valor-boton">
+          <a [routerLink]="'contacto'" class="button-valor">Conoce todos los servicios</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Segunda card -->
-<div class="valor-card">
-  <div class="valor-imagen">
-    <img src="assets/ositoFortalecer.png" alt="Imagen 2">
-  </div>
-  <div class="valor-contenido">
-    <h3 class="titulo-valor">Fortalecer la presencia digital</h3>
-    <p class="descripcion-valor">
-      Construye tu presencia, tu marca y tu conexión directa con tus clientes. Ya sea con una web rápida y potente o una aplicación móvil impecable, tener a la persona adecuada desarrollando tu plataforma digital no es un lujo: es una ventaja competitiva real.
-    </p>
-    <div class="valor-boton">
-      <a [routerLink]="'nosotros'" class="button-valor">Trabajemos juntos</a>
+    <div class="valor-card">
+      <div class="valor-imagen">
+        <img src="assets/ositoFortalecer.png" alt="Fortalecer presencia digital" />
+      </div>
+      <div class="valor-contenido">
+        <h3 class="titulo-valor">Fortalecer la presencia digital</h3>
+        <p class="descripcion-valor">Construye tu presencia, tu marca y tu conexión directa con tus clientes. Ya sea con una web rápida y potente o una aplicación móvil impecable, tener a la persona adecuada desarrollando tu plataforma digital no es un lujo: es una ventaja competitiva real.</p>
+        <div class="valor-boton">
+          <a [routerLink]="'nosotros'" class="button-valor">Trabajemos juntos</a>
+        </div>
+      </div>
     </div>
-  </div>
-  
-</div>
-<div class="flecha-abajo" (click)="scrollTo('final-inicio')"></div>
 
-<!-- Tercera card -->
-<div class="valor-card">
-  <div class="valor-imagen">
-    <img src="assets/cicloVida.png" alt="Imagen 3">
-  </div>
-  <div class="valor-contenido">
-    <h3 class="titulo-valor">Compromiso total</h3>
-    <p class="descripcion-valor">
-      No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios. Esta cercanía garantiza soluciones hechas a medida, con un nivel de dedicación en cuerpo y alma que nadie puede igualar.
-    </p>
-    <div class="valor-boton">
-      <div class="button-valor" (click)="scrollTo('formulario-container')">Animate</div>
+    <button type="button" class="flecha-abajo" aria-label="Ir a final" (click)="scrollTo('final-inicio')"></button>
+
+    <div class="valor-card">
+      <div class="valor-imagen">
+        <img src="assets/cicloVida.png" alt="Ciclo de vida del proyecto" />
+      </div>
+      <div class="valor-contenido">
+        <h3 class="titulo-valor">Compromiso total</h3>
+        <p class="descripcion-valor">No eres un número de proyecto más. Orsetto se involucra a fondo con tu visión, entiende tu negocio y se compromete con tus objetivos como si fueran propios. Esta cercanía garantiza soluciones hechas a medida, con un nivel de dedicación en cuerpo y alma que nadie puede igualar.</p>
+        <div class="valor-boton">
+          <button type="button" class="button-valor" (click)="scrollTo('formulario-container')" aria-label="Animate a comenzar">Anímate</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-    
   </section>
-  
+
   <div class="espacio"></div>
 
   <section class="final-inicio" id="final-inicio">
     <div class="final-card">
       <div class="final-contenido">
         <h3 class="titulo-final">Contacta con nosotros y comienza la transformación de tu negocio.</h3>
-        <p class="descripcion-final">
-          Unete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin limites, asegurando un futuro para tu negocio con más ganancias y menos estrés. 
-        </p>
+        <p class="descripcion-final">Únete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin límites, asegurando un futuro para tu negocio con más ganancias y menos estrés.</p>
         <div class="final-boton">
-          <div class="button-valor" (click)="scrollTo('formulario-container')">Contactanos</div>
+          <button type="button" class="button-valor" (click)="scrollTo('formulario-container')" aria-label="Contáctanos">Contáctanos</button>
         </div>
       </div>
     </div>

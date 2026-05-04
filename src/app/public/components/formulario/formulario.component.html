@@ -1,37 +1,44 @@
 <section class="contact-section">
-    <div class="contact-card">
-      <div class="emoji-circle">🧸</div>
-      <h2>Comienza a construir el futuro que siempre has soñado.</h2>
-      <p>Envía un mensaje personalizado describiendo lo que deseas para tu negocio y obtener una cotización totalmente gratis. </p>
-      
-      <form class="contact-form" (submit)="enviarEmail($event)">
+  <div class="contact-card">
+    <div class="emoji-circle">🧸</div>
+    <h2>Comienza a construir el futuro que siempre has soñado.</h2>
+    <p>Envía un mensaje personalizado describiendo lo que deseas para tu negocio y obtener una cotización totalmente gratis.</p>
 
-        <input type="email" id="email"  name="user_email" placeholder="Correo electrónico" required>
-        
-        <select name="subject" required>
-          <option disabled selected>Selecciona un servicio</option>
-          <option>Desarrollo web</option>
-          <option>Desarrollo de aplicaciones móviles</option>
-          <option>Transformación dígital para negocios</option>
-          <option>Realidad virtual</option>
-          <option>Realidad aumentada</option>
-          <option>Realidad mixta</option>
-          <option>Inteligencia artificial</option>
-        </select>
-        
-        <textarea placeholder="Escribe tu mensaje aquí..." name="message" required></textarea>
-        
-        <button type="submit">Enviar</button>
-      </form>
+    <form class="contact-form" (submit)="enviarEmail($event)">
+      <input type="email" id="email" name="user_email" placeholder="Correo electrónico" required />
 
-      <div class="social-section">
-        <p class="social-text">También puedes contar tu historia en:</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=61578969411741" target="_blank" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/dev.babybear/" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/BabybearDev" target="_blank" class="social-link" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/orsetto-dev-6a9350377" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+      <select name="subject" required>
+        <option disabled selected>Selecciona un servicio</option>
+        <option>Desarrollo web</option>
+        <option>Desarrollo de aplicaciones móviles</option>
+        <option>Transformación digital para negocios</option>
+        <option>Realidad virtual</option>
+        <option>Realidad aumentada</option>
+        <option>Realidad mixta</option>
+        <option>Inteligencia artificial</option>
+      </select>
+
+      <textarea placeholder="Escribe tu mensaje aquí..." name="message" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="social-section">
+      <p class="social-text">También puedes contar tu historia en:</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61578969411741" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/dev.babybear/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/BabybearDev" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-link">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/orsetto-dev-6a9350377" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
