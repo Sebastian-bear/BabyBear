@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-transformacion',
@@ -13,25 +12,10 @@ export class TransformacionComponent implements OnInit, AfterViewInit, OnDestroy
   @ViewChild('flecha') flechaElement!: ElementRef;
   private scrollTimeout: any;
 
-  constructor(
-    private titleService: Title,
-    private metaTags: Meta
-  ) {}
+  constructor() {}
 
   ngOnInit() {
-    this.titleService.setTitle('Transformacion Digital Estrategica - Orsetto');
-    this.metaTags.updateTag({ 
-      name: 'description', 
-      content: 'Moderniza tu negocio con soluciones tecnologicas innovadoras. Diagnostico y consultoria digital.' 
-    });
-    this.metaTags.updateTag({ 
-      property: 'og:title', 
-      content: 'Transformacion Digital Estrategica - Orsetto' 
-    });
-    this.metaTags.updateTag({ 
-      property: 'og:description', 
-      content: 'Moderniza tu negocio con soluciones tecnologicas innovadoras. Diagnostico y consultoria digital.' 
-    });
+    // El SEO es manejado por el AppComponent ahora
   }
 
   ngAfterViewInit() {

@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit, NgZone } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-web',
@@ -14,14 +13,10 @@ export class WebComponent implements OnInit, AfterViewInit {
   private lastScrollCheck = 0;
   private readonly SCROLL_CHECK_INTERVAL = 250;
 
-  constructor(
-    private titleService: Title,
-    private metaTags: Meta,
-    private ngZone: NgZone
-  ) {}
+  constructor(private ngZone: NgZone) {}
 
   ngOnInit(): void {
-    this.setPageMetadata();
+    // El SEO es manejado por el AppComponent ahora
   }
 
   ngAfterViewInit(): void {
@@ -35,16 +30,6 @@ export class WebComponent implements OnInit, AfterViewInit {
       this.lastScrollCheck = now;
       this.checkScrollPosition();
     }
-  }
-
-  private setPageMetadata(): void {
-    const description = 'Sitios web rápidos, claros y orientados a conversión. Una presencia digital profesional que explica, convence y genera oportunidades reales.';
-    const title = 'Desarrollo Web Estratégico - Orsetto';
-    
-    this.titleService.setTitle(title);
-    this.metaTags.updateTag({ name: 'description', content: description });
-    this.metaTags.updateTag({ property: 'og:title', content: title });
-    this.metaTags.updateTag({ property: 'og:description', content: description });
   }
 
   private checkScrollPosition(): void {

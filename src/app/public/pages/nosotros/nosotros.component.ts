@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-nosotros',
   imports: [],
@@ -8,16 +7,10 @@ import { Title, Meta } from '@angular/platform-browser';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NosotrosComponent implements OnInit { 
-  constructor(
-    private titleService: Title,
-    private metaTags: Meta
-  ) {}
+  constructor() {}
 
   ngOnInit() {
-    this.titleService.setTitle('Sobre Nosotros - Orsetto');
-    this.metaTags.updateTag({ name: 'description', content: 'Conoce a Orsetto, tu socio en transformación digital. Compromiso, innovación y resultados.' });
-    this.metaTags.updateTag({ property: 'og:title', content: 'Sobre Nosotros - Orsetto' });
-    this.metaTags.updateTag({ property: 'og:description', content: 'Conoce a Orsetto, tu socio en transformación digital. Compromiso, innovación y resultados.' });
+    // El SEO es manejado por el AppComponent ahora
   }
   @ViewChild('flecha') flechaElement!: ElementRef;
   

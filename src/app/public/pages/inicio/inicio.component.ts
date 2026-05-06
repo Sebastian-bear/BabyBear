@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { EmailComponent } from '../../components/email/email.component';
 import { RouterModule } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-inicio',
@@ -13,22 +12,10 @@ import { Title, Meta } from '@angular/platform-browser';
 export class InicioComponent implements AfterViewInit, OnInit {
   @ViewChild('flecha') flechaElement!: ElementRef;
 
-  constructor(private titleService: Title, private metaTags: Meta) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Orsetto - Desarrollo Web, Móvil y Transformación Digital');
-    this.metaTags.updateTag({
-      name: 'description',
-      content: 'Orsetto: Tecnología que no hiberna. Desarrollo web, aplicaciones móviles y transformación digital estratégica.',
-    });
-    this.metaTags.updateTag({
-      property: 'og:title',
-      content: 'Orsetto - Desarrollo Web, Móvil y Transformación Digital',
-    });
-    this.metaTags.updateTag({
-      property: 'og:description',
-      content: 'Orsetto: Tecnología que no hiberna. Desarrollo web, aplicaciones móviles y transformación digital estratégica.',
-    });
+    // El SEO es manejado por el AppComponent ahora
   }
 
   ngAfterViewInit(): void {

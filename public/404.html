@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada - Redireccionando...</title>
+    <script>
+        // Obtener la ruta solicitada
+        var location = window.location.pathname;
+        
+        // Si la ruta no contiene la extensión .html, redirigir a inicio
+        if (!location.endsWith('.html') && !location.endsWith('.js') && !location.endsWith('.css')) {
+            // Limpiar la ruta y redirigir a la página de inicio
+            window.location.replace('/');
+        } else {
+            // Si es un archivo estático que no existe, también redirigir
+            window.location.replace('/');
+        }
+    </script>
+</head>
+<body>
+    <p>Página no encontrada. Redireccionando a la página de inicio...</p>
+</body>
+</html>

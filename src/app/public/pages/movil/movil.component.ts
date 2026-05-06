@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movil',
@@ -13,25 +12,10 @@ export class MovilComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('flecha') flechaElement!: ElementRef;
   private scrollTimeout: any;
 
-  constructor(
-    private titleService: Title,
-    private metaTags: Meta
-  ) {}
+  constructor() {}
 
   ngOnInit() {
-    this.titleService.setTitle('Desarrollo de Aplicaciones Móviles - Orsetto');
-    this.metaTags.updateTag({ 
-      name: 'description', 
-      content: 'Apps para iOS y Android que automatizan, fidelizan y multiplican tu impacto en los clientes.' 
-    });
-    this.metaTags.updateTag({ 
-      property: 'og:title', 
-      content: 'Desarrollo de Aplicaciones Móviles - Orsetto' 
-    });
-    this.metaTags.updateTag({ 
-      property: 'og:description', 
-      content: 'Apps para iOS y Android que automatizan, fidelizan y multiplican tu impacto en los clientes.' 
-    });
+    // El SEO es manejado por el AppComponent ahora
   }
 
   ngAfterViewInit() {

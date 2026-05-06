@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { FormularioComponent } from '../../components/formulario/formulario.component';
 import { RouterModule } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contacto',
@@ -13,22 +12,10 @@ import { Title, Meta } from '@angular/platform-browser';
 export class ContactoComponent implements AfterViewInit, OnInit {
   @ViewChild('flecha') flechaElement!: ElementRef;
 
-  constructor(private titleService: Title, private metaTags: Meta) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Contacto - Orsetto');
-    this.metaTags.updateTag({
-      name: 'description',
-      content: 'Ponte en contacto con nosotros para comenzar tu transformación digital. Estamos listos para ayudarte.',
-    });
-    this.metaTags.updateTag({
-      property: 'og:title',
-      content: 'Contacto - Orsetto',
-    });
-    this.metaTags.updateTag({
-      property: 'og:description',
-      content: 'Ponte en contacto con nosotros para comenzar tu transformación digital. Estamos listos para ayudarte.',
-    });
+    // El SEO es manejado por el AppComponent ahora
   }
 
   ngAfterViewInit(): void {
