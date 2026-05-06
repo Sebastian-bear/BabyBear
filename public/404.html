@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página no encontrada - Redireccionando...</title>
     <script>
-        // Redirigir directamente al dominio principal para evitar bucles infinitos
-        window.location.replace('https://orsetto.pro');
+        // Captura la ruta solicitada y la redirige con hash routing
+        // Esto permite que Angular maneje el routing correctamente
+        
+        var path = window.location.pathname;
+        
+        // Remueve la barra inicial si existe
+        if (path.startsWith('/')) {
+            path = path.substring(1);
+        }
+        
+        // Redirige a la raíz con la ruta en el hash
+        // Ej: /contacto → /#/contacto
+        // Ej: /web → /#/web
+        if (path && path !== '' && path !== 'docs/') {
+            window.location.replace('/#/' + path);
+        } else {
+            window.location.replace('/');
+        }
     </script>
 </head>
 <body>
-    <p>Página no encontrada. Redireccionando a la página de inicio...</p>
+    <p>Página no encontrada. Redireccionando...</p>
 </body>
 </html>

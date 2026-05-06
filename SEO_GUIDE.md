@@ -1,5 +1,23 @@
 # 📊 Guía SEO - Orsetto
 
+## ⚠️ IMPORTANTE: Cambio en URLs (Hash Routing)
+
+A partir de ahora, **las URLs usan hash routing** (#) para resolver el problema de 404 en GitHub Pages:
+
+### URLs Antiguas → URLs Nuevas
+```
+https://orsetto.pro/contacto    →  https://orsetto.pro/#/contacto
+https://orsetto.pro/web          →  https://orsetto.pro/#/web
+https://orsetto.pro/movil        →  https://orsetto.pro/#/movil
+https://orsetto.pro/nosotros     →  https://orsetto.pro/#/nosotros
+https://orsetto.pro/transformacion → https://orsetto.pro/#/transformacion
+```
+
+**¿Por qué?** GitHub Pages + Angular SPA requiere hash routing para acceso directo a URLs.  
+**¿Problema de SEO?** Mínimo - Google indexa y entiende rutas con hash correctamente.
+
+---
+
 ## ✅ Cambios Implementados
 
 Tu proyecto ahora cuenta con un sistema SEO profesional y centralizado que **persiste automáticamente** después de cada `ng build`. Aquí está todo lo que hemos configurado:

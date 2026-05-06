@@ -33,13 +33,27 @@ export class AppComponent implements OnInit {
   }
 
   private updateSeoForRoute(url: string): void {
-    // Limpiar la URL de parámetros y query
-    const path = url.split('?')[0].split('#')[0];
+    // Remover parámetros query
+    let path = url.split('?')[0];
+    
+    // Con hash routing, remover el hash
+    if (path.includes('#')) {
+      path = path.split('#')[0];
+    }
+    
+    // Normalizar path
+    if (!path || path === '/') {
+      path = '';
+    }
     
     // Mapear rutas a claves de configuración
     const routeMap: { [key: string]: string } = {
       '': 'home',
-      '/': 'home',
+      'nosotros': 'nosotros',
+      'web': 'web',
+      'movil': 'movil',
+      'transformacion': 'transformacion',
+      'contacto': 'contacto',
       '/nosotros': 'nosotros',
       '/web': 'web',
       '/movil': 'movil',
