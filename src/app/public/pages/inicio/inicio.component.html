@@ -1,15 +1,31 @@
-<head>
-  
-</head>
 <div class="container">
-  <div class="presentación">
-    <h1>Todo empieza por algo</h1>
-    <h1><span class="exito">pequeño</span></h1>
-    <p class="hero-subtitulo">Nosotros lo tomamos con cariño... y lo llevamos contigo hasta hacerlo real.</p>
-    <button type="button" class="empezar" (click)="scrollTo('formulario-container')" aria-label="Comenzar">Cuéntanos tu idea</button>
-    <img src="assets/empezar.png" alt="Osito programador" class="osito" />
-    <button type="button" class="flecha-abajo" aria-label="Ir a formulario" #flecha (click)="scrollTo('formulario-container')"></button>
-  </div>
+  <section class="hero-section">
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Producto destacado</p>
+        <h1>Sitio web profesional para constructoras</h1>
+        <p class="hero-text">Sitio web profesional para constructoras que genera confianza y resultados. Nosotros lo tomamos con cariño... y lo llevamos contigo hasta hacerlo real.</p>
+
+        <div class="hero-actions">
+          <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="hero-button hero-button-primary">Me interesa</a>
+          <a [routerLink]="'/demo'" class="hero-button hero-button-secondary">Ver demo</a>
+        </div>
+        <div class="hero-tags">
+          <span>Calculadora de Cotizaciones</span>
+          <span>Panel de Administración</span>
+          <span>Soporte Bilingüe ES/EN</span>
+          <span>Arquitectura Nest.js + Angular</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/ositoBuild.png" alt="Osito constructor" class="hero-image" />
+        <div class="hero-stat">
+          <strong>Listo para convertir visitas en confianza</strong>
+          <span>Un inicio claro, ordenado y hecho para que el cliente entienda el valor de tu empresa desde el primer clic.</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="espacio"></div>
 
@@ -70,6 +86,7 @@
     </div>
 
     <div class="ecosistema-call">
+      <img src="assets/empezar.png" alt="Osito programador" class="ecosistema-imagen" />
       <h3 class="ecosistema-titulo">Todo puede formar parte de un solo sistema</h3>
       <p class="ecosistema-descripcion">Puedes empezar con una página web o una app, y evolucionar hacia un ecosistema digital completo que automatiza y conecta todo tu negocio.</p>
       <a [routerLink]="'transformacion'" class="button-ecosistema">Explorar ecosistema completo</a>
@@ -80,13 +97,15 @@
     <div class="anuncio-card">
       <div class="anuncio-badge">Disponible ahora · Una sola venta</div>
       <div class="anuncio-contenido">
-        <h3 class="anuncio-titulo">Sitio completo para constructora o inmobiliaria — listo en 48 horas</h3>
-        <p class="anuncio-descripcion">Ya desarrollado y funcionando: calculadora de cotizaciones · panel de administración · portafolio de proyectos · formularios y completamente bilingüe español/inglés. Solo ponle el nombre de tu empresa.</p>
+        <h3 class="anuncio-titulo">Sitio completo para constructora o inmobiliaria </h3>
+        <p class="anuncio-descripcion">
+          Una infraestructura digital de nivel corporativo lista para ser adaptada e implementada con la identidad de tu empresa. Incluye arquitectura modular escalable: calculadora paramétrica de cotizaciones, panel de administración nativo, portafolio interactivo y soporte bilingüe nativo.
+        </p>
         <div class="anuncio-features">
-          <span>Calculadora de cotizaciones</span>
-          <span>Panel de admin</span>
-          <span>Bilingüe ES/EN</span>
-          <span>Back-end incluido</span>
+          <span>Calculadora de Cotizaciones</span>
+          <span>Panel de Administración</span>
+          <span>Soporte Bilingüe ES/EN</span>
+          <span>Arquitectura Nest.js + Angular</span>
         </div>
       </div>
       <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="anuncio-boton">Me interesa →</a>

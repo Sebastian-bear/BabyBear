@@ -32,6 +32,10 @@
   position: relative;
 }
 
+.conoce-section {
+  background:#B5A491;
+}
+
 .conoce-titulo,
 .decisión-titulo {
   font-size: 42px;
@@ -41,6 +45,7 @@
   font-weight: 700;
   letter-spacing: -0.4px;
   line-height: 1.3;
+  color: var(--text-white);
 }
 
 .conoce-titulo::after,
@@ -196,14 +201,9 @@
   }
 }
 
-.decisión-section {
-  background: linear-gradient(135deg, var(--accent-brown-light) 0%, var(--accent-brown-dark) 100%);
-  position: relative;
-  border-top: 1px solid var(--border-light);
-}
 
 .decisión-titulo {
-  color: var(--text-white);
+  color: var(--text-black);
   font-weight: 700;
   letter-spacing: -0.4px;
 }
@@ -222,7 +222,7 @@
 .decisión-column li {
   font-size: 1.15rem;
   line-height: 2.2;
-  color: var(--text-white);
+  color: var(--text-black);
   font-weight: 600;
   text-align: left;
   letter-spacing: 0.2px;
@@ -269,6 +269,7 @@ u {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #B5A491;
 }
 
 .final-card {
