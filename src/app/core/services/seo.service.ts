@@ -1,5 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
+import { OG_IMAGE } from '../config/seo.config';
 
 export interface SeoConfig {
   title: string;
@@ -24,138 +26,105 @@ export class SeoService {
 
   constructor(
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {}
 
   /**
-   * Configura todos los metatags de SEO para una página
+   * Configura todos los metatags de SEO para una página.
+   * Funciona tanto en el navegador como durante el prerenderizado.
    */
   setSeoConfig(config: SeoConfig): void {
-    // Título de la página
     this.titleService.setTitle(config.title);
-
-    // Description
     this.updateMetaTag('description', config.description);
 
-    // Keywords (si existen)
     if (config.keywords) {
       this.updateMetaTag('keywords', config.keywords);
     }
 
-    // Open Graph Tags
+    // Open Graph
     this.updateMetaTag('og:title', config.ogTitle || config.title, 'property');
     this.updateMetaTag('og:description', config.ogDescription || config.description, 'property');
     this.updateMetaTag('og:url', config.ogUrl || this.baseUrl, 'property');
     this.updateMetaTag('og:type', 'website', 'property');
     this.updateMetaTag('og:site_name', 'Orsetto', 'property');
+    this.updateMetaTag('og:locale', 'es_MX', 'property');
 
-    if (config.ogImage) {
-      this.updateMetaTag('og:image', config.ogImage, 'property');
-      this.updateMetaTag('og:image:type', 'image/svg+xml', 'property');
-      this.updateMetaTag('og:image:width', '200', 'property');
-      this.updateMetaTag('og:image:height', '200', 'property');
-    }
+    const image = config.ogImage || OG_IMAGE.url;
+    this.updateMetaTag('og:image', image, 'property');
+    this.updateMetaTag('og:image:type', OG_IMAGE.type, 'property');
+    this.updateMetaTag('og:image:width', OG_IMAGE.width, 'property');
+    this.updateMetaTag('og:image:height', OG_IMAGE.height, 'property');
+    this.updateMetaTag('og:image:alt', OG_IMAGE.alt, 'property');
 
-    // Twitter Card Tags
+    // Twitter / X
     this.updateMetaTag('twitter:card', 'summary_large_image');
-    this.updateMetaTag('twitter:title', config.twitterTitle || config.title);
-    this.updateMetaTag('twitter:description', config.twitterDescription || config.description);
+    this.updateMetaTag('twitter:title', config.twitterTitle || config.ogTitle || config.title);
+    this.updateMetaTag('twitter:description', config.twitterDescription || config.ogDescription || config.description);
+    this.updateMetaTag('twitter:image', config.twitterImage || image);
+    this.updateMetaTag('twitter:image:alt', OG_IMAGE.alt);
 
-    if (config.twitterImage) {
-      this.updateMetaTag('twitter:image', config.twitterImage);
-    }
-
-    // Canonical URL
     if (config.canonical) {
       this.updateLinkTag('canonical', config.canonical);
     }
 
-    // JSON-LD Schema
     if (config.schema) {
       this.updateJsonLdSchema(config.schema);
     }
-
-    // Scroll al inicio
-    window.scrollTo(0, 0);
   }
 
-  /**
-   * Actualiza un metatag existente o lo crea si no existe
-   */
   private updateMetaTag(
     nameOrProperty: string,
     content: string,
     type: 'name' | 'property' = 'name'
   ): void {
-    let selector: string;
-
-    if (type === 'property') {
-      selector = `meta[property="${nameOrProperty}"]`;
-    } else {
-      selector = `meta[name="${nameOrProperty}"]`;
-    }
-
-    const existingTag = document.querySelector(selector);
+    const selector = `meta[${type}="${nameOrProperty}"]`;
+    const existingTag = this.document.querySelector(selector);
 
     if (existingTag) {
       existingTag.setAttribute('content', content);
     } else {
-      const tag = document.createElement('meta');
-      if (type === 'property') {
-        tag.setAttribute('property', nameOrProperty);
-      } else {
-        tag.setAttribute('name', nameOrProperty);
-      }
+      const tag = this.document.createElement('meta');
+      tag.setAttribute(type, nameOrProperty);
       tag.setAttribute('content', content);
-      document.head.appendChild(tag);
+      this.document.head.appendChild(tag);
     }
   }
 
-  /**
-   * Actualiza un link tag (como canonical)
-   */
   private updateLinkTag(rel: string, href: string): void {
-    let link = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
+    let link = this.document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
 
     if (link) {
-      link.href = href;
+      link.setAttribute('href', href);
     } else {
-      link = document.createElement('link');
-      link.rel = rel;
-      link.href = href;
-      document.head.appendChild(link);
+      link = this.document.createElement('link');
+      link.setAttribute('rel', rel);
+      link.setAttribute('href', href);
+      this.document.head.appendChild(link);
     }
   }
 
-  /**
-   * Actualiza o crea el schema JSON-LD
-   */
   private updateJsonLdSchema(schema: any): void {
     const id = 'seo-schema-json-ld';
-    let schemaScript = document.getElementById(id) as HTMLScriptElement;
+    let schemaScript = this.document.getElementById(id) as HTMLScriptElement | null;
 
     if (schemaScript) {
       schemaScript.textContent = JSON.stringify(schema);
     } else {
-      schemaScript = document.createElement('script');
+      schemaScript = this.document.createElement('script');
       schemaScript.id = id;
-      schemaScript.type = 'application/ld+json';
+      schemaScript.setAttribute('type', 'application/ld+json');
       schemaScript.textContent = JSON.stringify(schema);
-      document.head.appendChild(schemaScript);
+      this.document.head.appendChild(schemaScript);
     }
   }
 
-  /**
-   * Obtiene el URL canónico para una ruta
-   */
   getCanonicalUrl(path: string): string {
     return `${this.baseUrl}${path}`;
   }
 
-  /**
-   * Obtiene la URL de la imagen OG
-   */
-  getOgImageUrl(imageName?: string): string {
-    return `${this.baseUrl}/assets/${imageName || 'logo.svg'}`;
+  getOgImageUrl(): string {
+    return OG_IMAGE.url;
   }
 }

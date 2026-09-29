@@ -55,3 +55,12 @@
   width: 60px;
   height: auto;
 }
+
+.footer-legal {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-white);
+  text-align: center;
+  opacity: 0.9;
+}

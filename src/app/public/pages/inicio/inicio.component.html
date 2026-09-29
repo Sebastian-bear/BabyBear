@@ -1,31 +1,11 @@
 <div class="container">
-  <section class="hero-section">
-    <div class="hero-shell">
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Producto destacado</p>
-        <h1>Sitio web profesional para constructoras</h1>
-        <p class="hero-text">Sitio web profesional para constructoras que genera confianza y resultados. Nosotros lo tomamos con cariño... y lo llevamos contigo hasta hacerlo real.</p>
-
-        <div class="hero-actions">
-          <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="hero-button hero-button-primary">Me interesa</a>
-          <a [routerLink]="'/demo'" class="hero-button hero-button-secondary">Ver demo</a>
-        </div>
-        <div class="hero-tags">
-          <span>Calculadora de Cotizaciones</span>
-          <span>Panel de Administración</span>
-          <span>Soporte Bilingüe ES/EN</span>
-          <span>Arquitectura Nest.js + Angular</span>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="assets/ositoBuild.png" alt="Osito constructor" class="hero-image" />
-        <div class="hero-stat">
-          <strong>Listo para convertir visitas en confianza</strong>
-          <span>Un inicio claro, ordenado y hecho para que el cliente entienda el valor de tu empresa desde el primer clic.</span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="presentación">
+    <h1><span class="hero-linea">Todo empieza por algo</span><span class="exito">pequeño</span></h1>
+    <p class="hero-subtitulo">Nosotros lo tomamos con cariño... y lo llevamos contigo hasta hacerlo real.</p>
+    <button type="button" class="empezar" (click)="scrollTo('formulario-container')" aria-label="Comenzar">Cuéntanos tu idea</button>
+    <img src="assets/empezar.webp" srcset="assets/empezar-sm.webp 400w, assets/empezar.webp 965w" sizes="(max-width: 768px) 195px, 610px" alt="Osito programador" class="osito" fetchpriority="high" decoding="async" style="aspect-ratio: 965 / 983" />
+    <button type="button" class="flecha-abajo" aria-label="Ir a formulario" #flecha (click)="scrollTo('formulario-container')"></button>
+  </div>
 
   <div class="espacio"></div>
 
@@ -38,8 +18,38 @@
       </div>
       <app-email></app-email>
     </div>
-    <button type="button" class="flecha-abajo" aria-label="Ir a servicios" (click)="scrollTo('razones-seccion')"></button>
+    <button type="button" class="flecha-abajo" aria-label="Ir a servicios" (click)="scrollTo('problema-seccion')"></button>
   </div>
+
+  <div class="espacio"></div>
+
+  <section class="razones-seccion" id="problema-seccion">
+    <h2 class="titulo-razones">Trabajas todo el día. ¿Y aun así no ves hacia dónde va tu negocio?</h2>
+    <p class="descripcion-razones">Los comercios que más trabajan suelen ser los que menos ven: cuánto ganan de verdad, qué se vende y qué se pierde. No es falta de esfuerzo, es falta de visibilidad.</p>
+
+    <div class="razones-grid">
+      <div class="razon-card">
+        <img src="assets/icons/chart.svg" class="razon-icon icon-svg" alt="Icono de ventas" />
+        <div class="razon-label">Ventas</div>
+        <h3 class="titulo-card">Vendes mucho, pero no sabes cuánto te queda</h3>
+        <p class="descripcion-card">Las cuentas viven en libretas, hojas sueltas y en la memoria de quien atiende. Cuando quieres saber cómo te fue, nadie tiene la respuesta completa.</p>
+      </div>
+
+      <div class="razon-card">
+        <img src="assets/icons/clock.svg" class="razon-icon icon-svg" alt="Icono de operación" />
+        <div class="razon-label">Operación</div>
+        <h3 class="titulo-card">Todo depende de ti</h3>
+        <p class="descripcion-card">Inventario, pedidos y clientes pasan por tu cabeza y tu WhatsApp. Si tú no estás, el negocio se detiene.</p>
+      </div>
+
+      <div class="razon-card">
+        <img src="assets/icons/target.svg" class="razon-icon icon-svg" alt="Icono de decisiones" />
+        <div class="razon-label">Decisiones</div>
+        <h3 class="titulo-card">Decides a ciegas</h3>
+        <p class="descripcion-card">Sin datos claros, surtir, subir precios o contratar se decide por intuición y cansancio, no por información.</p>
+      </div>
+    </div>
+  </section>
 
   <div class="espacio"></div>
 
@@ -53,7 +63,7 @@
         <div class="razon-label">Web</div>
         <h3 class="titulo-card">Tu presencia digital, con identidad</h3>
         <p class="descripcion-card">Un sitio que no solo se ve bien, sino que trabaja por ti mientras duermes. Rápido, moderno y hecho a tu medida.</p>
-        <p class="precio-card">Desde $2,000 MXN</p>
+        <p class="precio-card">Desde $8,500 MXN</p>
         <p class="tags-card">Sitios web · E-commerce · Landing</p>
       </div>
 
@@ -62,7 +72,7 @@
         <div class="razon-label">App</div>
         <h3 class="titulo-card">Tu negocio en el bolsillo</h3>
         <p class="descripcion-card">Aplicaciones diseñadas para conectar con tus clientes y ofrecer experiencias fluidas en cada interacción.</p>
-        <p class="precio-card">Desde $18,000 MXN</p>
+        <p class="precio-card">Desde $45,000 MXN</p>
         <p class="tags-card">iOS · Android · Apple</p>
       </div>
 
@@ -86,7 +96,6 @@
     </div>
 
     <div class="ecosistema-call">
-      <img src="assets/empezar.png" alt="Osito programador" class="ecosistema-imagen" />
       <h3 class="ecosistema-titulo">Todo puede formar parte de un solo sistema</h3>
       <p class="ecosistema-descripcion">Puedes empezar con una página web o una app, y evolucionar hacia un ecosistema digital completo que automatiza y conecta todo tu negocio.</p>
       <a [routerLink]="'transformacion'" class="button-ecosistema">Explorar ecosistema completo</a>
@@ -95,20 +104,20 @@
     <div class="espacio"></div>
 
     <div class="anuncio-card">
-      <div class="anuncio-badge">Disponible ahora · Una sola venta</div>
+      <div class="anuncio-badge">Primer paso recomendado</div>
+
       <div class="anuncio-contenido">
-        <h3 class="anuncio-titulo">Sitio completo para constructora o inmobiliaria </h3>
-        <p class="anuncio-descripcion">
-          Una infraestructura digital de nivel corporativo lista para ser adaptada e implementada con la identidad de tu empresa. Incluye arquitectura modular escalable: calculadora paramétrica de cotizaciones, panel de administración nativo, portafolio interactivo y soporte bilingüe nativo.
-        </p>
+        <h3 class="anuncio-titulo">Diagnóstico + Hoja de ruta · $4,500 MXN</h3>
+        <p class="anuncio-descripcion">Nos sentamos contigo, recorremos cómo opera tu negocio hoy y te entregamos un plan claro: qué te está frenando, qué conviene atacar primero y cuánto cuesta cada paso. Si decides trabajar con nosotros, este costo se descuenta del proyecto.</p>
         <div class="anuncio-features">
-          <span>Calculadora de Cotizaciones</span>
-          <span>Panel de Administración</span>
-          <span>Soporte Bilingüe ES/EN</span>
-          <span>Arquitectura Nest.js + Angular</span>
+          <span>Levantamiento de tu operación</span>
+          <span>Hoja de ruta priorizada</span>
+          <span>Costos reales</span>
+          <span>Sin compromiso de continuar</span>
         </div>
       </div>
-      <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="anuncio-boton">Me interesa →</a>
+
+      <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="anuncio-boton">Quiero mi diagnóstico →</a>
     </div>
   </section>
 
@@ -119,7 +128,7 @@
 
     <div class="valor-card">
       <div class="valor-imagen">
-        <img src="assets/ositoVR.png" alt="Osito VR" />
+        <img src="assets/ositoVR.webp" alt="Osito VR" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024" />
       </div>
       <div class="valor-contenido">
         <h3 class="titulo-valor">Integración de la mejor tecnología en tu negocio</h3>
@@ -132,7 +141,7 @@
 
     <div class="valor-card">
       <div class="valor-imagen">
-        <img src="assets/ositoFortalecer.png" alt="Fortalecer presencia digital" />
+        <img src="assets/ositoFortalecer.webp" alt="Fortalecer presencia digital" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024" />
       </div>
       <div class="valor-contenido">
         <h3 class="titulo-valor">Fortalecer la presencia digital</h3>
@@ -147,7 +156,7 @@
 
     <div class="valor-card">
       <div class="valor-imagen">
-        <img src="assets/cicloVida.png" alt="Ciclo de vida del proyecto" />
+        <img src="assets/cicloVida.webp" alt="Ciclo de vida del proyecto" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024" />
       </div>
       <div class="valor-contenido">
         <h3 class="titulo-valor">Compromiso total</h3>

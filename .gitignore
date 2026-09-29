@@ -40,3 +40,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+/PENDIENTES-SEO-Y-CLIENTES.md

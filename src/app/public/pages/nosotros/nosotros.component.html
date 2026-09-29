@@ -1,118 +1,136 @@
 <div class="container">
-  <section class="hero">
-    <div class="hero-section">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>¡Encantados de conocerte!</h1>
-          <p>Somos dos ingenieros en sistemas de Durango que decidieron 
-construir tecnología con alma. No solo código: soluciones que 
-conectan, automatizan y transforman negocios reales.</p>
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Sobre nosotros</p>
+        <h1>¡Encantados de conocerte!</h1>
+        <p class="hero-text">
+          Somos dos ingenieros en sistemas de Durango que decidieron construir tecnología con alma.
+          No solo código: soluciones que conectan, automatizan y transforman negocios reales.
+        </p>
+
+        <div class="hero-actions">
+          <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="hero-button hero-button-primary">Hablemos de tu proyecto</a>
+          <button type="button" class="hero-button hero-button-secondary" (click)="scrollTo('equipo')">Conoce al equipo</button>
         </div>
-        <div class="hero-image">
-          <img src="assets/ositoSaludando.png" alt="osito saludando">
+
+        <div class="hero-tags">
+          <span>Durango, México</span>
+          <span>Ingeniería en Sistemas</span>
+          <span>Tecnología humana</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <img src="assets/ositoSaludando.webp" srcset="assets/ositoSaludando-sm.webp 656w, assets/ositoSaludando.webp 976w" sizes="(max-width: 768px) 328px, 482px" alt="Osito saludando" class="hero-image" fetchpriority="high" decoding="async" style="aspect-ratio: 1536 / 1024">
+        </div>
+        <div class="hero-stat">
+          <strong>Aquí te abrazamos, no te vendemos</strong>
+          <span>Dos personas, un mismo estándar de calidad y cercanía en cada proyecto.</span>
         </div>
       </div>
     </div>
-  </section> 
-  <section class="ayudar">
-  <h1 class="ayudar-titulo">¿En qué te podemos ayudar?</h1>
-  <div class="container ayudar-layout">
-    
-    <div class="ayudar-imagen">
-      <img src="assets/ositoCeo.png" alt="Osito CEO">
-    </div>
-    
-    <div class="ayudar-texto">
-      <p class="ayudar-descripcion">
-       Tras haber desarrollado productos de software que han generado satisfacción en las personas, mejorando su productividad, su calidad de vida y mejorado sus empresas se que podemos ayudarte a...
-      </p>
-      <ul class="ayudar-lista">
-        <li>
-          <span class="ayudar-bullet">•</span>
-          Liberar tu tiempo, automatizando procesos repetitivos para que te enfoques en lo que realmente importa.
-        </li>
-        <li>
-          <span class="ayudar-bullet">•</span>
-          Aumentar tu presencia y profesionalismo, para que más personas te descubran, te recuerden y confíen en ti.
-        </li>
-        <li>
-          <span class="ayudar-bullet">•</span>
-          Transformar tus ideas en realidades digitales, aunque no tengas conocimientos técnicos ni sepas por dónde empezar.
-        </li>
-        <li>
-          <span class="ayudar-bullet">•</span>
-          Dar claridad y dirección, acompañándote paso a paso para que tomes decisiones seguras y efectivas, sin complicaciones.
-        </li>
-      </ul>
-    </div>
-  </div>
-   <div class="flecha-abajo" (click)="scrollTo('nuestra-historia')"></div>
+
+    <div class="flecha-abajo" #flecha (click)="scrollTo('ayudar')"></div>
   </section>
-  <div class="espacio"></div>
-  <section class="nuestra-historia" id="nuestra-historia">
-    <div class="container historia-layout">
-      
-      <div class="historia-texto">
-        <h2>Nuestra historia</h2>
-        
-<p>
-  Todo comenzó con una idea sencilla: 
-  <strong>hacer las cosas más humanas con ayuda de la tecnología.</strong>
-  Detrás de ORSETTO hay dos personas con un sueño inmenso 
-  y las herramientas para hacerlo realidad.
-</p>
 
-<p>
-  Somos Sebastián y Daniela, estudiantes de Ingeniería en 
-  Sistemas del Tecnológico de Durango. Nos conocemos dentro 
-  y fuera del código, y eso se nota en cada proyecto que 
-  entregamos: no solo funciona, se siente bien.
-</p>
+  <!-- EN QUÉ TE PODEMOS AYUDAR -->
+  <section class="ayudar-section" id="ayudar">
+    <h2 class="seccion-titulo">¿En qué te podemos ayudar?</h2>
+    <p class="seccion-subtitulo">
+      Hemos desarrollado productos de software que mejoran la productividad, la calidad de vida y los negocios de las personas. Sabemos que podemos ayudarte a...
+    </p>
 
-<p>
-  El osito es más que un logo. Es el símbolo de que aquí 
-  te abrazamos, no te vendemos. Lo grande también empieza 
-  pequeño, y nosotros somos prueba de eso. 🐻❤️
-</p>
+    <div class="caso-layout">
+      <div class="caso-imagen">
+        <img src="assets/ositoCeo.webp" srcset="assets/ositoCeo-sm.webp 640w, assets/ositoCeo.webp 1024w" sizes="(max-width: 768px) 318px, 539px" alt="Osito CEO" class="caso-visual" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1173">
       </div>
 
-      <div class="historia-imagen">
-        <img src="assets/ositoHistoria.png" alt="Osito contemplando">
+      <div class="ayudar-grid">
+        <article class="proceso-paso">
+          <div class="paso-numero">1</div>
+          <h3>Liberar tu tiempo</h3>
+          <p>Automatizando procesos repetitivos para que te enfoques en lo que realmente importa.</p>
+        </article>
+        <article class="proceso-paso">
+          <div class="paso-numero">2</div>
+          <h3>Aumentar tu presencia</h3>
+          <p>Más profesionalismo, para que más personas te descubran, te recuerden y confíen en ti.</p>
+        </article>
+        <article class="proceso-paso">
+          <div class="paso-numero">3</div>
+          <h3>Hacer realidad tus ideas</h3>
+          <p>Las transformamos en realidades digitales, aunque no tengas conocimientos técnicos ni sepas por dónde empezar.</p>
+        </article>
+        <article class="proceso-paso">
+          <div class="paso-numero">4</div>
+          <h3>Dar claridad y dirección</h3>
+          <p>Te acompañamos paso a paso para que tomes decisiones seguras y efectivas, sin complicaciones.</p>
+        </article>
       </div>
     </div>
+
+    <div class="flecha-abajo" (click)="scrollTo('nuestra-historia')"></div>
   </section>
-  <div class="espacio"></div>
+
+  <!-- HISTORIA -->
+  <section class="historia-section" id="nuestra-historia">
+    <div class="historia-layout">
+      <div class="historia-copy">
+        <h2 class="seccion-titulo">Nuestra historia</h2>
+        <p>
+          Todo comenzó con una idea sencilla:
+          <strong>hacer las cosas más humanas con ayuda de la tecnología.</strong>
+          Detrás de ORSETTO hay dos personas con un sueño inmenso y las herramientas para hacerlo realidad.
+        </p>
+        <p>
+          Somos Sebastián y Daniela, estudiantes de Ingeniería en Sistemas del Tecnológico de Durango.
+          Nos conocemos dentro y fuera del código, y eso se nota en cada proyecto que entregamos:
+          no solo funciona, se siente bien.
+        </p>
+        <div class="solucion-highlight">
+          <span class="solucion-highlight-label">El osito</span>
+          <p>
+            Es más que un logo. Es el símbolo de que aquí te abrazamos, no te vendemos.
+            Lo grande también empieza pequeño, y nosotros somos prueba de eso. 🐻❤️
+          </p>
+        </div>
+      </div>
+
+      <div class="historia-visual">
+        <div class="hero-frame">
+          <img src="assets/ositoHistoria.webp" srcset="assets/ositoHistoria-sm.webp 656w, assets/ositoHistoria.webp 976w" sizes="(max-width: 768px) 328px, 482px" alt="Osito contemplando" class="hero-image" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1536">
+        </div>
+      </div>
+    </div>
+
+    <div class="flecha-abajo" (click)="scrollTo('equipo')"></div>
+  </section>
+
+  <!-- EQUIPO -->
   <section class="equipo-section" id="equipo">
-  <div class="container equipo-layout">
-
-    <div class="equipo-intro">
-      <h2>El equipo</h2>
-      <p class="equipo-sub">
-        Dos personas. Capacidades complementarias.
-        Un mismo estándar de calidad.
-      </p>
-    </div>
+    <h2 class="seccion-titulo">El equipo</h2>
+    <p class="seccion-subtitulo">Dos personas. Capacidades complementarias. Un mismo estándar de calidad.</p>
 
     <div class="equipo-cards" role="list">
-
       <!-- SEBASTIÁN -->
-      <article class="equipo-card fundador" role="listitem">
+      <article class="equipo-card" role="listitem">
         <div class="equipo-card-top">
           <div class="equipo-avatar">
-            <img src="assets/ositoPerfil.png" alt="Perfil de Sebastián">
+            <img src="assets/ositoPerfil.webp" alt="Perfil de Sebastián" loading="lazy" decoding="async" style="aspect-ratio: 1254 / 1254">
           </div>
           <div class="equipo-meta">
-            <div class="equipo-nombre">Edwin Sebastián Nava</div>
+            <h3 class="equipo-nombre">Edwin Sebastián Nava</h3>
             <div class="equipo-rol">Fundador · iOS · IA · AR · Estrategia</div>
           </div>
         </div>
         <p class="equipo-bio">
-          Ingeniero en Sistemas con especialidad en
-          Transformación Digital y promedio de 96.67.
-          Especialista en ecosistema Apple (Swift, CoreML, ARKit),
-          inteligencia artificial aplicada y experiencias inmersivas.
-          Proyectos reconocidos a nivel estatal y en colaboración
-          con el Gobierno de Durango.
+          Ingeniero en Sistemas con especialidad en Transformación Digital y promedio de 96.67.
+          Especialista en ecosistema Apple (Swift, CoreML, ARKit), inteligencia artificial aplicada
+          y experiencias inmersivas. Proyectos reconocidos a nivel estatal y en colaboración con el
+          Gobierno de Durango.
         </p>
         <div class="equipo-logros">
           <div class="equipo-logro"><span class="logro-icon">🏆</span>2° lugar DevCode Challenge — DuranIA 2025</div>
@@ -128,25 +146,24 @@ conectan, automatizan y transforman negocios reales.</p>
           <span class="stack-tag">Unity</span>
           <span class="stack-tag">AWS</span>
         </div>
-        <a href="https://github.com/Sebastian-bear" target="_blank" class="equipo-github">GitHub: Sebastian-bear →</a>
+        <a href="https://github.com/Sebastian-bear" target="_blank" rel="noopener" class="equipo-github">GitHub: Sebastian-bear →</a>
       </article>
 
       <!-- DANIELA -->
       <article class="equipo-card" role="listitem">
         <div class="equipo-card-top">
-          <div class="equipo-avatar dani">
-            <img src="assets/conejita.png" alt="Perfil de Daniela">
+          <div class="equipo-avatar">
+            <img src="assets/conejita.webp" alt="Perfil de Daniela" loading="lazy" decoding="async" style="aspect-ratio: 1254 / 1254">
           </div>
           <div class="equipo-meta">
-            <div class="equipo-nombre">Daniela Deshiré Tinoco</div>
+            <h3 class="equipo-nombre">Daniela Deshiré Tinoco</h3>
             <div class="equipo-rol">Co-fundadora · Back-end · Móvil · UI</div>
           </div>
         </div>
         <p class="equipo-bio">
-          Ingeniera en Sistemas con enfoque en desarrollo móvil,
-          diseño de interfaces y aplicaciones interactivas.
-          Experiencia en proyectos frontend, Unity y
-          microcontroladores. Actualmente cursando backend y IA aplicada.
+          Ingeniera en Sistemas con enfoque en desarrollo móvil, diseño de interfaces y aplicaciones
+          interactivas. Experiencia en proyectos frontend, Unity y microcontroladores. Actualmente
+          cursando backend y IA aplicada.
         </p>
         <div class="equipo-logros">
           <div class="equipo-logro"><span class="logro-icon">🏆</span>2° lugar DevCode Challenge — DuranIA 2025</div>
@@ -161,96 +178,75 @@ conectan, automatizan y transforman negocios reales.</p>
           <span class="stack-tag">Java</span>
           <span class="stack-tag">UI/UX</span>
         </div>
-        <a href="https://github.com/Danideti" target="_blank" class="equipo-github">GitHub: Danideti →</a>
+        <a href="https://github.com/Danideti" target="_blank" rel="noopener" class="equipo-github">GitHub: Danideti →</a>
       </article>
-
     </div>
 
     <!-- PROYECTO GOBIERNO -->
-    <div class="equipo-gobierno">
-      <div class="gobierno-badge">En curso</div>
-      <div class="gobierno-content">
-        <div class="gobierno-icon">🏛️</div>
-        <div>
-          <div class="gobierno-titulo">Sistema de calidad del aire — Gobierno del Estado de Durango</div>
-          <p class="gobierno-desc">Residencia profesional activa. Desarrollamos en tiempo real un sistema de monitoreo ambiental para el gobierno estatal. Tecnología aplicada a problemas reales de nuestra comunidad.</p>
-        </div>
+    <div class="anuncio-card">
+      <span class="anuncio-badge">En curso</span>
+      <div class="anuncio-contenido">
+        <h3 class="anuncio-titulo">Sistema de calidad del aire — Gobierno del Estado de Durango</h3>
+        <p class="anuncio-descripcion">
+          Residencia profesional activa. Desarrollamos en tiempo real un sistema de monitoreo ambiental
+          para el gobierno estatal. Tecnología aplicada a problemas reales de nuestra comunidad.
+        </p>
       </div>
     </div>
 
-  </div>
-</section>
-<div class="espacio"></div>
-  <section class="diferenciador" id="diferenciador">
-    <div class="super-card">
-      <h2 class="super-card-titulo">¿Por qué somos diferentes?</h2>
-      
-      <div class="razon">
-        <div class="numero">1</div>
-        <div class="contenido">
-          <h3>Nos involucramos como si tu negocio fuera nuestro. </h3>
-          <p>No te vendendemos una solución genérica: nos importa de verdad lo que haces y por qué lo haces.</p>
-        </div>
+    <div class="flecha-abajo" (click)="scrollTo('diferenciador')"></div>
+  </section>
+
+  <!-- ¿POR QUÉ SOMOS DIFERENTES? -->
+  <section class="diferencia-section" id="diferenciador">
+    <h2 class="seccion-titulo">¿Por qué somos diferentes?</h2>
+    <p class="seccion-subtitulo">Cinco razones por las que trabajar con nosotros se siente distinto.</p>
+
+    <div class="diferencia-grid">
+      <article class="diferencia-card">
+        <div class="paso-numero">1</div>
+        <h3>Nos involucramos como si tu negocio fuera nuestro</h3>
+        <p>No te vendemos una solución genérica: nos importa de verdad lo que haces y por qué lo haces.</p>
+      </article>
+
+      <article class="diferencia-card">
+        <div class="paso-numero">2</div>
+        <h3>No trabajamos con fórmulas vacías</h3>
+        <p>Cada proyecto es único, pensado a tu medida y con atención al más mínimo detalle.</p>
+      </article>
+
+      <article class="diferencia-card">
+        <div class="paso-numero">3</div>
+        <h3>Hablamos tu idioma</h3>
+        <p>Nada de tecnicismos innecesarios: te explicamos, te escuchamos y te acompañamos con claridad y empatía.</p>
+      </article>
+
+      <article class="diferencia-card">
+        <div class="paso-numero">4</div>
+        <h3>Tecnología con propósito humano</h3>
+        <p>Lo que creamos no es solo código: es funcional, visualmente impactante y emocionalmente significativo.</p>
+      </article>
+
+      <article class="diferencia-card">
+        <div class="paso-numero">5</div>
+        <h3>Contigo desde el primer clic hasta después del lanzamiento</h3>
+        <p>No desaparecemos cuando terminamos el trabajo. Somos tus aliados, tu respaldo y tu diferencia.</p>
+      </article>
+    </div>
+
+    <div class="flecha-abajo" (click)="scrollTo('cita-final')"></div>
+  </section>
+
+  <!-- CITA FINAL -->
+  <section class="cta-final" id="cita-final">
+    <div class="cita-contenedor">
+      <div class="cita-logo">
+        <img src="assets/logo.svg" alt="Logo de ORSETTO">
       </div>
-
-      <div class="separador"></div>
-
-      <div class="razon">
-        <div class="numero">2</div>
-        <div class="contenido">
-          <h3>No trabajamos con fórmulas vacías.</h3>
-          <p>Cada proyecto es único, pensado a tu medida y con atención al más mínimo detalle.</p>
-        </div>
-      </div>
-
-      <div class="separador"></div>
-
-      <div class="razon">
-        <div class="numero">3</div>
-        <div class="contenido">
-          <h3>Hablamos tu idioma</h3>
-          <p>Nada de tecnicismos innecesarios: te explicamos, te escuchamos y te acompañamos con claridad y empatía.</p>
-        </div>
-      </div>
-      
-      <div class="separador"></div>
-
-      <div class="razon">
-        <div class="numero">4</div>
-        <div class="contenido">
-          <h3>Combinamos tecnología con propósito humano. </h3>
-          <p>Lo que creamos no es solo código: es funcional, visualmente impactante y emocionalmente significativo..</p>
-        </div>
-      </div>
-
-      <div class="separador"></div>
-
-      <div class="razon">
-        <div class="numero">5</div>
-        <div class="contenido">
-          <h3>Contigo desde el primer clic hasta después del lanzamiento. </h3>
-          <p>No desaparecemos cuando terminamos el trabajo. Somos tus aliados, tu respaldo y tu diferencia.</p>
-        </div>
-      </div>
+      <blockquote class="cita-texto">
+        “Cada cliente me comparte un pedacito de su historia… y nuestro trabajo es ayudarle a escribir el siguiente capítulo.”
+      </blockquote>
+      <a [routerLink]="'/contacto'" fragment="formulario-contacto" class="boton-cta">Escribamos el tuyo</a>
     </div>
   </section>
-  <div class="espacio"></div>
-  <section class="cita-final">
-  <div class="cita-container">
-    
-    <div class="cita-logo">
-      <img src="assets/logo.svg" alt="Logo del proyecto">
-    </div>
-
-    <div class="cita-linea"></div>
-
-    <div class="cita-texto">
-      <p>
-        <em> “Cada cliente me comparte un pedacito de su historia… 
-          y nuestro trabajo es ayudarle a escribir el siguiente capítulo.”</em>
-      </p>
-    </div>
-
-  </div>
-</section>
 </div>

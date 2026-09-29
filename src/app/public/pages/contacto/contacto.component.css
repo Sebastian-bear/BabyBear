@@ -208,6 +208,22 @@
   letter-spacing: -0.4px;
 }
 
+/* Imagen alineada con la altura de la lista de beneficios */
+.decisión-layout {
+  align-items: stretch;
+}
+
+.decisión-imagen {
+  margin-top: 0;
+  display: flex;
+}
+
+.decisión-imagen img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .decisión-column {
   flex: 1;
   list-style: none;
@@ -216,6 +232,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
   padding-left: 6%;
 }
 
@@ -315,7 +333,19 @@ u {
 .final-boton {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
   margin-top: 20px;
+}
+
+.button-whatsapp {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+.button-whatsapp:hover {
+  background-color: var(--text-black);
+  color: #ffffff;
 }
 
 .button-valor {
@@ -411,6 +441,10 @@ u {
   .decisión-imagen {
     order: 1;
     max-width: 300px;
+  }
+
+  .decisión-imagen img {
+    height: auto;
   }
   .decisión-column {
     order: 2;

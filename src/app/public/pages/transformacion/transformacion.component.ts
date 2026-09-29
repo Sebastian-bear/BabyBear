@@ -40,6 +40,7 @@ export class TransformacionComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   private checkScrollPosition() {
+    if (typeof window === 'undefined') return;
     if (!this.flechaElement) return;
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;

@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { FormularioComponent } from '../../components/formulario/formulario.component';
 import { RouterModule } from '@angular/router';
+import { CONTACT_CONFIG } from '../../../core/config/contact.config';
 
 @Component({
   selector: 'app-contacto',
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
 })
 export class ContactoComponent implements AfterViewInit, OnInit {
   @ViewChild('flecha') flechaElement!: ElementRef;
+  readonly whatsappUrl = CONTACT_CONFIG.whatsappUrl;
 
   constructor() {}
 
@@ -28,6 +30,7 @@ export class ContactoComponent implements AfterViewInit, OnInit {
   }
 
   private checkScrollPosition(): void {
+    if (typeof window === 'undefined') return;
     if (!this.flechaElement) return;
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;

@@ -1,7 +1,8 @@
+import { RouterModule } from '@angular/router';
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, ChangeDetectionStrategy, OnInit } from '@angular/core';
 @Component({
   selector: 'app-nosotros',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './nosotros.component.html',
   styleUrl: './nosotros.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -24,6 +25,7 @@ export class NosotrosComponent implements OnInit {
   }
 
   private checkScrollPosition() {
+    if (typeof window === 'undefined') return;
     if (this.flechaElement) {
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;

@@ -1,19 +1,42 @@
 <div class="formulario-contenido">
-  <h2 class="titulo-contacto">Entra en el circulo de las empresas que han decidido crecer hasta el infinito</h2>
-  <p class="descripcion-contacto">Sabemos que la tecnologia puede sentirse lejana, cara o confusa. Por eso no hablamos en codigo. Escuchamos tu historia, entendemos tu negocio, y construimos exactamente lo que necesitas, con el cuidado de quien trata tu proyecto como si fuera el suyo.</p>
-  
+  <h2 class="titulo-contacto">Cuéntanos cómo trabaja tu negocio y te ayudamos a ver con claridad hacia dónde crecer</h2>
+  <p class="descripcion-contacto">Sabemos que la tecnología puede sentirse lejana, cara o confusa. Por eso no hablamos en código. Escuchamos tu historia, entendemos tu negocio y construimos exactamente lo que necesitas, con el cuidado de quien trata tu proyecto como si fuera suyo.</p>
+
   <form id="contactoForm" (submit)="enviarEmail($event)">
     <div class="campo-formulario">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="user_email" placeholder="tu@email.com" required>
-    </div>
-    
-    <div class="campo-formulario">
-      <label for="mensaje">Tu mensaje</label>
-      <textarea id="mensaje" name="message" placeholder="Escribe aquí tu mensaje..." required></textarea>
+      <label for="nombre">Tu nombre</label>
+      <input type="text" id="nombre" name="user_name" placeholder="¿Cómo te llamas?" autocomplete="name" required>
     </div>
 
-    <p class="nota-cotizacion">*La cotización no tiene ningún costo</p>
-    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+    <div class="campo-formulario">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="user_email" placeholder="tu@email.com" autocomplete="email" required>
+    </div>
+
+    <div class="campo-formulario">
+      <label for="mensaje">Tu mensaje</label>
+      <textarea id="mensaje" name="message" placeholder="Cuéntanos qué hace tu negocio y qué te gustaría resolver" required></textarea>
+    </div>
+
+    <!-- Campo trampa para bots: los usuarios no lo ven -->
+    <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <p class="nota-cotizacion">*Cotizar no tiene ningún costo. Te respondemos en {{ tiempoRespuesta }}.</p>
+
+    <div class="acciones-formulario">
+      <button type="submit" class="btn-enviar" [disabled]="estado() === 'enviando'">
+        {{ estado() === 'enviando' ? 'Enviando…' : 'Enviar mensaje' }}
+      </button>
+      <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-alt">Escríbenos por WhatsApp</a>
+    </div>
+
+    <p class="estado-envio" role="status" aria-live="polite">
+      @if (estado() === 'ok') {
+        <span class="ok">¡Gracias! Recibimos tu mensaje. Te respondemos en {{ tiempoRespuesta }}.</span>
+      }
+      @if (estado() === 'error') {
+        <span class="error">No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos por WhatsApp.</span>
+      }
+    </p>
   </form>
 </div>

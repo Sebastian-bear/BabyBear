@@ -28,6 +28,7 @@ export class InicioComponent implements AfterViewInit, OnInit {
   }
 
   private checkScrollPosition(): void {
+    if (typeof window === 'undefined') return;
     if (!this.flechaElement) return;
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;

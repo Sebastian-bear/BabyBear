@@ -1,43 +1,6 @@
-# robots.txt - Orsetto
-# Archivo para guiar a los motores de búsqueda en la indexación del sitio
-
-# Permitir a todos los motores de búsqueda indexar el contenido público
+# robots.txt de Orsetto
+# Todo el sitio es público e indexable.
 User-agent: *
 Allow: /
-Allow: /assets/
-Allow: /api/
 
-# Rutas a no indexar
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
-Disallow: /*.json$
-Disallow: /*?*redirect=
-Disallow: /*?*utm_
-
-# Configuración de crawl
-Request-rate: 1 second
-Crawl-delay: 1
-
-# Ubicación del sitemap
 Sitemap: https://orsetto.pro/sitemap.xml
-
-# Reglas específicas para Google
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0.5
-
-# Reglas específicas para Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Denegar bots maliciosos comunes
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Allow: /robots.txt

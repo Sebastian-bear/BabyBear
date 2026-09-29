@@ -1,3 +1,10 @@
 {
-  "routes": {}
+  "routes": {
+    "/": {},
+    "/contacto": {},
+    "/movil": {},
+    "/nosotros": {},
+    "/transformacion": {},
+    "/web": {}
+  }
 }

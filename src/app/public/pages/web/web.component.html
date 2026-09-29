@@ -23,7 +23,7 @@
 
             <div class="hero-visual">
                 <div class="hero-frame">
-                    <img src="assets/ositoDesarrolloWeb.png" alt="Osito desarrollando una web profesional" class="hero-image">
+                    <img src="assets/ositoDesarrolloWeb.webp" srcset="assets/ositoDesarrolloWeb-sm.webp 672w, assets/ositoDesarrolloWeb.webp 1040w" sizes="(max-width: 768px) 332px, 520px" alt="Osito desarrollando una web profesional" class="hero-image" fetchpriority="high" decoding="async" style="aspect-ratio: 1536 / 1024">
                 </div>
                 <div class="hero-stat">
                     <strong>Tu web trabajando 24/7</strong>
@@ -125,65 +125,44 @@
     </section>
 
     <section class="caso-section" id="caso-uso">
-        <h2 class="seccion-titulo">Una constructora que necesita generar confianza desde el primer clic</h2>
-        <p class="seccion-subtitulo">Cuando el proyecto es serio, la web tiene que demostrarlo antes de que el cliente pregunte.</p>
+        <h2 class="seccion-titulo">Un comercio con clientes fieles que nadie más encuentra</h2>
+        <p class="seccion-subtitulo">Cuando tu negocio se sostiene de boca en boca, la web tiene que hacer lo que tú no alcanzas: estar presente y explicar por ti.</p>
 
         <div class="caso-layout">
             <div class="caso-media">
                 <div class="caso-imagen">
-                    <img src="assets/ositoConstructor.png" alt="Ejemplo de sitio web para constructora" class="caso-visual">
+                    <img src="assets/ositoWeb.webp" srcset="assets/ositoWeb-sm.webp 720w, assets/ositoWeb.webp 1104w" sizes="(max-width: 768px) 354px, 551px" alt="Ejemplo de sitio web para un comercio local" class="caso-visual" loading="lazy" decoding="async" style="aspect-ratio: 1536 / 1024">
                 </div>
 
                 <div class="caso-flow">
-                    <span>Anuncio</span>
-                    <span>Landing</span>
+                    <span>Búsqueda</span>
+                    <span>Tu sitio</span>
                     <span>WhatsApp</span>
                     <span>Visita</span>
-                    <span>Cotización</span>
+                    <span>Venta</span>
                 </div>
             </div>
 
             <div class="caso-copy">
-                <h3>De catálogo invisible a máquina de leads</h3>
+                <h3>De boca en boca a visible las 24 horas</h3>
                 <p>
-                    Una constructora no necesita solo “presencia”. Necesita una página que explique sus servicios, muestre proyectos, responda dudas frecuentes y convierta la intención en contacto.
-                </p>
+                        Un comercio que trabaja de sol a sol rara vez tiene tiempo de contestar veinte veces las mismas preguntas: horarios, ubicación, productos, precios, cómo pedir. Una web clara responde por ti, muestra lo que vendes y convierte la búsqueda en un mensaje de WhatsApp.
+                    </p>
 
                 <ul class="caso-lista">
-                    <li>El cliente entiende rápido qué tipo de obra realizan</li>
-                    <li>Los proyectos construyen autoridad y credibilidad</li>
-                    <li>El formulario filtra mejor las solicitudes reales</li>
-                    <li>La web reduce llamadas repetidas y dudas operativas</li>
+                    <li>El cliente entiende rápido qué vendes y dónde encontrarte</li>
+                    <li>Tus productos y tu historia construyen confianza</li>
+                    <li>WhatsApp y formulario traen pedidos y consultas reales</li>
+                    <li>La web reduce llamadas repetidas y dudas del día a día</li>
                 </ul>
 
                 <blockquote class="caso-frase">
-                    La web no reemplaza al vendedor; llega antes que él.
+                    La web no reemplaza tu atención; la hace llegar a más gente.
                 </blockquote>
             </div>
         </div>
 
-        <div class="flecha-abajo" (click)="scrollTo('promocion-constructora')"></div>
-        <div class="espacio"></div>
-        <div class="anuncio-card">
-  <div class="anuncio-badge">Disponible ahora · Una sola venta</div>
-  <div class="anuncio-contenido">
-    <h3 class="anuncio-titulo">
-      Sitio completo para constructora o inmobiliaria
-    </h3>
-    <p class="anuncio-descripcion">
-      Una infraestructura digital de nivel corporativo lista para ser adaptada e implementada con la identidad de tu empresa. Incluye arquitectura modular escalable: calculadora paramétrica de cotizaciones, panel de administración nativo, portafolio interactivo y soporte bilingüe nativo.
-    </p>
-    <div class="anuncio-features">
-      <span>Calculadora de cotizaciones</span>
-      <span>Panel de admin</span>
-      <span>Bilingüe ES/EN</span>
-      <span>Back-end incluido</span>
-    </div>
-  </div>
-  <a [routerLink]="'/contacto'" 
-     fragment="formulario-contacto" 
-     class="anuncio-boton">Me interesa →</a>
-</div>
+        <div class="flecha-abajo" (click)="scrollTo('impacto')"></div>
     </section>
     <section class="impacto-section" id="impacto">
         <h2 class="seccion-titulo">El impacto que ves en números</h2>
@@ -229,7 +208,7 @@
                     <h3 class="plan-nombre">Landing de captación</h3>
                     <p class="plan-lema">Ideal para campañas o validación rápida</p>
                 </div>
-                <div class="plan-precio">Desde $2,500 MXN</div>
+                <div class="plan-precio">Desde $8,500 MXN</div>
                 <p class="plan-descripcion">Una página enfocada en un objetivo: atraer, explicar y lograr el primer contacto.</p>
                 <ul class="plan-incluye">
                     <li><span class="check">✓</span> Diseño de una sola página</li>
@@ -246,7 +225,7 @@
                     <h3 class="plan-nombre">Sitio corporativo estratégico</h3>
                     <p class="plan-lema">La base ideal para una marca seria</p>
                 </div>
-                <div class="plan-precio">Desde $5,500 MXN</div>
+                <div class="plan-precio">Desde $15,000 MXN</div>
                 <p class="plan-descripcion">Varias secciones, narrativa de marca, servicio claro y una presentación sólida para generar confianza.</p>
                 <ul class="plan-incluye">
                     <li><span class="check">✓</span> Home más secciones internas</li>
@@ -262,7 +241,7 @@
                     <h3 class="plan-nombre">Web con funcionalidades</h3>
                     <p class="plan-lema">Cuando el sitio debe hacer algo más</p>
                 </div>
-                <div class="plan-precio">Desde $8,500 MXN</div>
+                <div class="plan-precio">Desde $28,000 MXN</div>
                 <p class="plan-descripcion">Pensado para formularios avanzados, catálogos, reservas, flujos especiales o lógica a medida.</p>
                 <ul class="plan-incluye">
                     <li><span class="check">✓</span> Componentes dinámicos</li>
@@ -278,7 +257,7 @@
                     <h3 class="plan-nombre">Plataforma a medida</h3>
                     <p class="plan-lema">Para procesos complejos y visión de largo plazo</p>
                 </div>
-                <div class="plan-precio">Desde $15,000 MXN</div>
+                <div class="plan-precio">Desde $55,000 MXN</div>
                 <p class="plan-descripcion">Dashboards, usuarios, automatización o sistemas internos pensados desde la operación real.</p>
                 <ul class="plan-incluye">
                     <li><span class="check">✓</span> Arquitectura personalizada</li>
@@ -307,27 +286,27 @@
         <div class="ecosistema-grid">
             <article class="ecosistema-card">
                 <div class="ecosistema-icono">
-                    <img src="assets/ositoRM.png" alt="Ecosistema digital" class="ecosistema-visual">
+                    <img src="assets/ositoRM.webp" alt="Ecosistema digital" class="ecosistema-visual" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024">
                 </div>
                 <h3>Ecosistema digital</h3>
                 <p>Un sistema diseñado para hacer crecer tu negocio sin límites</p>
-                <span class="ecosistema-precio">Desde $15,000 MXN</span>
+                <span class="ecosistema-precio">Desde $35,000 MXN</span>
                 <a [routerLink]="'/transformacion'" fragment="hero" class="ecosistema-boton">Ver ecosistema digital</a>
             </article>
 
             <article class="ecosistema-card">
                 <div class="ecosistema-icono">
-                    <img src="assets/ositoRA.png" alt="App móvil" class="ecosistema-visual">
+                    <img src="assets/ositoRA.webp" alt="App móvil" class="ecosistema-visual" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024">
                 </div>
                 <h3>App móvil</h3>
                 <p>Lleva tu servicio al bolsillo de tus clientes con iOS o Android.</p>
-                <span class="ecosistema-precio">Desde $18,000 MXN</span>
+                <span class="ecosistema-precio">Desde $45,000 MXN</span>
                 <a [routerLink]="'/movil'" class="ecosistema-boton">Ver plan móvil</a>
             </article>
 
             <article class="ecosistema-card">
                 <div class="ecosistema-icono">
-                    <img src="assets/ositoIA.png" alt="Inteligencia artificial" class="ecosistema-visual">
+                    <img src="assets/ositoIA.webp" alt="Inteligencia artificial" class="ecosistema-visual" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024">
                 </div>
                 <h3>Inteligencia artificial</h3>
                 <p>Chatbots, análisis predictivo, reconocimiento biométrico. Decisiones con datos.</p>
@@ -336,7 +315,7 @@
 
             <article class="ecosistema-card">
                 <div class="ecosistema-icono">
-                    <img src="assets/ositoRV.png" alt="Realidad aumentada y virtual" class="ecosistema-visual">
+                    <img src="assets/ositoRV.webp" alt="Realidad aumentada y virtual" class="ecosistema-visual" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1024">
                 </div>
                 <h3>Realidad aumentada / virtual</h3>
                 <p>Experiencias inmersivas para mostrar productos, entrenar o sorprender.</p>
@@ -383,7 +362,7 @@
     <section class="cta-final" id="final-web">
         <div class="cta-contenedor">
             <div class="cta-imagen">
-                <img src="assets/ositoWeb.png" alt="Ejemplo de página web">
+                <img src="assets/ositoWeb.webp" srcset="assets/ositoWeb-sm.webp 720w, assets/ositoWeb.webp 1104w" sizes="(max-width: 768px) 354px, 551px" alt="Ejemplo de página web" loading="lazy" decoding="async" style="aspect-ratio: 1536 / 1024">
             </div>
             <div class="cta-texto">
                 <h2>¿Listo para transformar tu presencia online?</h2>

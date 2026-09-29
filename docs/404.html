@@ -1,31 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página no encontrada - Redireccionando...</title>
-    <script>
-        // Captura la ruta solicitada y la redirige con hash routing
-        // Esto permite que Angular maneje el routing correctamente
-        
-        var path = window.location.pathname;
-        
-        // Remueve la barra inicial si existe
-        if (path.startsWith('/')) {
-            path = path.substring(1);
-        }
-        
-        // Redirige a la raíz con la ruta en el hash
-        // Ej: /contacto → /#/contacto
-        // Ej: /web → /#/web
-        if (path && path !== '' && path !== 'docs/') {
-            window.location.replace('/#/' + path);
-        } else {
-            window.location.replace('/');
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Página no encontrada | Orsetto</title>
+  <link rel="icon" href="/assets/icons.png" type="image/png">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+      background: #E3D2B8;
+      color: #000;
+    }
+    header {
+      background: #B8D0E3;
+      border-bottom: 2px solid #000;
+      padding: 1rem 2rem;
+    }
+    header a {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    header img { width: 52px; height: auto; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 .75rem; }
+    p { font-size: 1.15rem; margin: 0 0 1.75rem; max-width: 520px; line-height: 1.6; }
+    .acciones { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .boton {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 30px;
+      background: #B8D0E3;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(93, 121, 142, .25);
+    }
+    .boton:hover { background: #5D798E; color: #fff; }
+  </style>
 </head>
 <body>
-    <p>Página no encontrada. Redireccionando...</p>
+  <header>
+    <a href="/"><img src="/assets/logo.svg" alt="Logo de Orsetto"> Orsetto</a>
+  </header>
+  <main>
+    <h1>Esta página no existe</h1>
+    <p>Puede que el enlace esté roto o que la página haya cambiado de lugar. Volvamos a un buen punto de partida.</p>
+    <div class="acciones">
+      <a class="boton" href="/">Ir al inicio</a>
+      <a class="boton" href="/contacto/">Hablar con nosotros</a>
+    </div>
+  </main>
 </body>
 </html>

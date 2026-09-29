@@ -184,3 +184,87 @@ textarea {
     align-self: center;
   }
 }
+
+/* ===== Acciones, estado y anti-spam ===== */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.acciones-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.acciones-formulario .btn-enviar {
+  margin: 0;
+}
+
+.btn-enviar:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+.btn-whatsapp-alt {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: var(--primary-dark);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transition: var(--transition);
+}
+
+.btn-whatsapp-alt:hover,
+.btn-whatsapp-alt:focus-visible {
+  background: var(--text-dark);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.estado-envio {
+  margin: 14px 0 0;
+  min-height: 1.4em;
+  font-weight: 700;
+}
+
+.estado-envio .ok,
+.estado-envio .error {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.estado-envio .ok {
+  background: rgba(46, 125, 50, 0.85);
+}
+
+.estado-envio .error {
+  background: rgba(183, 28, 28, 0.85);
+}
+
+@media (max-width: 768px) {
+  .acciones-formulario {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-whatsapp-alt,
+  .acciones-formulario .btn-enviar {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

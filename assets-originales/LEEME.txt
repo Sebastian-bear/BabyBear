@@ -1,0 +1,3 @@
+Imágenes originales (PNG/JPEG de alta resolución) de las ilustraciones del sitio.
+No se publican: viven fuera de public/ a propósito. Las versiones optimizadas (.webp) están en public/assets/.
+Si agregas una ilustración nueva, guarda aquí el original y genera su .webp (ancho máximo ~2x del tamaño en pantalla, menos de 150 KB).

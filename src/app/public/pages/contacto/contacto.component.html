@@ -8,7 +8,7 @@
     <h2 class="conoce-titulo">Conoce nuestros servicios</h2>
     <div class="container conoce-layout">
       <div class="conoce-imagen">
-        <img src="assets/Conoce.png" alt="Osito programando" />
+        <img src="assets/Conoce.webp" srcset="assets/Conoce-sm.webp 640w, assets/Conoce.webp 1008w" sizes="(max-width: 768px) 315px, 500px" alt="Osito programando" loading="lazy" decoding="async" style="aspect-ratio: 1536 / 1024" />
       </div>
       <div class="cards-column">
         <a [routerLink]="'/transformacion'" class="servicio-card">
@@ -49,66 +49,30 @@
     <h2 class="decisión-titulo">Esto pasará si decides automatizar</h2>
     <div class="container decisión-layout">
       <div class="decisión-imagen">
-        <img src="assets/OsitoFeliz.png" alt="Osito feliz" />
+        <img src="assets/OsitoFeliz.webp" srcset="assets/OsitoFeliz-sm.webp 608w, assets/OsitoFeliz.webp 1008w" sizes="(max-width: 768px) 300px, 500px" alt="Osito feliz" loading="lazy" decoding="async" style="aspect-ratio: 1254 / 1254" />
       </div>
       <ul class="decisión-column">
-        <li>
-          <span class="bullet">✔️</span>
-          Puedes <u>generar ventas incluso mientras descansas</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Tu equipo puede enfocarse en <u>tareas más creativas y valiosas</u>, dejando lo repetitivo a los sistemas.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Puedes <u>avanzar al ritmo del mercado</u>, paso a paso y con confianza.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Libera <u>tiempo para estrategia, expansión o simplemente vivir mejor</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Construye procesos más claros que te permitan <u>crecer de forma constante</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Tener datos reales te ayuda a tomar <u>decisiones con mayor seguridad</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Facilita que tus clientes puedan <u>interactuar contigo desde su celular</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Mejora tu operación con <u>mayor eficiencia interna</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Puedes <u>crecer a tu propio ritmo</u> sin quedarte atrás.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Tu negocio puede volverse <u>más ligero y menos dependiente de ti</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Impulsa un <u>aumento en eficiencia</u> en todo tu negocio.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Una base digital hoy te da <u>ventaja para el futuro</u>.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Puedes <u>estar presente donde tus clientes ya buscan</u>: online.
-        </li>
-        <li>
-          <span class="bullet">✔️</span>
-          Empieza a <u>construir tu reputación</u> con opiniones reales de clientes.
-        </li>
-      </ul>
+      <li>
+        <span class="bullet">✔️</span>
+        Sabrás <u>cuánto vendes y cuánto ganas</u>, sin libretas ni adivinar.
+      </li>
+      <li>
+        <span class="bullet">✔️</span>
+        Tu equipo dejará lo repetitivo a los sistemas y se enfocará en <u>atender mejor</u>.
+      </li>
+      <li>
+        <span class="bullet">✔️</span>
+        Tus clientes podrán <u>encontrarte y escribirte desde su celular</u>.
+      </li>
+      <li>
+        <span class="bullet">✔️</span>
+        Decidirás qué surtir, cuánto cobrar y cuándo contratar con <u>datos reales</u>.
+      </li>
+      <li>
+        <span class="bullet">✔️</span>
+        Tu negocio <u>dejará de depender de que tú estés en todo</u>.
+      </li>
+    </ul>
     </div>
   </section>
 
@@ -121,11 +85,12 @@
           <h3 class="titulo-final">Contacta con nosotros y comienza la transformación de tu negocio.</h3>
           <p class="descripcion-final">Únete a las organizaciones que han decidido iniciar el cambio hacia la transformación digital y comienza a crecer sin límites, asegurando un futuro para tu negocio con más ganancias y menos estrés.</p>
           <div class="final-boton">
-            <button type="button" class="button-valor" (click)="scrollTo('formulario-contacto')" aria-label="Ir a contacto">Contáctanos</button>
+            <button type="button" class="button-valor" (click)="scrollTo('formulario-contacto')" aria-label="Ir a contacto">Escríbenos tu caso</button>
+            <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="button-valor button-whatsapp">Agendar por WhatsApp</a>
           </div>
         </div>
         <div class="final-imagen">
-          <img src="assets/ositoSeguro.png" alt="Osito seguro" />
+          <img src="assets/ositoSeguro.webp" alt="Osito seguro" loading="lazy" decoding="async" style="aspect-ratio: 1024 / 1536" />
         </div>
       </div>
     </div>

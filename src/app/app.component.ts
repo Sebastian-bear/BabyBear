@@ -11,7 +11,7 @@ import { filter } from 'rxjs/operators';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'Baby-Bear';
+  title = 'Orsetto';
 
   constructor(
     private router: Router,
@@ -27,25 +27,12 @@ export class AppComponent implements OnInit {
       .subscribe((event: any) => {
         this.updateSeoForRoute(event.urlAfterRedirects);
       });
-
-    // Establecer SEO para la ruta inicial
-    this.updateSeoForRoute(this.router.url);
   }
 
   private updateSeoForRoute(url: string): void {
-    // Remover parámetros query
-    let path = url.split('?')[0];
-    
-    // Con hash routing, remover el hash
-    if (path.includes('#')) {
-      path = path.split('#')[0];
-    }
-    
-    // Normalizar path
-    if (!path || path === '/') {
-      path = '';
-    }
-    
+    // Quitar query, ancla y diagonales inicial/final: '/web/' -> 'web'
+    const path = url.split('?')[0].split('#')[0].replace(/^\/+|\/+$/g, '');
+
     // Mapear rutas a claves de configuración
     const routeMap: { [key: string]: string } = {
       '': 'home',
@@ -53,12 +40,7 @@ export class AppComponent implements OnInit {
       'web': 'web',
       'movil': 'movil',
       'transformacion': 'transformacion',
-      'contacto': 'contacto',
-      '/nosotros': 'nosotros',
-      '/web': 'web',
-      '/movil': 'movil',
-      '/transformacion': 'transformacion',
-      '/contacto': 'contacto'
+      'contacto': 'contacto'
     };
 
     const configKey = routeMap[path];

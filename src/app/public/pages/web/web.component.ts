@@ -33,6 +33,7 @@ export class WebComponent implements OnInit, AfterViewInit {
   }
 
   private checkScrollPosition(): void {
+    if (typeof window === 'undefined') return;
     if (this.flechaElement) {
       this.ngZone.runOutsideAngular(() => {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;

@@ -1,33 +1,56 @@
 <section class="contact-section">
   <div class="contact-card">
     <div class="emoji-circle">🧸</div>
-    <h2>Comienza a construir el futuro que siempre has soñado.</h2>
-    <p>Envía un mensaje personalizado describiendo lo que deseas para tu negocio y obtener una cotización totalmente gratis.</p>
+    <h1>Cuéntanos de tu negocio y lo vemos juntos</h1>
+    <p>
+      Déjanos tus datos y qué necesitas. Te respondemos en {{ tiempoRespuesta }} con los siguientes pasos.
+      Cotizar es gratis; el Diagnóstico + Hoja de ruta cuesta $4,500 MXN y se descuenta si trabajamos juntos.
+    </p>
 
     <form class="contact-form" (submit)="enviarEmail($event)">
-      <input type="email" id="email" name="user_email" placeholder="Correo electrónico" required />
+      <input type="text" name="user_name" placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name" required />
+      <input type="text" name="company" placeholder="Nombre de tu negocio" aria-label="Nombre de tu negocio" autocomplete="organization" />
+      <input type="email" id="email" name="user_email" placeholder="Correo electrónico" aria-label="Correo electrónico" autocomplete="email" required />
+      <input type="tel" name="phone" placeholder="WhatsApp o teléfono" aria-label="WhatsApp o teléfono" autocomplete="tel" minlength="8" required />
 
-      <select name="subject" required>
-        <option disabled selected>Selecciona un servicio</option>
-        <option>Sistema Web Estratégico para Constructoras </option>
-        <option>Transformación Base</option>
-        <option>Transformación Expansión</option>
-        <option>Ecosistema Completo</option>
-        <option>Diagnóstico + Hoja de ruta</option>
-        <option>Landing de captación</option>
-        <option>Sitio Corporativo Estratégico</option>
-        <option>Web Con Funcionalidades</option>
-        <option>Plataforma a medida</option>
-        <option>Prototipo navegable</option>
-        <option>MVP Funcional</option>
-        <option>App Completa</option>
-        <option>Otro (especificar en el mensaje)</option>
+      <select name="subject" aria-label="¿Qué necesitas?" required>
+        <option value="" disabled selected>¿Qué necesitas?</option>
+        <option>Diagnóstico + Hoja de ruta ($4,500 MXN)</option>
+        <option>Sitio web o landing</option>
+        <option>App móvil</option>
+        <option>Sistema a medida o automatización</option>
+        <option>Realidad aumentada / virtual</option>
+        <option>No estoy seguro, oriéntenme</option>
       </select>
 
-      <textarea placeholder="Escribe tu mensaje aquí..." name="message" required></textarea>
+      <textarea
+        name="message"
+        placeholder="Cuéntanos qué hace tu negocio y qué te gustaría resolver"
+        aria-label="Tu mensaje"
+        required
+      ></textarea>
 
-      <button type="submit">Enviar</button>
+      <!-- Campo trampa para bots: los usuarios no lo ven -->
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <button type="submit" [disabled]="estado() === 'enviando'">
+        {{ estado() === 'enviando' ? 'Enviando…' : 'Enviar mensaje' }}
+      </button>
+
+      <p class="form-status" role="status" aria-live="polite">
+        @if (estado() === 'ok') {
+          <span class="ok">¡Gracias! Recibimos tu mensaje. Te respondemos en {{ tiempoRespuesta }}.</span>
+        }
+        @if (estado() === 'error') {
+          <span class="error">No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos por WhatsApp.</span>
+        }
+      </p>
     </form>
+
+    <p class="alt-contacto">
+      ¿Prefieres hablar ahora?
+      <a [href]="whatsappUrl" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Escríbenos por WhatsApp</a>
+    </p>
 
     <div class="social-section">
       <p class="social-text">También puedes contar tu historia en:</p>

@@ -1,22 +1,37 @@
 import { SeoConfig } from '../services/seo.service';
 
+const SITE = 'https://orsetto.pro';
+
+/** Imagen para compartir en redes (1200x630). Vive en public/assets/. */
+export const OG_IMAGE = {
+  url: `${SITE}/assets/og-orsetto.jpg`,
+  type: 'image/jpeg',
+  width: '1200',
+  height: '630',
+  alt: 'Orsetto: tecnología que no hiberna',
+};
+
+/**
+ * SEO por página. Las URLs llevan diagonal final porque así las sirve GitHub Pages
+ * (cada ruta es una carpeta con su index.html prerenderizado).
+ */
 export const SEO_CONFIG: { [key: string]: SeoConfig } = {
   'home': {
-    title: 'Orsetto - Desarrollo Web, Móvil y Transformación Digital',
-    description: 'Orsetto: Tecnología que no hiberna. Desarrollo web, aplicaciones móviles y transformación digital estratégica. Soluciones tecnológicas para empresas que buscan crecer.',
-    keywords: 'desarrollo web, aplicaciones móviles, transformación digital, desarrollo angular, realidad aumentada, consultoría tecnológica',
-    ogTitle: 'Orsetto - Tecnología que no hiberna',
-    ogDescription: 'Desarrollo web profesional, aplicaciones móviles y transformación digital estratégica.',
-    ogUrl: 'https://orsetto.pro/',
-    ogImage: 'https://orsetto.pro/assets/logo.svg',
-    canonical: 'https://orsetto.pro/',
+    title: 'Orsetto | Software y sitios web para negocios en México',
+    description: 'Software a la medida para negocios que trabajan mucho y no ven sus números: sitios web, apps y sistemas. Empieza con un diagnóstico y una hoja de ruta.',
+    keywords: 'software para negocios, sistema para comercios, página web para negocios, desarrollo de apps móviles, automatización de procesos, transformación digital, agencia de software México',
+    ogTitle: 'Orsetto | Tecnología que no hiberna',
+    ogDescription: 'Software a la medida para negocios que trabajan mucho y no ven sus números. Empieza con un diagnóstico y una hoja de ruta.',
+    ogUrl: `${SITE}/`,
+    ogImage: OG_IMAGE.url,
+    canonical: `${SITE}/`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': 'Orsetto',
-      'url': 'https://orsetto.pro',
-      'logo': 'https://orsetto.pro/assets/logo.svg',
-      'description': 'Tecnología que no hiberna. Desarrollo web, aplicaciones móviles y transformación digital.',
+      'url': SITE,
+      'logo': `${SITE}/assets/logo.svg`,
+      'description': 'Agencia de desarrollo de software: sitios web, apps y sistemas a la medida para negocios.',
       'sameAs': [
         'https://www.facebook.com/orsettopro',
         'https://www.instagram.com/orsettopro',
@@ -25,100 +40,100 @@ export const SEO_CONFIG: { [key: string]: SeoConfig } = {
       'contactPoint': {
         '@type': 'ContactPoint',
         'contactType': 'Customer Support',
-        'url': 'https://orsetto.pro/contacto'
+        'url': `${SITE}/contacto/`
       }
     }
   },
 
   'nosotros': {
-    title: 'Sobre Nosotros - Orsetto',
-    description: 'Conoce a Orsetto, una empresa de desarrollo web y transformación digital. Estamos apasionados por crear soluciones tecnológicas innovadoras.',
-    keywords: 'sobre nosotros, equipo, empresa, historia, misión, visión',
-    ogTitle: 'Sobre Nosotros - Orsetto',
-    ogDescription: 'Descubre quiénes somos y qué nos hace especiales en el desarrollo tecnológico.',
-    ogUrl: 'https://orsetto.pro/nosotros',
-    ogImage: 'https://orsetto.pro/assets/logo.svg',
-    canonical: 'https://orsetto.pro/nosotros',
+    title: 'Nosotros | Orsetto, software que se adapta a tu negocio',
+    description: 'Somos Orsetto, una agencia de desarrollo de software que adapta la tecnología a las personas de tu negocio, y no al revés. Conoce cómo trabajamos.',
+    keywords: 'agencia de software, quiénes somos, desarrollo de software a la medida, equipo de desarrollo, Orsetto',
+    ogTitle: 'Nosotros | Orsetto',
+    ogDescription: 'Una agencia de software que adapta la tecnología a las personas de tu negocio, y no al revés.',
+    ogUrl: `${SITE}/nosotros/`,
+    ogImage: OG_IMAGE.url,
+    canonical: `${SITE}/nosotros/`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
       'name': 'Sobre Orsetto',
-      'description': 'Información sobre la empresa Orsetto'
+      'description': 'Información sobre la agencia de software Orsetto'
     }
   },
 
   'web': {
-    title: 'Desarrollo Web - Orsetto',
-    description: 'Desarrollo web profesional con las últimas tecnologías. Sitios responsive, rápidos y optimizados para SEO. Especialistas en Angular, React y más.',
-    keywords: 'desarrollo web, sitios web, aplicaciones web, Angular, React, desarrollo frontend, backend',
-    ogTitle: 'Desarrollo Web Profesional - Orsetto',
-    ogDescription: 'Soluciones web modernas y escalables para tu negocio.',
-    ogUrl: 'https://orsetto.pro/web',
-    ogImage: 'https://orsetto.pro/assets/logo.svg',
-    canonical: 'https://orsetto.pro/web',
+    title: 'Páginas web para negocios que venden | Orsetto',
+    description: 'Páginas web rápidas y claras que muestran lo que vendes, responden por ti y traen mensajes de clientes. Landing, sitio corporativo y plataformas desde $8,500 MXN.',
+    keywords: 'página web para negocios, diseño de páginas web, landing page, sitio web corporativo, sitio web para comercio, plataforma web a la medida',
+    ogTitle: 'Páginas web para negocios que venden | Orsetto',
+    ogDescription: 'Páginas web rápidas y claras que trabajan por tu negocio las 24 horas. Desde $8,500 MXN.',
+    ogUrl: `${SITE}/web/`,
+    ogImage: OG_IMAGE.url,
+    canonical: `${SITE}/web/`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      'name': 'Desarrollo Web',
+      'name': 'Desarrollo de páginas web para negocios',
       'provider': {
         '@type': 'Organization',
         'name': 'Orsetto'
       },
-      'description': 'Desarrollo web profesional con las últimas tecnologías'
+      'description': 'Landing pages, sitios corporativos y plataformas web a la medida para negocios'
     }
   },
 
   'movil': {
-    title: 'Desarrollo Móvil - Orsetto',
-    description: 'Aplicaciones móviles nativas e híbridas para iOS y Android. Experiencias de usuario excepcionales con las mejores prácticas de desarrollo.',
-    keywords: 'desarrollo móvil, aplicaciones iOS, aplicaciones Android, React Native, Flutter, desarrollo app',
-    ogTitle: 'Desarrollo Móvil - Orsetto',
-    ogDescription: 'Aplicaciones móviles profesionales para iOS y Android.',
-    ogUrl: 'https://orsetto.pro/movil',
-    ogImage: 'https://orsetto.pro/assets/logo.svg',
-    canonical: 'https://orsetto.pro/movil',
+    title: 'Desarrollo de apps móviles para negocios | Orsetto',
+    description: 'Apps móviles para iOS y Android: desde un prototipo navegable hasta una app completa para atender, vender y fidelizar a los clientes de tu negocio.',
+    keywords: 'desarrollo de apps móviles, app para negocio, aplicación iOS y Android, app a la medida, prototipo de app, MVP de app',
+    ogTitle: 'Desarrollo de apps móviles para negocios | Orsetto',
+    ogDescription: 'Apps para iOS y Android que atienden, venden y fidelizan a tus clientes.',
+    ogUrl: `${SITE}/movil/`,
+    ogImage: OG_IMAGE.url,
+    canonical: `${SITE}/movil/`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      'name': 'Desarrollo Móvil',
+      'name': 'Desarrollo de apps móviles',
       'provider': {
         '@type': 'Organization',
         'name': 'Orsetto'
       },
-      'description': 'Aplicaciones móviles nativas e híbridas'
+      'description': 'Apps móviles para iOS y Android, desde prototipo hasta producto completo'
     }
   },
 
   'transformacion': {
-    title: 'Transformación Digital - Orsetto',
-    description: 'Consultoría en transformación digital. Estrategia, implementación y optimización de procesos tecnológicos para tu empresa.',
-    keywords: 'transformación digital, consultoría, estrategia digital, innovación, automatización',
-    ogTitle: 'Transformación Digital - Orsetto',
-    ogDescription: 'Impulsa tu negocio con nuestra consultoría en transformación digital.',
-    ogUrl: 'https://orsetto.pro/transformacion',
-    ogImage: 'https://orsetto.pro/assets/logo.svg',
-    canonical: 'https://orsetto.pro/transformacion',
+    title: 'Transformación digital para negocios y comercios | Orsetto',
+    description: 'Ordena tu operación y ve tus números: sistemas de control, automatizaciones y reportes para negocios. Diagnóstico + hoja de ruta por $4,500 MXN.',
+    keywords: 'transformación digital para negocios, sistema de control de ventas e inventario, automatización de procesos, digitalizar un negocio, diagnóstico digital, reportes para negocios',
+    ogTitle: 'Transformación digital para negocios | Orsetto',
+    ogDescription: 'Ordena tu operación, ve tus números y automatiza lo repetitivo. Empieza con un diagnóstico y una hoja de ruta.',
+    ogUrl: `${SITE}/transformacion/`,
+    ogImage: OG_IMAGE.url,
+    canonical: `${SITE}/transformacion/`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      'name': 'Transformación Digital',
+      'name': 'Transformación digital para negocios',
       'provider': {
         '@type': 'Organization',
         'name': 'Orsetto'
       },
-      'description': 'Consultoría en transformación digital estratégica'
+      'description': 'Diagnóstico, sistemas de control y automatización para negocios y comercios'
     }
   },
 
   'contacto': {
-    title: 'Contacto - Orsetto',
-    description: 'Ponte en contacto con nosotros para comenzar tu transformación digital. Estamos listos para ayudarte con tus proyectos tecnológicos.',
-    keywords: 'contacto, formulario de contacto, información de contacto, soporte',
-    ogTitle: 'Contacto - Orsetto',
-    ogDescription: 'Contacta con nosotros para discutir tu próximo proyecto.',
-    ogUrl: 'https://orsetto.pro/contacto',
-    ogImage: 'https://orsetto.pro/assets/logo.svg',
-    canonical: 'https://orsetto.pro/contacto',
+    title: 'Contacto y cotización gratis | Orsetto',
+    description: 'Cuéntanos de tu negocio y recibe una cotización sin costo. Te respondemos en menos de 24 horas hábiles por correo o WhatsApp.',
+    keywords: 'contacto, cotización de software, cotizar página web, cotizar app móvil, diagnóstico digital',
+    ogTitle: 'Contacto y cotización gratis | Orsetto',
+    ogDescription: 'Cuéntanos de tu negocio y recibe una cotización sin costo. Respondemos en menos de 24 horas hábiles.',
+    ogUrl: `${SITE}/contacto/`,
+    ogImage: OG_IMAGE.url,
+    canonical: `${SITE}/contacto/`,
     schema: {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
